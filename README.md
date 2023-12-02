@@ -10,3 +10,4 @@ ile gerekli modüllerin kurulumlarını tamamlamalıyız.
 ile projeyi çalıştırabiliriz.
 
 
+
