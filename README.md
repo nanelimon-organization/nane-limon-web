@@ -9,5 +9,4 @@ ile gerekli modüllerin kurulumlarını tamamlamalıyız.
 ### `npm start`
 ile projeyi çalıştırabiliriz.
 
-Projeye [http://localhost:3000] bağlantısından ulaşabiliriz.
 
