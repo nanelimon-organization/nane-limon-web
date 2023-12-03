@@ -1,53 +1,35 @@
-import { Button, Grid } from "@mui/material";
+import { Box, Button, Grid } from "@mui/material";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-
-function NavbarButton({title,to}) {
+import { Link, NavLink } from "react-router-dom";
+import style from './NavbarButton.module.css'
+function NavbarButton({ title, to }) {
   return (
-    <Grid component={motion.div} whileHover="animate">
-      <Link to={to}>
+    <Grid className={style.un} >
+      <NavLink
+        to={to}
+      >
         <Button component={motion.div} disableRipple sx={useStyle.button}>
           {title}
         </Button>
-      </Link>
-      <Grid
-        component={motion.div}
-        variants={buttonAnimation}
-        initial={buttonAnimation.initial}
-        exit={buttonAnimation.endAnimation}
-      ></Grid>
+
+        
+        {/* <Grid
+          component={motion.div}
+          variants={buttonAnimation}
+          initial={buttonAnimation.initial}
+          exit={buttonAnimation.endAnimation}
+        ></Grid> */}
+      </NavLink>
     </Grid>
   );
 }
 
 export default NavbarButton;
 
-const buttonAnimation = {
-  initial: {
-    borderBottomWidth: 2,
-    borderTopWidth: 0,
-    borderLeftWidth: 0,
-    borderRightWidth: 0,
-    borderStyle: "solid",
-    borderBottomColor: "green",
-    width: "0%",
-  },
-  animate: {
-    borderBottomWidth: 2,
-    borderTopWidth: 0,
-    borderLeftWidth: 0,
-    borderRightWidth: 0,
-    borderStyle: "solid",
-    width: "100%",
-    borderBottomColor: "green",
-
-    transition: { duration: 0.5 },
-  },
-};
 
 const useStyle = {
   button: {
-    color: "green",
+    color: "#008000",
     "&:hover": {
       boxShadow: "none !important",
       backgroundColor: "white",
@@ -55,11 +37,14 @@ const useStyle = {
     "&:active": {
       boxShadow: "none !important",
       backgroundColor: "white",
+      color: "black"
     },
+  
+  
   },
   donateButton: {
     color: "white",
-    backgroundColor: "green",
+    backgroundColor: "#008000",
     borderRadius: 2,
     "&:hover": {
       color: "white",
@@ -67,4 +52,5 @@ const useStyle = {
       borderRadius: 2,
     },
   },
+  
 };

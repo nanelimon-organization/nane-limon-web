@@ -10,10 +10,12 @@ function Navbar() {
       width="100%"
       flexDirection="row"
       bgcolor="white"
-      sx={{ borderBottom: 1, borderBottomColor: "green" }}
+      sx={{ borderBottom: 1, borderBottomColor: "#008000",}}
       paddingX={16}
       paddingY={2}
       alignItems="center"
+      position="sticky"
+      top={0}
       justifyContent="center"
     >
       <NavbarLogo />
@@ -22,9 +24,10 @@ function Navbar() {
         item
         xs={0}
         md={10}
-        display={{ xs: "none", md: "flex" }}
+        display={{ xs: "none", md: "flex"}}
         justifyContent="space-between"
       >
+        <NavbarButton title="Anasayfa" to="/" />
         <NavbarButton title="Çalışma Alanları" to="/fields" />
         <NavbarButton title="Projeler" to="/projects" />
         <NavbarButton title="Sunumlar" to="/presentations" />

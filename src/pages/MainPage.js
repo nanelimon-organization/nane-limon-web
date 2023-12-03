@@ -1,7 +1,14 @@
-import { Typography } from "@mui/material";
 
-function HomePage(){
-    return <Typography>anasayfa</Typography>
+
+import { Outlet } from "react-router-dom";
+import Navbar from "../layout/Navbar/Navbar";
+function Main(){
+    return <>
+        <Navbar />
+        <main>
+            <Outlet />
+        </main>
+    </>
 }
 
-export default HomePage;
+export default Main;

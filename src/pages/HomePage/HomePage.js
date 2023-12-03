@@ -1,13 +1,7 @@
-import { Outlet } from "react-router-dom";
-import Navbar from "../../layout/Navbar/Navbar";
+import { Typography } from "@mui/material";
 
-function Main(){
-    return <>
-        <Navbar />
-        <main>
-            <Outlet />
-        </main>
-    </>
+function HomePage(){
+    return <Typography>anasayfa</Typography>
 }
 
-export default Main;
+export default HomePage;
