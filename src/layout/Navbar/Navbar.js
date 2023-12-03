@@ -14,7 +14,8 @@ function Navbar() {
       paddingX={16}
       paddingY={2}
       alignItems="center"
-      position="sticky"
+      position="fixed"
+      zIndex={10}
       top={0}
       justifyContent="center"
     >
