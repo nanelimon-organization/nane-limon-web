@@ -9,22 +9,20 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: "San Francisco – Oakland Bay Bridge, United States",
+   
     imgPath:
       "https://wallpapers.com/images/featured-full/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
   },
   {
-    label: "Bird",
+   
     imgPath:
       "https://wallpapers.com/images/high/1920-x-1080-hd-2kph8n73fpmvddj1.webp",
   },
   {
-    label: "Bali, Indonesia",
     imgPath:
       "https://wallpapers.com/images/high/1920-x-1080-hd-c65hirjqswhsd1z3.webp",
   },
   {
-    label: "Goč, Serbia",
     imgPath:
       "https://wallpapers.com/images/high/1920-x-1080-hd-ydvvfje0bdoimttn.webp",
   },

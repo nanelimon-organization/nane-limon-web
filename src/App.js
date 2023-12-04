@@ -9,7 +9,7 @@ import AboutPage from "./pages/AboutPage/AboutPage";
 import CommunityEvents from "./pages/CommunityEvents/CommunityEvents";
 import DonatePage from "./pages/DonatePage/DonatePage";
 import FieldsPage from "./pages/WorkingFields/FieldsPage";
-import HomePage from './pages/HomePage/HomePage'
+import HomePage, { homeLoader } from './pages/HomePage/HomePage'
 import Main from "./pages/MainPage";
 function App() {
   const router = createBrowserRouter([
@@ -18,7 +18,7 @@ function App() {
       element: <Main />,
       errorElement: <ErrorPage />,
       children: [
-        { path: "/", element: <HomePage /> },
+        { path: "/", element: <HomePage />, loader:homeLoader},
         { path: "/fields", element: <FieldsPage /> },
         { path: "/projects", element: <ProjectsPage /> },
         { path: "/presentations", element: <PresentationPage /> },
