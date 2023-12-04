@@ -1,18 +1,16 @@
-import {  Button, Grid,  } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import NavbarButton from "./components/NavbarButton";
 import NavbarLogo from "./components/NavbarLogo";
-
+import MenuIcon from '@mui/icons-material/Menu';
 function Navbar() {
   const donateTitle = "Bize Destek Olun";
   return (
     <Grid
-    
       container
       width="100%"
       flexDirection="row"
       bgcolor="white"
-
-      paddingX={16}
+      paddingX={{xs: 6,md:16}}
       paddingY={2}
       marginBottom={20}
       alignItems="center"
@@ -21,13 +19,18 @@ function Navbar() {
       top={0}
       justifyContent="center"
     >
+    
+    <Grid item xs={12} md={2} display="flex" justifyContent="space-between">
       <NavbarLogo />
-
+      <Button sx={{display: {xs: "flex",md:"none"}, color: "green"}}>
+      <MenuIcon />
+      </Button>
+      </Grid>
       <Grid
         item
         xs={0}
         md={10}
-        display={{ xs: "none", md: "flex"}}
+        display={{ xs: "none", md: "flex" }}
         justifyContent="space-between"
       >
         <NavbarButton title="Anasayfa" to="/" />
