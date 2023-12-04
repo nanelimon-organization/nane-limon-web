@@ -3,7 +3,7 @@ import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftR
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
-import { Box } from "@mui/material";
+import { Box, Button, Container } from "@mui/material";
 import { useTheme } from "@emotion/react";
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -34,11 +34,12 @@ function Banner() {
     const maxSteps = images.length;
   
     const handleNext = () => {
-      setActiveStep((prevActiveStep) => prevActiveStep + 1);
+      setActiveStep((prevActiveStep) => prevActiveStep == maxSteps-1 ? null : prevActiveStep + 1);
     };
   
-    const handleBack = () => {
-      setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    const handleBack = (prev) => {
+     
+      setActiveStep((prevActiveStep) => prevActiveStep <= 0 ? null : prevActiveStep - 1);
     };
   
     const handleStepChange = (step) => {
@@ -47,14 +48,18 @@ function Banner() {
   
 
   return (
-    <Box sx={{ width: "100%", flexGrow: 1}}>
+    <Box sx={{ width: "100%", flexGrow: 1,alignItems:"center", justifyContent: "center", display: "flex", marginTop:14}}>
+   <Button onClick={handleBack} sx={{marginX: {xs: 0,md: 5},  color:"#008000"}}>
+      <KeyboardArrowLeftRoundedIcon sx={{paddingX: {xs:0,md: 5},width: 36,height: 36}}  />
+      </Button>
       <AutoPlaySwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={activeStep}
         onChangeIndex={handleStepChange}
         springConfig={{
-          duration: "0.9s",
+          duration: "2s",
           easeFunction: "ease-in-out",
+          
           delay: "0s",
         }}
         loop={true}
@@ -65,17 +70,21 @@ function Banner() {
             key={step.label}
             component="img"
             sx={{
-              height: 600,
+              height: {xs: 200, md:600},
               display: "block",
               objectFit: "fill",
               overflow: "hidden",
               width: "100%",
+              borderRadius: 10
             }}
             src={step.imgPath}
             alt={step.label}
           />
         ))}
       </AutoPlaySwipeableViews>
+      <Button onClick={handleNext} sx={{marginX: {xs: 0,md: 5},  color:"#008000"}}>
+      <KeyboardArrowRightRoundedIcon sx={{paddingX: {xs:0,md: 5} ,width: 36,height: 36}}  />
+      </Button>
     </Box>
   );
 }

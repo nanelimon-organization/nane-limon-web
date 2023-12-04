@@ -6,13 +6,15 @@ function Navbar() {
   const donateTitle = "Bize Destek Olun";
   return (
     <Grid
+    
       container
       width="100%"
       flexDirection="row"
       bgcolor="white"
-      sx={{ borderBottom: 1, borderBottomColor: "#008000",}}
+
       paddingX={16}
       paddingY={2}
+      marginBottom={20}
       alignItems="center"
       position="fixed"
       zIndex={10}

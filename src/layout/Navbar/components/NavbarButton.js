@@ -1,18 +1,14 @@
 import { Box, Button, Grid } from "@mui/material";
 import { motion } from "framer-motion";
 import { Link, NavLink } from "react-router-dom";
-import style from './NavbarButton.module.css'
+import style from "./NavbarButton.module.css";
+import CustomButton from "../../../components/Button";
 function NavbarButton({ title, to }) {
   return (
-    <Grid className={style.un} >
-      <NavLink
-        to={to}
-      >
-        <Button component={motion.div} disableRipple sx={useStyle.button}>
-          {title}
-        </Button>
+    <Grid className={style.un}>
+      <NavLink to={to}>
+        <CustomButton title={title} />
 
-        
         {/* <Grid
           component={motion.div}
           variants={buttonAnimation}
@@ -26,22 +22,7 @@ function NavbarButton({ title, to }) {
 
 export default NavbarButton;
 
-
 const useStyle = {
-  button: {
-    color: "#008000",
-    "&:hover": {
-      boxShadow: "none !important",
-      backgroundColor: "white",
-    },
-    "&:active": {
-      boxShadow: "none !important",
-      backgroundColor: "white",
-      color: "black"
-    },
-  
-  
-  },
   donateButton: {
     color: "white",
     backgroundColor: "#008000",
@@ -52,5 +33,4 @@ const useStyle = {
       borderRadius: 2,
     },
   },
-  
 };

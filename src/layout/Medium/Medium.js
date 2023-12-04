@@ -1,24 +1,35 @@
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
-import { Box, Card, Grid, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
+import {
+  Box,
+  Card,
+  Divider,
+  Grid,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Typography,
+} from "@mui/material";
 
-function Medium({posts}) {
+function Medium({ posts }) {
   return (
     <Grid item xs={12} md={6}>
-      <Card sx={{ margin: 8, padding: 5, boxShadow: 20,borderRadius:10 }} >
-        <Box component="a"  target="_blank" href="https://medium.com/nane-limon">
-        <Box
-          component="img"
-          width={{xs: 36,md:256}}
-        
-          paddingLeft={4}
-          sx={{ objectFit: "contain" }}
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Medium_%28website%29_logo.svg/2560px-Medium_%28website%29_logo.svg.png"
-        /></Box>
-
+      <Card sx={{ margin: {xs: 3,md: 8}, padding: {xs: 2,md: 5}, boxShadow: 20, borderRadius: 10, alignItems:"center", display:"flex",flexDirection:"column" }}>
+        <Box component="a" target="_blank" href="https://medium.com/nane-limon">
+          <Box
+            component="img"
+            width={{ xs: 128, md: 256 }}
+            sx={{ objectFit: "contain" }}
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Medium_%28website%29_logo.svg/2560px-Medium_%28website%29_logo.svg.png"
+          />
+        </Box>
         <List>
+          <Typography variant="h5" textAlign="center" sx={{fontSize:{xs: 15,md:22}}}>Son 5 Makale</Typography>
+          <Divider sx={{marginY: 1, borderWidth:1,borderColor: "green"}}/>
           {posts.map((post) => {
             return (
-              <ListItem>
+              <ListItem sx={{ paddingX: 0 }}>
                 <ListItemButton
                   target="_blank"
                   href={post.link}
@@ -32,17 +43,17 @@ function Medium({posts}) {
               </ListItem>
             );
           })}
-          <ListItem>
-          <ListItemButton
-                  target="_blank"
-                  href="https://medium.com/nane-limon"
-                  rel="noopener noreferrer"
-                >
-                  <ListItemIcon>
-                    <KeyboardArrowRightRoundedIcon />
-                  </ListItemIcon>
-                  <ListItemText primary="Diğer Paylaşımları Oku" />
-                </ListItemButton>
+          <ListItem sx={{ paddingX: 0 }}>
+            <ListItemButton
+              target="_blank"
+              href="https://medium.com/nane-limon"
+              rel="noopener noreferrer"
+            >
+              <ListItemIcon>
+                <KeyboardArrowRightRoundedIcon />
+              </ListItemIcon>
+              <ListItemText primary="Diğer Paylaşımları Oku" />
+            </ListItemButton>
           </ListItem>
         </List>
       </Card>

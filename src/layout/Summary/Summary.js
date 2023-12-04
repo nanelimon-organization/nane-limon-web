@@ -3,7 +3,7 @@ import { Box, Grid, Typography } from "@mui/material";
 function Summary() {
   return (
     <Grid item xs={12} md={6}>
-      <Box sx={{ margin: 8, padding: 4 }}>
+      <Box sx={{ margin: {xs: 3,md: 8}, padding: {xs: 2,md: 5},}}>
         <Box bgcolor="green" padding={1} borderRadius={5} boxShadow={10}>
           <Typography
             variant="h5"
@@ -19,7 +19,7 @@ function Summary() {
         </Box>
         <Typography
           variant="h6"
-          sx={{ fontSize: 20, fontWeight: "400", textAlign: "justify" }}
+          sx={{ fontSize: {xs:12, md: 20}, fontWeight: "400", textAlign: "justify" }}
           paddingTop={2}
         >
           It is a long established fact that a reader will be distracted by the
