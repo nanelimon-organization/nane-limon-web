@@ -1,7 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: "Open Sans"
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,3 +10,43 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "opensans-regular";
+  src: local("opensans-regular"),
+   url("./fonts/open-sans/OpenSans-Regular.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "opensans-medium";
+  src: local("opensans-medium"),
+   url("./fonts/open-sans/OpenSans-Medium.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "opensans-light";
+  src: local("opensans-light"),
+   url("./fonts/open-sans/OpenSans-Light.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "opensans-semibold";
+  src: local("opensans-semibold"),
+   url("./fonts/open-sans/OpenSans-SemiBold.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "opensans-bold";
+  src: local("opensans-bold"),
+   url("./fonts/open-sans/OpenSans-Bold.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "opensans-mediumitalic";
+  src: local("opensans-mediumitalic"),
+   url("./fonts/open-sans/OpenSans-MediumItalic.ttf") format("truetype");
+ }
+
+
+
+ 

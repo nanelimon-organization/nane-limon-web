@@ -1,35 +1,45 @@
-import { Avatar, Box, Typography } from "@mui/material";
+import { Avatar, Box, Card, Typography } from "@mui/material";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
 
-function Member() {
+function Member({ name, title, src }) {
   return (
-    <Box
+    <Card
       sx={{
-        marginX:5,
+        padding: 4,
         alignItems: "center",
+        borderRadius:5,
         display: "flex",
         flexDirection: "column",
       }}
     >
-      <Avatar sx={{ width: 128, height: 128 }}></Avatar>
+      <Avatar src={src} sx={{ width: 100, height: 100 }}></Avatar>
 
       <Typography
         variant="h6"
         sx={{
-          fontSize: 24,
+          fontSize: 20,
           fontWeight: "700",
           textAlign: "center",
+          fontFamily: "opensans-semibold",
         }}
       >
-        Muhteşem Biri
+        {name}
       </Typography>
 
-      <Typography textAlign="justify">
-        Creative professionals who specialize in visual art may find it
-        challenging to balance the writing of their bio and displaying of their
-        portfolio. Not Lisa Quine. Lisa has an exceptional balance of her
-        professional bio and creative work.
+      <Typography textAlign="justify" fontFamily="opensans-regular">
+        {title}
       </Typography>
-    </Box>
+
+      <Box display="flex" marginY={1}>
+        <FaGithub />
+        <Box paddingX={1}>
+        <FaLinkedin />
+        </Box>
+        <IoIosMail />
+
+      </Box>
+    </Card>
   );
 }
 

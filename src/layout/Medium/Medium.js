@@ -25,7 +25,7 @@ function Medium({ posts }) {
           />
         </Box>
         <List>
-          <Typography variant="h5" textAlign="center" sx={{fontSize:{xs: 15,md:22}}}>Son 5 Makale</Typography>
+          <Typography variant="h5" textAlign="center" fontFamily="opensans-mediumitalic" sx={{fontSize:{xs: 15,md:22}}}>Son 5 Makale</Typography>
           <Divider sx={{marginY: 1, borderWidth:1,borderColor: "green"}}/>
           {posts.map((post) => {
             return (
@@ -38,7 +38,7 @@ function Medium({ posts }) {
                   <ListItemIcon>
                     <KeyboardArrowRightRoundedIcon />
                   </ListItemIcon>
-                  <ListItemText primary={post.title} />
+                  <ListItemText  primary={<Typography fontFamily="opensans-medium">{post.title}</Typography>} />
                 </ListItemButton>
               </ListItem>
             );

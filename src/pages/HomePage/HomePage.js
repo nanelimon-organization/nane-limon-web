@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   Card,
+  Divider,
   Grid,
   TextField,
   Typography,
@@ -25,19 +26,21 @@ function HomePage() {
 
   return (
     <>
-      <Box sx={{ paddingX: {xs: 0, md: 20} }}>
-        <Banner />
+      <Banner />
+      <Box sx={{ paddingX: { xs: 0, md: 20 } }}>
         {/* medium ve özet kısmı */}
+
         <Grid container>
           <Medium posts={posts} />
           <Summary />
         </Grid>
         {/* medium ve özet kısmı */}
-
-        <Team />
-
+      </Box>
+      <Divider />
+      <Team />
+      <Divider />
+      <Box sx={{ paddingX: { xs: 0, md: 20 } }}>
         <ContactForm />
-
       </Box>
     </>
   );

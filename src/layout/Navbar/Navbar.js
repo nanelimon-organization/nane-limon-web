@@ -1,4 +1,4 @@
-import { Button, Grid } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import NavbarButton from "./components/NavbarButton";
 import NavbarLogo from "./components/NavbarLogo";
 import MenuIcon from '@mui/icons-material/Menu';
@@ -37,11 +37,11 @@ function Navbar() {
         <NavbarButton title="Çalışma Alanları" to="/fields" />
         <NavbarButton title="Projeler" to="/projects" />
         <NavbarButton title="Sunumlar" to="/presentations" />
-        <NavbarButton title="Hakkımızda" to="/aboutus" />
+        <NavbarButton title="Ekibimiz" to="/aboutus" />
         <NavbarButton title="Community Etkinlikleri" to="/communityevents" />
 
         <Button disableRipple sx={styles.donateButton}>
-          {donateTitle}
+          <Typography textTransform="capitalize" fontFamily="opensans-medium">{donateTitle}</Typography>
         </Button>
       </Grid>
     </Grid>

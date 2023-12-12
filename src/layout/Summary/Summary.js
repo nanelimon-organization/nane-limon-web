@@ -4,14 +4,15 @@ function Summary() {
   return (
     <Grid item xs={12} md={6}>
       <Box sx={{ margin: {xs: 3,md: 8}, padding: {xs: 2,md: 5},}}>
-        <Box bgcolor="green" padding={1} borderRadius={5} boxShadow={10}>
+        <Box borderRadius={5}>
           <Typography
             variant="h5"
             sx={{
-              fontSize: 30,
+              fontSize: 28,
               fontWeight: "700",
-              color: "white",
-              textAlign: "center",
+              color: "black",
+              textAlign: "start",
+              fontFamily: "opensans-bold"
             }}
           >
             Türkçe Doğal Dil İşleme Gönüllüleri
@@ -19,7 +20,7 @@ function Summary() {
         </Box>
         <Typography
           variant="h6"
-          sx={{ fontSize: {xs:12, md: 20}, fontWeight: "400", textAlign: "justify" }}
+          sx={{ fontSize: {xs:12, md: 20}, fontWeight: "400", textAlign: "justify",fontFamily: "opensans-regular" }}
           paddingTop={2}
         >
           It is a long established fact that a reader will be distracted by the
