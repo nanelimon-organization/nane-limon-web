@@ -12,7 +12,6 @@ function Navbar() {
       bgcolor="white"
       paddingX={{xs: 6,md:16}}
       paddingY={2}
-      marginBottom={20}
       alignItems="center"
       position="fixed"
       zIndex={10}

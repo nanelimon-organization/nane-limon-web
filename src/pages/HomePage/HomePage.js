@@ -51,7 +51,7 @@ export default HomePage;
 export const homeLoader = async ({ request, params }) => {
   try {
     const response = await axios.get(
-      "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@tarikkaan1koc"
+      "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/nane-limon"
     );
     return await response.data.items.slice(0, 5);
   } catch {

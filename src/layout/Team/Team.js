@@ -31,7 +31,7 @@ function Team() {
     },
   ];
   const [index, setIndex] = useState(0);
-
+  
   const member1 = list[0+index];
   const member2 = list[1+index];
   const member3 = list[2+index];
@@ -83,13 +83,13 @@ function Team() {
         <Grid item xs={12} md={2} marginX={2} marginY={{xs: 2,md: 0}}>
           <Member name={member1.name} title={member1.title} />
         </Grid>
-        <Grid item xs={12} md={2} marginX={2} marginY={{xs: 2,md: 0}} >
+        <Grid item xs={12} md={2} marginX={2} marginY={{xs: 2,md: 0}} display={{xs: "none",md: "flex"}}  flexDirection="column">
           <Member name={member2.name} title={member2.title}  />
         </Grid>
         <Grid item xs={12} md={2} marginX={2} marginY={{xs: 2,md: 0}} display={{xs: "none",md: "flex"}} flexDirection="column">
           <Member name={member3.name} title={member3.title}  />
         </Grid>
-        <Grid item xs={12} md={2} marginX={2} marginY={{xs: 2,md: 0}} display={{xs: "none",md: "flex"}} flexDirection="column">
+        <Grid item xs={12} md={2} marginX={2} marginY={{xs: 2,md: 0}}  >
           <Member name={member4.name} title={member4.title}  />
         </Grid>
 
