@@ -1,8 +1,9 @@
 import { Avatar, Box, Card, Typography } from "@mui/material";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
+import { NavLink } from "react-router-dom";
 
-function Member({ name, title, src }) {
+function Member({member }) {
   return (
     <Card
       sx={{
@@ -13,8 +14,9 @@ function Member({ name, title, src }) {
         flexDirection: "column",
       }}
     >
-      <Avatar src={src} sx={{ width: 100, height: 100 }}></Avatar>
+      <Avatar src={member.src} sx={{ width: 100, height: 100 }}></Avatar>
 
+      <NavLink state={member} style={{textDecoration: "none", color: "black"}} to={'aboutus/'+member.slug}>
       <Typography
         variant="h6"
         sx={{
@@ -24,11 +26,11 @@ function Member({ name, title, src }) {
           fontFamily: "opensans-semibold",
         }}
       >
-        {name}
+        {member.name}
       </Typography>
-
+      </NavLink>
       <Typography textAlign="justify" fontFamily="opensans-regular">
-        {title}
+        {member.title}
       </Typography>
 
       <Box display="flex" marginY={1}>

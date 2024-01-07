@@ -7,26 +7,32 @@ function Team() {
   const list = [
     {
       name: "Murat Köklü",
+      slug: "murat-koklu",
       title: "title"
     },
     {
       name: "Şeyma Sarıgil",
+      slug: "seyma-sarigil",
       title: "title"
     },
     {
       name: "Erdinç Dal",
+      slug: "erdinc-dal",
       title: "title"
     },
     {
       name: "Tarık Kaan Koç",
+      slug: "tarik-kaan-koc",
         title: "title"
     },
     {
       name: "Elif Sarıgil",
+      slug: "elif-sarigil",
       title: "title"
     },
     {
       name: "Eray Büyükkanat",
+      slug: "eray-buyukkanat",
       title: "title"
     },
   ];
@@ -81,16 +87,16 @@ function Team() {
           </Button>
         </Grid>
         <Grid item xs={12} md={2} marginX={2} marginY={{xs: 2,md: 0}}>
-          <Member name={member1.name} title={member1.title} />
+          <Member member={member1} />
         </Grid>
         <Grid item xs={12} md={2} marginX={2} marginY={{xs: 2,md: 0}} display={{xs: "none",md: "flex"}}  flexDirection="column">
-          <Member name={member2.name} title={member2.title}  />
+          <Member member={member2} />
         </Grid>
         <Grid item xs={12} md={2} marginX={2} marginY={{xs: 2,md: 0}} display={{xs: "none",md: "flex"}} flexDirection="column">
-          <Member name={member3.name} title={member3.title}  />
+          <Member member={member3}  />
         </Grid>
         <Grid item xs={12} md={2} marginX={2} marginY={{xs: 2,md: 0}}  >
-          <Member name={member4.name} title={member4.title}  />
+          <Member member={member4}  />
         </Grid>
 
         <Grid item xs={12} md={2} display="flex" flexDirection="row" justifyContent="center">
