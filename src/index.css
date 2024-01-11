@@ -47,6 +47,25 @@ code {
    url("./fonts/open-sans/OpenSans-MediumItalic.ttf") format("truetype");
  }
 
+ /* roboto */
+
+ @font-face {
+  font-family: "roboto-medium";
+  src: local("roboto-medium"),
+   url("./fonts/roboto/Roboto-Medium.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "roboto-regular";
+  src: local("roboto-regular"),
+   url("./fonts/roboto/Roboto-Regular.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "roboto-bold";
+  src: local("roboto-bold"),
+   url("./fonts/roboto/Roboto-Bold.ttf") format("truetype");
+ }
 
 
  

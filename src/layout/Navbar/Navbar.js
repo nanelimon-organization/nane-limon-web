@@ -11,10 +11,10 @@ function Navbar() {
       flexDirection="row"
       bgcolor="white"
       paddingX={{xs: 6,md:16}}
-      paddingY={2}
       alignItems="center"
-      position="fixed"
       zIndex={10}
+      position="sticky"
+      marginBottom={4}
       top={0}
       justifyContent="center"
     >
@@ -36,7 +36,6 @@ function Navbar() {
         <NavbarButton title="Çalışma Alanları" to="/fields" />
         <NavbarButton title="Projeler" to="/projects" />
         <NavbarButton title="Sunumlar" to="/presentations" />
-        <NavbarButton title="Ekibimiz" to="/aboutus" />
         <NavbarButton title="Community Etkinlikleri" to="/communityevents" />
 
         <Button disableRipple sx={styles.donateButton}>

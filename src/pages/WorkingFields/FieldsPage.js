@@ -6,7 +6,6 @@ function FieldsPage() {
       <Grid
       container
         bgcolor="#9BABB8"
-        marginTop={14}
         display="flex"
         justifyContent="space-evenly"
         padding={5}

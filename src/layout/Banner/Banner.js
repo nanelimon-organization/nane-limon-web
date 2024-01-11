@@ -48,7 +48,7 @@ function Banner() {
   
 
   return (
-    <Box sx={{ width: "100%", flexGrow: 1,alignItems:"center", justifyContent: "center", display: "flex", marginTop:14}}>
+    <Box sx={{ width: "100%", flexGrow: 1,alignItems:"center", justifyContent: "center", display: "flex"}}>
    <Button onClick={handleBack} sx={{marginX: {xs: 0,md: 5},  color:"#008000"}}>
       <KeyboardArrowLeftRoundedIcon sx={{paddingX: {xs:0,md: 5},width: 36,height: 36}}  />
       </Button>

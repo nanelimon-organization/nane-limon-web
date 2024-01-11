@@ -9,10 +9,10 @@ function Summary() {
             variant="h5"
             sx={{
               fontSize: 28,
-              fontWeight: "700",
+             
               color: "black",
               textAlign: "start",
-              fontFamily: "opensans-bold"
+              fontFamily: "roboto-bold"
             }}
           >
             Türkçe Doğal Dil İşleme Gönüllüleri
@@ -20,7 +20,7 @@ function Summary() {
         </Box>
         <Typography
           variant="h6"
-          sx={{ fontSize: {xs:12, md: 20}, fontWeight: "400", textAlign: "justify",fontFamily: "opensans-regular" }}
+          sx={{ fontSize: {xs:12, md: 20}, textAlign: "justify",fontFamily: "roboto-regular" }}
           paddingTop={2}
         >
           It is a long established fact that a reader will be distracted by the
