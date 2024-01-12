@@ -9,7 +9,6 @@ function Summary() {
             variant="h5"
             sx={{
               fontSize: 28,
-             
               color: "black",
               textAlign: "start",
               fontFamily: "roboto-bold"

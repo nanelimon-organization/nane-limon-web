@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import CustomButton from "../../components/Button";
 import CustomTextArea from "../../components/TextArea";
 import CustomTextField from "../../components/TextField";
@@ -13,10 +13,6 @@ function ContactForm() {
     title: "",
     description: ""
   })
-
-  function handleForm(){
-    
-  }
 
   return (
     <Grid container marginY={5} padding={5}>
@@ -33,7 +29,7 @@ function ContactForm() {
       >
         <Typography
           variant="h4"
-          sx={{ fontFamily: "opensans-bold" }}
+          sx={{ fontFamily: "roboto-bold" }}
           textAlign="center"
         >
           BİZE ULAŞIN

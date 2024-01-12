@@ -3,7 +3,7 @@ import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftR
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
-import { Box, Button, Container } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { useTheme } from "@emotion/react";
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -34,7 +34,7 @@ function Banner() {
     const maxSteps = images.length;
   
     const handleNext = () => {
-      setActiveStep((prevActiveStep) => prevActiveStep == maxSteps-1 ? null : prevActiveStep + 1);
+      setActiveStep((prevActiveStep) => prevActiveStep === maxSteps-1 ? null : prevActiveStep + 1);
     };
   
     const handleBack = (prev) => {

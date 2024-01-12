@@ -21,15 +21,14 @@ function Member({member }) {
         variant="h6"
         sx={{
           fontSize: 20,
-          fontWeight: "700",
           textAlign: "center",
-          fontFamily: "opensans-semibold",
+          fontFamily: "roboto-bold",
         }}
       >
         {member.name}
       </Typography>
       </NavLink>
-      <Typography textAlign="justify" fontFamily="opensans-regular">
+      <Typography textAlign="justify" fontFamily="roboto-regular">
         {member.title}
       </Typography>
 

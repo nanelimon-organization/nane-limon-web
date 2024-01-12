@@ -1,4 +1,4 @@
-import { Card, Grid, Paper, Typography } from "@mui/material";
+import { Card, Grid, Typography } from "@mui/material";
 
 function FieldsPage() {
   return (
@@ -13,10 +13,10 @@ function FieldsPage() {
         alignItems="center"
       >
         <Grid item marginY={5}>
-          <Typography fontSize={32} marginBottom={2} fontFamily="opensans-bold">
+          <Typography fontSize={32} marginBottom={2} fontFamily="roboto-bold">
             Distracted by the readable content of a page
           </Typography>
-          <Typography fontSize={24} fontFamily="opensans-medium" maxWidth={550}>
+          <Typography fontSize={24} fontFamily="roboto-medium" maxWidth={550}>
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal
@@ -49,10 +49,10 @@ function FieldsPage() {
           </Card>
         </Grid>
         <Grid marginY={5}>
-          <Typography fontSize={32} marginBottom={2} fontFamily="opensans-bold">
+          <Typography fontSize={32} marginBottom={2} fontFamily="roboto-bold">
             Distracted by the readable content of a page
           </Typography>
-          <Typography fontSize={24} fontFamily="opensans-medium" maxWidth={550}>
+          <Typography fontSize={24} fontFamily="roboto-medium" maxWidth={550}>
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal
@@ -69,10 +69,10 @@ function FieldsPage() {
         alignItems="center"
       >
         <Grid marginY={5}>
-          <Typography fontSize={32} marginBottom={2} fontFamily="opensans-bold">
+          <Typography fontSize={32} marginBottom={2} fontFamily="roboto-bold">
             Distracted by the readable content of a page
           </Typography>
-          <Typography fontSize={24} fontFamily="opensans-medium" maxWidth={550}>
+          <Typography fontSize={24} fontFamily="roboto-medium" maxWidth={550}>
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal

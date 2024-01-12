@@ -23,7 +23,7 @@ function Footer() {
             marginY={1}
             underline="none"
             color="white"
-            fontFamily="opensans-medium"
+            fontFamily="roboto-medium"
           >
             Anasayfa
           </Link>
@@ -33,7 +33,7 @@ function Footer() {
             marginY={1}
             underline="none"
             color="white"
-            fontFamily="opensans-medium"
+            fontFamily="roboto-medium"
           >
             Çalışma Alanları
           </Link>
@@ -43,7 +43,7 @@ function Footer() {
             marginY={1}
             underline="none"
             color="white"
-            fontFamily="opensans-medium"
+            fontFamily="roboto-medium"
           >
             Projeler
           </Link>
@@ -53,7 +53,7 @@ function Footer() {
             marginY={1}
             underline="none"
             color="white"
-            fontFamily="opensans-medium"
+            fontFamily="roboto-medium"
           >
             Sunumlar
           </Link>
@@ -63,17 +63,7 @@ function Footer() {
             marginY={1}
             underline="none"
             color="white"
-            fontFamily="opensans-medium"
-          >
-            Ekibimiz
-          </Link>
-          <Link
-            href="#"
-            fontSize={14}
-            marginY={1}
-            underline="none"
-            color="white"
-            fontFamily="opensans-medium"
+            fontFamily="roboto-medium"
           >
             Community Etkinlikleri
           </Link>
@@ -82,12 +72,12 @@ function Footer() {
 
       <Grid item xs={12} md={3}>
         <Box display="flex" flexDirection="column">
-          <Typography fontSize={14} color="white" fontFamily="opensans-medium">
+          <Typography fontSize={14} color="white" fontFamily="roboto-medium">
             HAKKIMIZDA
           </Typography>
           <Divider sx={{ marginY: 1, bgcolor: "white" }} />
 
-          <Typography color="white" fontFamily="opensans-medium">
+          <Typography color="white" fontFamily="roboto-medium">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal

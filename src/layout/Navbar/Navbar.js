@@ -39,7 +39,7 @@ function Navbar() {
         <NavbarButton title="Community Etkinlikleri" to="/communityevents" />
 
         <Button disableRipple sx={styles.donateButton}>
-          <Typography textTransform="capitalize" fontFamily="opensans-medium">{donateTitle}</Typography>
+          <Typography textTransform="capitalize" fontFamily="roboto-medium">{donateTitle}</Typography>
         </Button>
       </Grid>
     </Grid>

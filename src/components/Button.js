@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 function CustomButton({title,onClick,border,borderColor,paddingX}) {
   return (
     <Button onClick={onClick} component={motion.div} disableRipple sx={[useStyle.button,{border: border,borderColor:borderColor,paddingX: paddingX}]} >
-      <Typography  textTransform="capitalize"  fontFamily="opensans-medium">{title}</Typography>
+      <Typography  textTransform="capitalize"  fontFamily="roboto-medium">{title}</Typography>
     </Button>
   );
 }

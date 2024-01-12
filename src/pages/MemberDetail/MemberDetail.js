@@ -1,12 +1,11 @@
 import {
-  Avatar,
   Box,
   Breadcrumbs,
   Card,
   Grid,
   Typography,
 } from "@mui/material";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
@@ -27,11 +26,11 @@ function MemberDetail() {
           href="/"
           to="/"
         >
-          <Typography fontFamily="opensans-bold" color="text.primary">
+          <Typography fontFamily="roboto-bold" color="text.primary">
             Anasayfa
           </Typography>
         </NavLink>
-        <Typography fontFamily="opensans-medium" color="text.primary">
+        <Typography fontFamily="roboto-medium" color="text.primary">
           {location.state.name}
         </Typography>
       </Breadcrumbs>
@@ -53,14 +52,14 @@ function MemberDetail() {
           <Typography
             textAlign="center"
             marginTop={2}
-            fontFamily="opensans-bold"
+            fontFamily="roboto-bold"
             fontSize={24}
           >
             {location.state.name}
           </Typography>
           <Typography
             textAlign="center"
-            fontFamily="opensans-medium"
+            fontFamily="roboto-medium"
             fontSize={16}
           >
             {location.state.title}
@@ -76,7 +75,7 @@ function MemberDetail() {
             maxWidth={750}
             marginX={{xs: 0,md: 10}}
             textAlign="center"
-            fontFamily="opensans-medium"
+            fontFamily="roboto-regular"
             padding={{ xs: 2, md: 0 }}
             fontSize={{ xs: 14, md: 20 }}
           >
