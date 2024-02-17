@@ -9,7 +9,12 @@ import { NavLink, useLocation } from "react-router-dom";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
+import { useState } from "react";
 function MemberDetail() {
+
+  useState(() => {
+    window.scrollTo({top: 0,behavior: "smooth"})
+  }, [])
   let location = useLocation();
   //projeler kısmı çalışma alanları gibi olcak. fontlar değişcek hepsinde, fontların rengi olarak da 2222 11111 gibi ibşi olacak. 
   return (

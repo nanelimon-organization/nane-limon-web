@@ -1,4 +1,4 @@
-import { Box, Divider, Grid } from "@mui/material";
+import { Alert, Box, Divider, Grid, Snackbar } from "@mui/material";
 
 import Banner from "../../layout/Banner/Banner";
 import axios from "axios";
@@ -7,11 +7,38 @@ import Summary from "../../layout/Summary/Summary";
 import { useLoaderData } from "react-router-dom";
 import Team from "../../layout/Team/Team";
 import ContactForm from "../../layout/ContactForm/ContactForm";
+import { useEffect, useState } from "react";
 function HomePage() {
   const posts = useLoaderData();
+  useEffect(() => {
+    window.scrollTo({top: 0,behavior: "smooth"})
+  }, [])
 
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
   return (
     <>
+    <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+        <Alert
+          onClose={handleClose}
+          severity="success"
+          variant="filled"
+          sx={{ width: '100%', margin: 2}}
+        >
+          Mesajın başarıyla iletildi!
+        </Alert>
+      </Snackbar>
       <Banner />
       <Box sx={{ paddingX: { xs: 0, md: 20 } }}>
         {/* medium ve özet kısmı */}
@@ -26,7 +53,7 @@ function HomePage() {
       <Team />
       <Divider />
       <Box sx={{ paddingX: { xs: 0, md: 20 } }}>
-        <ContactForm />
+        <ContactForm handleClick={handleClick} />
       </Box>
     </>
   );

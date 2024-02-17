@@ -16,7 +16,8 @@ function Team() {
       slug: "seyma-sarigil",
       title: "title",
       description: "Şeyma SarıgilThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
-      linkedin: "https://www.linkedin.com/in/eraybuyukkanat/"
+      linkedin: "https://www.linkedin.com/in/eraybuyukkanat/",
+      src: "https://media.licdn.com/dms/image/D4D03AQHBZOJObQQdhA/profile-displayphoto-shrink_200_200/0/1705149275457?e=2147483647&v=beta&t=tPWycpSPE4TnAuyzhdzeGIcJ76Pa43dvHsA_7Y9eMkU"
     },
     {
       name: "Erdinç Dal",
@@ -42,6 +43,7 @@ function Team() {
       slug: "eray-buyukkanat",
       title: "title",
       description: "ErayThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+      src: "https://media.licdn.com/dms/image/D4D03AQGU7O0XOJlK8g/profile-displayphoto-shrink_200_200/0/1701177246831?e=1713398400&v=beta&t=ApRp5LGPxnTg2riIToixUR22u1qPwLm8VuczHiuFg-o"
     },
   ];
   const [index, setIndex] = useState(0);

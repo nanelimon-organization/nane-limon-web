@@ -3,7 +3,7 @@ import { Box, Grid, Typography } from "@mui/material";
 function Summary() {
   return (
     <Grid item xs={12} md={6}>
-      <Box sx={{ margin: {xs: 3,md: 8}, padding: {xs: 2,md: 5},}}>
+      <Box sx={{ margin: { xs: 3, md: 8 }, padding: { xs: 2, md: 5 } }}>
         <Box borderRadius={5}>
           <Typography
             variant="h5"
@@ -11,7 +11,7 @@ function Summary() {
               fontSize: 28,
               color: "black",
               textAlign: "start",
-              fontFamily: "roboto-bold"
+              fontFamily: "roboto-bold",
             }}
           >
             Türkçe Doğal Dil İşleme Gönüllüleri
@@ -19,24 +19,25 @@ function Summary() {
         </Box>
         <Typography
           variant="h6"
-          sx={{ fontSize: {xs:12, md: 20}, textAlign: "justify",fontFamily: "roboto-regular" }}
+          sx={{
+            fontSize: { xs: 12, md: 20 },
+            textAlign: "justify",
+            fontFamily: "roboto-regular",
+          }}
           paddingTop={2}
         >
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English. Many desktop publishing packages and web
-          page editors now use Lorem Ipsum as their default model text, and a
-          search for 'lorem ipsum' will uncover many web sites still in their
-          infancy. Various versions have evolved over the years, sometimes by
-          accident, sometimes on purpose (injected humour and the like). It is a
-          long established fact that a reader will be distracted by the readable
-          content of a page when looking at its layout. The point of using Lorem
-          Ipsum is that it has a more-or-less normal distribution of letters, as
-          opposed to using 'Content here, content here', making it look like
-          readable English. Many
+          Ekip liderimiz Seyma SARIGİL ve Doç. Dr. Murat Köklü'nün akademik
+          rehberliğinde 2021'de kurulan Nane&Limon ekibimiz, Teknofest 2022'de
+          Türkçe Dogal Dil İşleme Serbest Kategoride Teknofest 2023' te Türkçe
+          Dogal Dil İşleme Tüm Kategoriler yarışmalarında üst üste zirveye
+          çıkarak hem 1.lik derecesi hemde teknik sunumda özel ödül kazandı.
+          Hedefimiz açık: Türkçe doğal dil işleme alanında çığır açmak ve
+          Türkiye'yi bu alanda lider yapmak. Opensource projelere katkımızla
+          ulusal gelişime öncülük ediyoruz. Nane&Limon ekibi olarak, Türkçe
+          doğal dil işlemede yapacak çok işimiz var ve heyecanla sizlerle
+          paylaşmayı bekliyoruz! Sevgiler...
         </Typography>
+
       </Box>
     </Grid>
   );

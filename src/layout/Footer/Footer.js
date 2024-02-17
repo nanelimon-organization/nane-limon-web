@@ -13,7 +13,7 @@ function Footer() {
       justifyContent="space-around"
       alignItems="center"
       paddingX={10}
-      paddingY={5}
+      paddingY={2}
     >
       <Grid item>
         <Box padding={2} display="flex" flexDirection="column">

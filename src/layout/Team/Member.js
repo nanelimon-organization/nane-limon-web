@@ -7,15 +7,16 @@ function Member({member }) {
   return (
     <Card
       sx={{
-        padding: 4,
         alignItems: "center",
         borderRadius:5,
         display: "flex",
         flexDirection: "column",
       }}
     >
+      <Box  justifyContent="center" display="flex"  bgcolor="#888888" width="100%" height={40} marginBottom={6} padding={2}>
+      
       <Avatar src={member.src} sx={{ width: 100, height: 100 }}></Avatar>
-
+      </Box>
       <NavLink state={member} style={{textDecoration: "none", color: "black"}} to={member.slug}>
       <Typography
         variant="h6"
@@ -33,13 +34,14 @@ function Member({member }) {
       </Typography>
 
       <Box display="flex" marginY={1}>
-        <FaGithub />
+        <FaGithub size={22} />
         <Box paddingX={1}>
-        <FaLinkedin />
+        <FaLinkedin size={22}/>
         </Box>
-        <IoIosMail />
+        <IoIosMail size={22} />
 
       </Box>
+     
     </Card>
   );
 }
