@@ -10,7 +10,7 @@ function CustomTextField({ label, multiline, rows, maxRows,type,error,value,setF
       <TextField
         multiline={multiline}
         rows={rows}
-        error={error}
+        error={error === "" ? true : false}
         type={type}
         value={value}
         onChange={inputHandler}
@@ -18,6 +18,8 @@ function CustomTextField({ label, multiline, rows, maxRows,type,error,value,setF
         maxRows={maxRows}
         sx={{ width: "100%", borderRadius: 10 }}
         color="success"
+        
+        
       />
     </Grid>
   );

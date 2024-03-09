@@ -39,7 +39,7 @@ function MemberDetail() {
           {location.state.name}
         </Typography>
       </Breadcrumbs>
-      <Card elevation={24} marginTop={2} sx={{display: "flex", flexDirection: {xs: "column", md: "row"},padding: 10,margin: 10}}>
+      <Card elevation={24} marginTop={2} sx={{display: "flex", width: "60%", flexDirection: {xs: "column", md: "row"},padding: 5,margin: 10}}>
         <Grid
           justifyContent="center"
           display="flex"
@@ -51,7 +51,7 @@ function MemberDetail() {
               component="img"
               width="250px"
               height="250px"
-              src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
+              src={location.state.src}
             />
           </Card>
           <Typography
@@ -79,7 +79,7 @@ function MemberDetail() {
           <Typography
             maxWidth={750}
             marginX={{xs: 0,md: 10}}
-            textAlign="center"
+            textAlign="start"
             fontFamily="roboto-regular"
             padding={{ xs: 2, md: 0 }}
             fontSize={{ xs: 14, md: 20 }}

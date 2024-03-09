@@ -66,6 +66,9 @@ export const homeLoader = async ({ request, params }) => {
     const response = await axios.get(
       "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/nane-limon"
     );
+    for(let i = 0;i<response.data.items.length;i++){
+      response.data.items[i].title = response.data.items[i].title.replace("&amp;","&")
+    }
     return await response.data.items.slice(0, 5);
   } catch {
     console.log("hata");
