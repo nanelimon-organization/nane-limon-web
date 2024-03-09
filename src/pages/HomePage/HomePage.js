@@ -8,6 +8,7 @@ import { useLoaderData } from "react-router-dom";
 import Team from "../../layout/Team/Team";
 import ContactForm from "../../layout/ContactForm/ContactForm";
 import { useEffect, useState } from "react";
+
 function HomePage() {
   const posts = useLoaderData();
   useEffect(() => {
@@ -18,6 +19,7 @@ function HomePage() {
 
   const handleClick = () => {
     setOpen(true);
+    
   };
 
   const handleClose = (reason) => {
