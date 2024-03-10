@@ -4,6 +4,7 @@ import CustomTextArea from "../../components/TextArea";
 import CustomTextField from "../../components/TextField";
 import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import ReactInputMask from "react-input-mask";
 
 function ContactForm({ handleClick }) {
   const [formValues, setFormValues] = useState({
@@ -24,7 +25,8 @@ function ContactForm({ handleClick }) {
       formValues.email !== "" &&
       formValues.phone !== "" &&
       formValues.title !== "" &&
-      formValues.description !== ""
+      formValues.description !== "" &&
+      formValues.email.includes("@")
     ) {
       setIsFirstRender(true);
       emailjs
@@ -98,17 +100,30 @@ function ContactForm({ handleClick }) {
             type="email"
             setFormValues={setFormValues}
             name="user_email"
-            error={!isFirstRender && formValues.email === ""}
+            error={
+              !isFirstRender &&
+              (formValues.email === "" || !formValues.email.includes("@"))
+            }
           />
-          <CustomTextField
-            formValue="phone"
+          <ReactInputMask
+            mask="(0999) 999 99 99"
             value={formValues.phone}
-            label="Telefon Numaranız"
-            type="tel"
-            setFormValues={setFormValues}
-            name="user_phone"
-            error={!isFirstRender && formValues.phone === ""}
-          />
+            disabled={false}
+            maskChar=""
+          >
+              {() => <CustomTextField
+              formValue="phone"
+              value={formValues.phone}
+              label="Telefon Numaranız"
+              type="tel"
+              setFormValues={setFormValues}
+              name="user_phone"
+              error={!isFirstRender && formValues.phone === ""}
+            />}
+
+            
+          </ReactInputMask>
+
           <CustomTextField
             formValue="title"
             value={formValues.title}

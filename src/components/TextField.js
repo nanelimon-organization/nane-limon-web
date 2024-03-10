@@ -10,6 +10,7 @@ function CustomTextField({ label, multiline, rows, maxRows,type,error,value,setF
       <TextField
         multiline={multiline}
         rows={rows}
+        
         error={error}
         type={type}
         name={name}
