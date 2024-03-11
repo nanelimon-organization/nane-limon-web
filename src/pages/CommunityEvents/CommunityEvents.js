@@ -1,105 +1,48 @@
-import { Card, Grid, Typography } from "@mui/material";
+import { Box, Card, Grid, Typography } from "@mui/material";
+import gonullukonusmacilik from "../../images/events/gonullukonusmacilik.png";
+import acikkaynak from "../../images/events/acikkaynak.png";
+import acikicerikdokuman from "../../images/events/acikicerikdokuman.png";
+import hackathonlar from "../../images/events/hackathonlar.png";
+import mentorlukvedestek from "../../images/events/mentorlukvedestek.png";
+import gonulluegitimler from "../../images/events/gonulluegitimler.png";
+import {
+  InfoLayoutRight,
+  InfoLayoutLeft,
+} from "../../layout/InfoLayout/InfoLayout";
 
 function CommunityEvents() {
   return (
     <>
-      <Grid
-        container
-        bgcolor="white"
-        display="flex"
-        justifyContent="space-evenly"
-        padding={5}
-        flexDirection={{ xs: "column", md: "row" }}
-        alignItems="center"
-      >
-        <Grid item marginY={5}>
-          <Typography fontSize={32} marginBottom={2} fontFamily="roboto-bold">
-            Distracted by the readable content of a page
-          </Typography>
-          <Typography fontSize={24} fontFamily="roboto-regular" maxWidth={550}>
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters,
-          </Typography>
-        </Grid>
-        <Grid>
-          <Card
-            sx={{
-              borderRadius: 2,
-              height: { xs: 150, md: 350 },
-              width: { xs: 300, md: 700 },
-            }}
-            variant="outlined"
-          >
-            <Typography>buraya foto gelcek</Typography>
-          </Card>
-        </Grid>
-      </Grid>
-      <Grid
-        container
-        bgcolor="white"
-        display="flex"
-        justifyContent="space-evenly"
-        padding={5}
-        alignItems="center"
-      >
-        <Grid>
-          <Card
-            sx={{
-              borderRadius: 2,
-              height: { xs: 150, md: 350 },
-              width: { xs: 300, md: 700 },
-            }}
-            variant="outlined"
-          >
-            <Typography>buraya foto gelcek</Typography>
-          </Card>
-        </Grid>
-        <Grid marginY={5}>
-          <Typography fontSize={32} marginBottom={2} fontFamily="roboto-bold">
-            Distracted by the readable content of a page
-          </Typography>
-          <Typography fontSize={24} fontFamily="roboto-regular" maxWidth={550}>
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters,
-          </Typography>
-        </Grid>
-      </Grid>
-      <Grid
-        container
-        bgcolor="white"
-        display="flex"
-        justifyContent="space-evenly"
-        padding={5}
-        alignItems="center"
-      >
-        <Grid marginY={5}>
-          <Typography fontSize={32} marginBottom={2} fontFamily="roboto-bold">
-            Distracted by the readable content of a page
-          </Typography>
-          <Typography fontSize={24} fontFamily="roboto-regular" maxWidth={550}>
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters,
-          </Typography>
-        </Grid>
-        <Grid>
-          <Card
-            sx={{
-              borderRadius: 2,
-              height: { xs: 150, md: 350 },
-              width: { xs: 300, md: 700 },
-            }}
-            variant="outlined"
-          >
-            <Typography>buraya foto gelcek</Typography>
-          </Card>
-        </Grid>
-      </Grid>
+      <InfoLayoutRight
+        title="Gönüllü Konuşmacılık"
+        src={gonullukonusmacilik}
+        description="Çeşitli yerlerde gönülllü konuşmacılık yapıyor, sunumlar yapıyoruz. Bunları yaparken bilgilerimizi aktarıyor, bu alanda gelişmek isteyenlerle beraber gelişiyoruz."
+      />
+      <InfoLayoutLeft
+        title="Hackathonlar"
+        description="Hackathonların uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması"
+        src={hackathonlar}
+      />
+      <InfoLayoutRight
+        title="Açık Kaynak Kütüphaneler"
+        src={acikkaynak}
+        description="Açık kaynak kütüphanelerin uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması"
+      />
+      <InfoLayoutLeft
+        title="Gönüllü Eğitimler"
+        description="Gönüllü eğitimlerin uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması"
+        src={gonulluegitimler}
+      />
+      <InfoLayoutRight
+        title="Açık İçerik ve Dökümantasyon Üretimi"
+        src={acikicerikdokuman}
+        description="Açık içerik ve dökümantasyon üretiminin uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması"
+      />
+      <InfoLayoutLeft
+        title="Mentörlük ve destek"
+        description="Mentörlük ve desteğin uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması"
+        src={mentorlukvedestek}
+      />
     </>
   );
 }

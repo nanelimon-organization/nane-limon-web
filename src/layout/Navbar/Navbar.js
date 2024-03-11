@@ -35,7 +35,7 @@ function Navbar() {
         <NavbarButton title="Çalışma Alanları" to="/fields" />
         <NavbarButton title="Projeler" to="/projects" />
         <NavbarButton title="Sunumlar" to="/presentations" />
-        <NavbarButton title="Community Etkinlikleri" to="/communityevents" />
+        <NavbarButton title="Etkinlikler" to="/communityevents" />
 
         <Button disableRipple sx={styles.donateButton}>
           <Typography textTransform="capitalize" fontFamily="roboto-medium">{donateTitle}</Typography>
