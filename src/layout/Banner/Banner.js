@@ -79,8 +79,9 @@ function Banner() {
           component={motion.img}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
+          
           exit={{ opacity: 0 }}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: 0.3, type: "just", stiffness: 100}}
           sx={{
             height: { xs: 200, md: 600 },
             display: "block",
