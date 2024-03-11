@@ -6,7 +6,7 @@ function NavbarLogo() {
   return (
     <Grid item md={2}>
       <Link to="/">
-        <Box component="img" src={src} sx={{ width: 128, height: 128 }} />
+        <Box component="img" src={src} sx={{ width: 96, height: 96 }} />
       </Link>
     </Grid>
   );
