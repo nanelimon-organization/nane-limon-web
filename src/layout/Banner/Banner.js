@@ -3,24 +3,21 @@ import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftR
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 import { Box, Button } from "@mui/material";
 import { motion } from "framer-motion";
+import img1 from "../../images/img1.jpg";
+import img2 from "../../images/img2.jpg";
+import img3 from "../../images/img3.jpg";
 
 const images = [
   {
-    imgPath:
-      "https://wallpapers.com/images/featured-full/1920-x-1080-hd-1qq8r4pnn8cmcew4.jpg",
+    imgPath: img1,
   },
   {
-    imgPath:
-      "https://wallpapers.com/images/high/1920-x-1080-hd-2kph8n73fpmvddj1.webp",
+    imgPath: img2,
   },
   {
-    imgPath:
-      "https://wallpapers.com/images/high/1920-x-1080-hd-c65hirjqswhsd1z3.webp",
+    imgPath: img3,
   },
-  {
-    imgPath:
-      "https://wallpapers.com/images/high/1920-x-1080-hd-ydvvfje0bdoimttn.webp",
-  },
+
 ];
 function Banner() {
   const maxSteps = images.length;
@@ -74,25 +71,24 @@ function Banner() {
           sx={{ paddingX: { xs: 0, md: 5 }, width: 36, height: 36 }}
         />
       </Button>
-        <Box
-          key={member1.imgPath}
-          component={motion.img}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          
-          exit={{ opacity: 0 }}
-          transition={{ delay: 0.3, type: "just", stiffness: 100}}
-          sx={{
-            height: { xs: 200, md: 600 },
-            display: "block",
-            objectFit: "fill",
-            overflow: "hidden",
-            width: "100%",
-            borderRadius: 10,
-          }}
-          src={member1.imgPath}
-          alt={member1.imgPath}
-        />
+      <Box
+        key={member1.imgPath}
+        component={motion.img}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ delay: 0.3, type: "just", stiffness: 100 }}
+        sx={{
+          height: { xs: 200, md: 600 },
+          display: "block",
+          objectFit: "cover",
+          overflow: "hidden",
+          width: "100%",
+          borderRadius: 10,
+        }}
+        src={member1.imgPath}
+        alt={member1.imgPath}
+      />
       <Button
         onClick={swipeToRight}
         sx={{ marginX: { xs: 0, md: 5 }, color: "#008000" }}
