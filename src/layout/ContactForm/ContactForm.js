@@ -5,7 +5,7 @@ import CustomTextField from "../../components/TextField";
 import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ReactInputMask from "react-input-mask";
-
+import ReCAPTCHA from "react-google-recaptcha";
 function ContactForm({ handleClick }) {
   const [formValues, setFormValues] = useState({
     name: "",
@@ -17,6 +17,7 @@ function ContactForm({ handleClick }) {
   const form = useRef();
 
   const [isFirstRender, setIsFirstRender] = useState(true);
+  const [capVal,setCapVal] = useState(null);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -111,17 +112,17 @@ function ContactForm({ handleClick }) {
             disabled={false}
             maskChar=""
           >
-              {() => <CustomTextField
-              formValue="phone"
-              value={formValues.phone}
-              label="Telefon Numaranız"
-              type="tel"
-              setFormValues={setFormValues}
-              name="user_phone"
-              error={!isFirstRender && formValues.phone === ""}
-            />}
-
-            
+            {() => (
+              <CustomTextField
+                formValue="phone"
+                value={formValues.phone}
+                label="Telefon Numaranız"
+                type="tel"
+                setFormValues={setFormValues}
+                name="user_phone"
+                error={!isFirstRender && formValues.phone === ""}
+              />
+            )}
           </ReactInputMask>
 
           <CustomTextField
@@ -142,10 +143,12 @@ function ContactForm({ handleClick }) {
             setFormValues={setFormValues}
             error={!isFirstRender && formValues.description === ""}
           />
+          <ReCAPTCHA sitekey={process.env.REACT_APP_SITE_KEY} onChange={val => setCapVal(val)}/>
         </Grid>
         <Grid item xs={12}>
           <CustomButton
             title="Gönder"
+            disabled={!capVal}
             border={1}
             paddingX={5}
             onClick={sendEmail}
