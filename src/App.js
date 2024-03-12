@@ -28,7 +28,7 @@ function App() {
         { path: "/fields", element: <FieldsPage /> },
         { path: "/projects", element: <ProjectsPage /> },
         { path: "/presentations", element: <PresentationPage /> },
-        { path: "/communityevents", element: <CommunityEvents /> },
+        { path: "/events", element: <CommunityEvents /> },
         { path: "/donate", element: <DonatePage /> },
       ],
     },

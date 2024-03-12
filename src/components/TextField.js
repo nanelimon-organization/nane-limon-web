@@ -1,21 +1,20 @@
 import { Grid, TextField } from "@mui/material";
 
-function CustomTextField({ label, multiline, rows, maxRows,type,error,value,setFormValues,formValue,name}) {
+function CustomTextField({ label, multiline, rows, maxRows,type,error,value,name,InputProps,onChange,component}) {
 
-  function inputHandler(event){
-    setFormValues((prev)=>({...prev,[formValue]: event.target.value}))
-  }
+ 
   return (
     <Grid item xs={6} paddingX={2} paddingY={2}>
       <TextField
+        component={component}
         multiline={multiline}
         rows={rows}
-        
+        InputProps={InputProps}
         error={error}
         type={type}
         name={name}
         value={value}
-        onChange={inputHandler}
+        onChange={(e)=>onChange(e)}
         label={label}
         maxRows={maxRows}
         sx={{ width: "100%", borderRadius: 10 }}

@@ -9,8 +9,14 @@ import {
   InfoLayoutRight,
   InfoLayoutLeft,
 } from "../../layout/InfoLayout/InfoLayout";
+import { useEffect } from "react";
 
 function CommunityEvents() {
+
+  useEffect(() => {
+    window.scrollTo({top: 0,behavior: "smooth"})
+  }, [])
+
   return (
     <>
       <InfoLayoutRight

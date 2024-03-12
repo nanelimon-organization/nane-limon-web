@@ -1,9 +1,7 @@
 import { Grid, TextField } from "@mui/material";
 
-function CustomTextArea({ label, rows, maxRows, error,name,value,setFormValues,formValue}) {
-  function inputHandler(event){
-    setFormValues((prev)=>({...prev,[formValue]: event.target.value}))
-  }
+function CustomTextArea({ label, rows, maxRows, error,name,value,setFormValues,formValue,onChange}) {
+ 
   return (
     <Grid item xs={12} paddingX={2} paddingY={2}>
       <TextField
@@ -12,7 +10,7 @@ function CustomTextArea({ label, rows, maxRows, error,name,value,setFormValues,f
         color="success"
         maxRows={maxRows}
         value={value}
-        onChange={inputHandler}
+        onChange={onChange}
         label={label}
         name={name}
         sx={{ width: "100%" }}

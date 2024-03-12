@@ -1,11 +1,12 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, Input, Typography } from "@mui/material";
 import CustomButton from "../../components/Button";
 import CustomTextArea from "../../components/TextArea";
 import CustomTextField from "../../components/TextField";
-import { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
+
 import emailjs from "@emailjs/browser";
-import ReactInputMask from "react-input-mask";
 import ReCAPTCHA from "react-google-recaptcha";
+import ReactInputMask from "react-input-mask";
 function ContactForm({ handleClick }) {
   const [formValues, setFormValues] = useState({
     name: "",
@@ -16,8 +17,13 @@ function ContactForm({ handleClick }) {
   });
   const form = useRef();
 
+
+ 
+  function inputHandler(event){
+    setFormValues(prev=>({...prev,[event.target.name]: event.target.value}))
+  } 
   const [isFirstRender, setIsFirstRender] = useState(true);
-  const [capVal,setCapVal] = useState(null);
+  const [capVal, setCapVal] = useState(null);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -90,8 +96,8 @@ function ContactForm({ handleClick }) {
             formValue="name"
             value={formValues.name}
             label="İsim Soyisim"
-            setFormValues={setFormValues}
-            name="user_name"
+            onChange={inputHandler}
+            name="name"
             error={!isFirstRender && formValues.name === ""}
           />
           <CustomTextField
@@ -99,51 +105,44 @@ function ContactForm({ handleClick }) {
             value={formValues.email}
             label="E-mail Adresiniz"
             type="email"
-            setFormValues={setFormValues}
-            name="user_email"
+            onChange={inputHandler}
+            name="email"
             error={
               !isFirstRender &&
               (formValues.email === "" || !formValues.email.includes("@"))
             }
           />
-          <ReactInputMask
-            mask="(0999) 999 99 99"
-            value={formValues.phone}
-            disabled={false}
-            maskChar=""
-          >
-            {() => (
-              <CustomTextField
-                formValue="phone"
-                value={formValues.phone}
-                label="Telefon Numaranız"
-                type="tel"
-                setFormValues={setFormValues}
-                name="user_phone"
-                error={!isFirstRender && formValues.phone === ""}
-              />
-            )}
+          <ReactInputMask mask="0999 999 9999" value={formValues.phone} onChange={(e)=>inputHandler(e)} maskChar={null}>
+          {()=><CustomTextField
+            formValue="phone"
+            label="Telefon Numaranız"
+            name="phone"
+            type="tel"
+            error={!isFirstRender && formValues.phone === ""}
+          />}
           </ReactInputMask>
-
           <CustomTextField
             formValue="title"
             value={formValues.title}
             label="Konu"
             name="title"
-            setFormValues={setFormValues}
+            onChange={inputHandler}
             error={!isFirstRender && formValues.title === ""}
           />
           <CustomTextArea
             formValue="description"
             value={formValues.description}
             label="Mesaj"
-            name="message"
+            name="description"
             rows={6}
             maxRows={10}
-            setFormValues={setFormValues}
+            onChange={inputHandler}
             error={!isFirstRender && formValues.description === ""}
           />
-          <ReCAPTCHA sitekey={process.env.REACT_APP_SITE_KEY} onChange={val => setCapVal(val)}/>
+          <ReCAPTCHA
+            sitekey={process.env.REACT_APP_SITE_KEY}
+            onChange={(val) => setCapVal(val)}
+          />
         </Grid>
         <Grid item xs={12}>
           <CustomButton

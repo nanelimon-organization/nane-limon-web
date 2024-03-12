@@ -8,18 +8,17 @@ function Footer() {
       bgcolor="#1A1C20"
       left={0}
       bottom={0}
-     
       right={0}
       justifyContent="space-around"
       alignItems="center"
       paddingX={10}
-      paddingY={2}
+      paddingY={5}
     >
       <Grid item>
         <Box padding={2} display="flex" flexDirection="column">
           <Link
-            href="#"
-            fontSize={14}
+            href="/"
+            fontSize={16}
             marginY={1}
             underline="none"
             color="white"
@@ -28,8 +27,8 @@ function Footer() {
             Anasayfa
           </Link>
           <Link
-            href="#"
-            fontSize={14}
+            href="fields"
+            fontSize={16}
             marginY={1}
             underline="none"
             color="white"
@@ -38,8 +37,8 @@ function Footer() {
             Çalışma Alanları
           </Link>
           <Link
-            href="#"
-            fontSize={14}
+            href="projects"
+            fontSize={16}
             marginY={1}
             underline="none"
             color="white"
@@ -48,8 +47,8 @@ function Footer() {
             Projeler
           </Link>
           <Link
-            href="#"
-            fontSize={14}
+            href="presentations"
+            fontSize={16}
             marginY={1}
             underline="none"
             color="white"
@@ -58,19 +57,19 @@ function Footer() {
             Sunumlar
           </Link>
           <Link
-            href="#"
-            fontSize={14}
+            href="events"
+            fontSize={16}
             marginY={1}
             underline="none"
             color="white"
             fontFamily="roboto-medium"
           >
-            Community Etkinlikleri
+            Etkinlikler
           </Link>
         </Box>
       </Grid>
 
-      <Grid item xs={12} md={3}>
+      <Grid item xs={12} md={5}>
         <Box display="flex" flexDirection="column">
           <Typography fontSize={14} color="white" fontFamily="roboto-medium">
             HAKKIMIZDA
@@ -78,10 +77,16 @@ function Footer() {
           <Divider sx={{ marginY: 1, bgcolor: "white" }} />
 
           <Typography color="white" fontFamily="roboto-medium">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters,
+            Ekip liderimiz Seyma SARIGİL ve Doç. Dr. Murat Köklü'nün akademik
+            rehberliğinde 2021'de kurulan Nane&Limon ekibimiz, Teknofest 2022'de
+            Türkçe Dogal Dil İşleme Serbest Kategoride Teknofest 2023' te Türkçe
+            Dogal Dil İşleme Tüm Kategoriler yarışmalarında üst üste zirveye
+            çıkarak hem 1.lik derecesi hemde teknik sunumda özel ödül kazandı.
+            Hedefimiz açık: Türkçe doğal dil işleme alanında çığır açmak ve
+            Türkiye'yi bu alanda lider yapmak. Opensource projelere katkımızla
+            ulusal gelişime öncülük ediyoruz. Nane&Limon ekibi olarak, Türkçe
+            doğal dil işlemede yapacak çok işimiz var ve heyecanla sizlerle
+            paylaşmayı bekliyoruz! Sevgiler...
           </Typography>
         </Box>
       </Grid>
