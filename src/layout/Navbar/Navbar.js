@@ -17,7 +17,7 @@ function Navbar() {
       top={0}
       justifyContent="center"
     >
-    
+
     <Grid item xs={12} md={2} display="flex" justifyContent="space-between">
       <NavbarLogo />
       <Button sx={{display: {xs: "flex",md:"none"}, color: "green"}}>
@@ -32,9 +32,9 @@ function Navbar() {
         justifyContent="space-between"
       >
         <NavbarButton title="Anasayfa" to="/" />
-        <NavbarButton title="Çalışma Alanları" to="/fields" />
+        {/* <NavbarButton title="Çalışma Alanları" to="/fields" /> */}
         <NavbarButton title="Projeler" to="/projects" />
-        <NavbarButton title="Sunumlar" to="/presentations" />
+        {/* <NavbarButton title="Sunumlar" to="/presentations" /> */}
         <NavbarButton title="Etkinlikler" to="/events" />
 
         <Button disableRipple sx={styles.donateButton}>

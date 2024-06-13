@@ -16,7 +16,7 @@ function MemberDetail() {
     window.scrollTo({top: 0,behavior: "smooth"})
   }, [])
   let location = useLocation();
-  //projeler kısmı çalışma alanları gibi olcak. fontlar değişcek hepsinde, fontların rengi olarak da 2222 11111 gibi ibşi olacak. 
+ 
   return (
     <Grid
       display="flex"
@@ -39,7 +39,7 @@ function MemberDetail() {
           {location.state.name}
         </Typography>
       </Breadcrumbs>
-      <Card elevation={24} marginTop={2} sx={{display: "flex", width: "60%", flexDirection: {xs: "column", md: "row"},padding: 5,margin: 10}}>
+      <Card elevation={24}  sx={{display: "flex", width: "60%", flexDirection: {xs: "column", md: "row"},padding: 5,margin: 7}}>
         <Grid
           justifyContent="center"
           display="flex"

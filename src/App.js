@@ -9,7 +9,7 @@ import AboutPage from "./pages/AboutPage/AboutPage";
 import CommunityEvents from "./pages/CommunityEvents/CommunityEvents";
 import DonatePage from "./pages/DonatePage/DonatePage";
 import FieldsPage from "./pages/WorkingFields/FieldsPage";
-import HomePage, { homeLoader } from "./pages/HomePage/HomePage";
+import HomePage from "./pages/HomePage/HomePage";
 import Main from "./pages/MainPage";
 import MemberDetail from "./pages/MemberDetail/MemberDetail";
 function App() {
@@ -22,7 +22,7 @@ function App() {
         {
           path: "/",
           element: <HomePage />,
-          loader: homeLoader,
+          //loader: homeLoader,
         },
         { path: "/:memberDetail", element: <MemberDetail /> },
         { path: "/fields", element: <FieldsPage /> },
