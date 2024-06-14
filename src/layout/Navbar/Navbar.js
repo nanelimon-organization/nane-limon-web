@@ -9,7 +9,7 @@ function Navbar() {
       container
       width="100%"
       flexDirection="row"
-      bgcolor="white"
+      bgcolor="#F5F5F5"
       paddingX={{xs: 6,md:16}}
       alignItems="center"
       zIndex={10}

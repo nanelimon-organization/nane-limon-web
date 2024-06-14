@@ -45,7 +45,7 @@ function HomePage() {
       <Box sx={{ paddingX: { xs: 0, md: 20 } }}>
         {/* medium ve özet kısmı */}
 
-        <Grid container>
+        <Grid justifyContent="center" container>
           {/* <Medium posts={posts} /> */}
           <Summary />
         </Grid>

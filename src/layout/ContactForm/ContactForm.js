@@ -6,7 +6,6 @@ import React, { useRef, useState } from "react";
 
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
-import ReactInputMask from "react-input-mask";
 function ContactForm({ handleClick }) {
   const [formValues, setFormValues] = useState({
     name: "",
@@ -20,7 +19,11 @@ function ContactForm({ handleClick }) {
 
  
   function inputHandler(event){
-    setFormValues(prev=>({...prev,[event.target.name]: event.target.value}))
+    const { name, value } = event.target;
+    console.log(name)
+    console.log(value)
+    setFormValues({ ...formValues, [name]: value });
+   
   } 
   const [isFirstRender, setIsFirstRender] = useState(true);
   const [capVal, setCapVal] = useState(null);
@@ -49,15 +52,53 @@ function ContactForm({ handleClick }) {
           }
         );
       handleClick();
-      setFormValues({
-        name: "",
-        email: "",
-        phone: "",
-        title: "",
-        description: "",
-      });
+      clear()
     } else {
       setIsFirstRender(false);
+    }
+  };
+  function clear(){
+    setFormValues({
+      name: "",
+      email: "",
+      phone: "",
+      title: "",
+      description: "",
+    });
+  }
+
+
+  const [error, setError] = useState(false);
+
+  const formatPhoneNumber = (value) => {
+    const digits = value.replace(/\D/g, '');
+
+    if (digits.length > 11) {
+      return formValues.phone;
+    }
+
+    if (!digits.startsWith('0')) {
+      return '0' + digits.slice(0, 10);
+    }
+
+    const match = digits.match(/^(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,4})$/);
+
+    if (match) {
+      return [match[1], match[2], match[3], match[4]].filter(Boolean).join(' ').trim();
+    }
+    return digits;
+  };
+
+  const handleChange = (e) => {
+    const { value } = e.target;
+    const formattedValue = formatPhoneNumber(value);
+    setFormValues((prev)=>({...prev,phone: formattedValue}));
+
+    const phonePattern = /^0\d{3} \d{3} \d{4}$/;
+    if (phonePattern.test(formattedValue) || formattedValue === '') {
+      setError(false);
+    } else {
+      setError(true);
     }
   };
 
@@ -112,15 +153,22 @@ function ContactForm({ handleClick }) {
               (formValues.email === "" || !formValues.email.includes("@"))
             }
           />
-          <ReactInputMask mask="0999 999 9999" value={formValues.phone} onChange={(e)=>inputHandler(e)} maskChar={null}>
-          {()=><CustomTextField
-            formValue="phone"
-            label="Telefon Numaranız"
-            name="phone"
-            type="tel"
-            error={!isFirstRender && formValues.phone === ""}
-          />}
-          </ReactInputMask>
+          
+      
+      <CustomTextField
+        type="tel"
+        id="phone"
+        name="phone"
+        label="Telefon Numarası"
+        
+        value={formValues.phone}
+        onChange={handleChange}
+        error={
+          !isFirstRender &&
+          (formValues.phone === "" || error || formValues.phone.length < 10)
+        }
+      />
+          
           <CustomTextField
             formValue="title"
             value={formValues.title}

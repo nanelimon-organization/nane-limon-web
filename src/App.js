@@ -12,7 +12,25 @@ import FieldsPage from "./pages/WorkingFields/FieldsPage";
 import HomePage from "./pages/HomePage/HomePage";
 import Main from "./pages/MainPage";
 import MemberDetail from "./pages/MemberDetail/MemberDetail";
+import { useEffect } from "react";
 function App() {
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'hidden') {
+        document.title = 'Bekliyorum';
+      } else {
+        document.title = 'Nane & Limon';
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
+
   const router = createBrowserRouter([
     {
       path: "/",

@@ -1,4 +1,4 @@
-import { Box, Card, Grid, Typography } from "@mui/material";
+import { Box, Card, Divider, Grid, Typography } from "@mui/material";
 import gonullukonusmacilik from "../../images/events/gonullukonusmacilik.png";
 import acikkaynak from "../../images/events/acikkaynak.png";
 import acikicerikdokuman from "../../images/events/acikicerikdokuman.png";
@@ -24,6 +24,7 @@ function CommunityEvents() {
         src={gonullukonusmacilik}
         description="Çeşitli yerlerde gönülllü konuşmacılık yapıyor, sunumlar yapıyoruz. Bunları yaparken bilgilerimizi aktarıyor, bu alanda gelişmek isteyenlerle beraber gelişiyoruz."
       />
+
       <InfoLayoutLeft
         title="Hackathonlar"
         description="Hackathonların uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması uzun bir açıklaması"

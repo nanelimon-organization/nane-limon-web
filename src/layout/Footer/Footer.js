@@ -12,13 +12,13 @@ function Footer() {
       justifyContent="space-around"
       alignItems="center"
       paddingX={10}
-      paddingY={5}
+      paddingY={2}
     >
       <Grid item>
         <Box padding={2} display="flex" flexDirection="column">
           <Link
             href="/"
-            fontSize={16}
+            fontSize={14}
             marginY={1}
             underline="none"
             color="white"
@@ -26,19 +26,10 @@ function Footer() {
           >
             Anasayfa
           </Link>
-          <Link
-            href="fields"
-            fontSize={16}
-            marginY={1}
-            underline="none"
-            color="white"
-            fontFamily="roboto-medium"
-          >
-            Çalışma Alanları
-          </Link>
+          
           <Link
             href="projects"
-            fontSize={16}
+            fontSize={14}
             marginY={1}
             underline="none"
             color="white"
@@ -46,19 +37,10 @@ function Footer() {
           >
             Projeler
           </Link>
-          <Link
-            href="presentations"
-            fontSize={16}
-            marginY={1}
-            underline="none"
-            color="white"
-            fontFamily="roboto-medium"
-          >
-            Sunumlar
-          </Link>
+          
           <Link
             href="events"
-            fontSize={16}
+            fontSize={14}
             marginY={1}
             underline="none"
             color="white"
@@ -71,12 +53,12 @@ function Footer() {
 
       <Grid item xs={12} md={5}>
         <Box display="flex" flexDirection="column">
-          <Typography fontSize={14} color="white" fontFamily="roboto-medium">
+          <Typography fontSize={12} color="white" fontFamily="roboto-medium">
             HAKKIMIZDA
           </Typography>
           <Divider sx={{ marginY: 1, bgcolor: "white" }} />
 
-          <Typography color="white" fontFamily="roboto-medium">
+          <Typography color="white" fontFamily="roboto-medium" textAlign="justify" fontSize={14}>
             Ekip liderimiz Seyma SARIGİL ve Doç. Dr. Murat Köklü'nün akademik
             rehberliğinde 2021'de kurulan Nane&Limon ekibimiz, Teknofest 2022'de
             Türkçe Dogal Dil İşleme Serbest Kategoride Teknofest 2023' te Türkçe

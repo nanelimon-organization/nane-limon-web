@@ -39,7 +39,7 @@ function MemberDetail() {
           {location.state.name}
         </Typography>
       </Breadcrumbs>
-      <Card elevation={24}  sx={{display: "flex", width: "60%", flexDirection: {xs: "column", md: "row"},padding: 5,margin: 7}}>
+      <Card  sx={{display: "flex", width: "60%", flexDirection: {xs: "column", md: "row"},padding: 5,margin: 10}}>
         <Grid
           justifyContent="center"
           display="flex"
@@ -77,9 +77,10 @@ function MemberDetail() {
         </Grid>
         <Grid>
           <Typography
+        
             maxWidth={750}
             marginX={{xs: 0,md: 10}}
-            textAlign="start"
+            textAlign="justify"
             fontFamily="roboto-regular"
             padding={{ xs: 2, md: 0 }}
             fontSize={{ xs: 14, md: 20 }}
