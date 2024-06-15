@@ -36,7 +36,8 @@ function ContactForm({ handleClick }) {
       formValues.phone !== "" &&
       formValues.title !== "" &&
       formValues.description !== "" &&
-      formValues.email.includes("@")
+      formValues.email.includes("@") &&
+      formValues.phone.length === 14
     ) {
       setIsFirstRender(true);
       emailjs
@@ -93,12 +94,17 @@ function ContactForm({ handleClick }) {
     const { value } = e.target;
     const formattedValue = formatPhoneNumber(value);
     setFormValues((prev)=>({...prev,phone: formattedValue}));
-
+    console.log(value)
     const phonePattern = /^0\d{3} \d{3} \d{4}$/;
-    if (phonePattern.test(formattedValue) || formattedValue === '') {
-      setError(false);
+    if (value.length < 14) {
+      if (phonePattern.test(formattedValue)) {
+        setError(false); 
+      } else {
+        setError(true);
+      }
     } else {
-      setError(true);
+      
+      setError(false);
     }
   };
 
@@ -165,7 +171,7 @@ function ContactForm({ handleClick }) {
         onChange={handleChange}
         error={
           !isFirstRender &&
-          (formValues.phone === "" || error || formValues.phone.length < 10)
+          (formValues.phone === "" || error || formValues.phone.length < 11)
         }
       />
           
