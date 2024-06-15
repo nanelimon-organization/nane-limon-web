@@ -3,9 +3,9 @@ import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftR
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 import { Box, Button } from "@mui/material";
 import { motion } from "framer-motion";
-import img1 from "../../images/img1.jpg";
-import img2 from "../../images/img2.jpg";
-import img3 from "../../images/img3.jpg";
+import img1 from "../../../images/img1.jpg";
+import img2 from "../../../images/img2.jpg";
+import img3 from "../../../images/img3.jpg";
 
 const images = [
   {

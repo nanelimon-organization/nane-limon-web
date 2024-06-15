@@ -1,9 +1,8 @@
 import { Alert, Box, Divider, Grid, Snackbar } from "@mui/material";
 
-import Banner from "../../layout/Banner/Banner";
-import axios from "axios";
-import Medium from "../../layout/Medium/Medium";
-import Summary from "../../layout/Summary/Summary";
+import Banner from "../../layout/HomePage/Banner/Banner";
+import Medium from "../../layout/HomePage/Medium/Medium";
+import Summary from "../../layout/HomePage/Summary/Summary";
 import { useLoaderData } from "react-router-dom";
 import Team from "../../layout/HomePage/Team/Team";
 import ContactForm from "../../layout/HomePage/ContactForm/ContactForm";

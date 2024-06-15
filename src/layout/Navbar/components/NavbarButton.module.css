@@ -1,6 +1,5 @@
 .un {
     display: inline-block;
-    margin-right: 50px;
     padding-bottom:2px;
     background-image: linear-gradient(#008000 0 0);
     background-position: 0 100%; 
@@ -23,3 +22,10 @@
   .default {
     color: "#008000"
   }
+
+  @media (min-width: 600px) {
+    .un {
+      margin-right: 50px; 
+    }
+  }
+  

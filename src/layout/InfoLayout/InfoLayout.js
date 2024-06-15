@@ -42,8 +42,8 @@ export function InfoLayoutRight({ title, description, src }) {
             sx={{
               borderRadius: 2,
               borderColor: "#F2F2F2",
-              height: { xs: 75, md: 150 },
-              width: { xs: 150, md: 300 },
+              height: { xs: 100, md: 150 },
+              width: { xs: 200, md: 300 },
             }}
             component={motion.img}
             initial={{ opacity: 0 }}
@@ -76,8 +76,8 @@ export function InfoLayoutLeft({ title, description, src }) {
             sx={{
               borderRadius: 2,
               borderColor: "#F2F2F2",
-              height: { xs: 75, md: 150 },
-              width: { xs: 150, md: 300 },
+              height: { xs: 100, md: 150 },
+              width: { xs: 200, md: 300 },
             }}
             variant="outlined"
             component={motion.img}
