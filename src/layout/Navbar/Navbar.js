@@ -37,6 +37,11 @@ function Navbar() {
         display="flex"
         justifyContent="space-between"
         alignItems="center"
+        component={motion.div}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ delay: 0.3, type: "tween", stiffness: 100 }}
       >
         <NavbarLogo />
         <Button
@@ -57,15 +62,45 @@ function Navbar() {
         md={10}
         display={{ xs: "none", md: "flex" }}
         justifyContent="space-between"
+        alignItems="center"
       >
-        <Grid>
+        <Grid display="flex" flexDirection="row">
+        <Grid
+            component={motion.div}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ delay: 0.3, type: "tween", stiffness: 100 }}
+          >
           <NavbarButton title="Anasayfa" to="/" />
+          </Grid>
           {/* <NavbarButton title="Çalışma Alanları" to="/fields" /> */}
+          <Grid
+            component={motion.div}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ delay: 0.5, type: "tween", stiffness: 100 }}
+          >
           <NavbarButton title="Projeler" to="/projects" />
+          </Grid>
           {/* <NavbarButton title="Sunumlar" to="/presentations" /> */}
+          <Grid
+            component={motion.div}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ delay: 0.7, type: "tween", stiffness: 100 }}
+          >
           <NavbarButton title="Etkinlikler" to="/events" />
+          </Grid>
         </Grid>
-        <Grid>
+        <Grid  component={motion.div}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ delay: 1, type: "tween", stiffness: 100 }}>
+          
           <NavLink to="https://buymeacoffee.com/nanelimon" target="_blank">
             <Button disableRipple sx={styles.donateButton}>
               <Typography textTransform="capitalize" fontFamily="roboto-medium">
@@ -80,7 +115,7 @@ function Navbar() {
         <Grid
           container
           direction="column"
-        alignItems="center"
+          alignItems="center"
           position="absolute"
           top="90%"
           padding={5}
@@ -92,9 +127,34 @@ function Navbar() {
           exit={{ opacity: 0 }}
           transition={{ delay: 0.3, type: "smooth", stiffness: 100 }}
         >
-          <NavbarButton title="Anasayfa" to="/" onClick={closeMenu} />
+          <Grid
+            component={motion.div}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ delay: 0.3, type: "tween", stiffness: 100 }}
+          >
+            <NavbarButton title="Anasayfa" to="/" onClick={closeMenu} />
+          </Grid>
+          <Grid component={motion.div}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ delay: 0.5, type: "smooth", stiffness: 100 }}>
           <NavbarButton title="Projeler" to="/projects" onClick={closeMenu} />
+          </Grid>
+          <Grid component={motion.div}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ delay: 0.7, type: "smooth", stiffness: 100 }}>
           <NavbarButton title="Etkinlikler" to="/events" onClick={closeMenu} />
+          </Grid>
+          <Grid component={motion.div}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ delay: 1, type: "smooth", stiffness: 100 }}>
           <NavLink to="https://buymeacoffee.com/nanelimon" target="_blank">
             <Button disableRipple sx={styles.donateButton} onClick={closeMenu}>
               <Typography textTransform="capitalize" fontFamily="roboto-medium">
@@ -102,6 +162,7 @@ function Navbar() {
               </Typography>
             </Button>
           </NavLink>
+          </Grid>
         </Grid>
       )}
     </Grid>
