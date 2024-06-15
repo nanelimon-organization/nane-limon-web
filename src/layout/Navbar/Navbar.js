@@ -18,7 +18,7 @@ function Navbar() {
       top={0}
       justifyContent="center"
     >
-      <Grid item xs={12} md={2} display="flex" justifyContent="space-between">
+      <Grid item xs={12} md={1}>
         <NavbarLogo />
         <Button sx={{ display: { xs: "flex", md: "none" }, color: "green" }}>
           <MenuIcon />
@@ -31,12 +31,14 @@ function Navbar() {
         display={{ xs: "none", md: "flex" }}
         justifyContent="space-between"
       >
+        <Grid>
         <NavbarButton title="Anasayfa" to="/" />
         {/* <NavbarButton title="Çalışma Alanları" to="/fields" /> */}
         <NavbarButton title="Projeler" to="/projects" />
         {/* <NavbarButton title="Sunumlar" to="/presentations" /> */}
         <NavbarButton title="Etkinlikler" to="/events" />
-
+        </Grid>
+        <Grid>
         <NavLink to="https://buymeacoffee.com/nanelimon" target="_blank">
           <Button disableRipple sx={styles.donateButton}>
             <Typography textTransform="capitalize" fontFamily="roboto-medium">
@@ -44,6 +46,7 @@ function Navbar() {
             </Typography>
           </Button>
         </NavLink>
+        </Grid>
       </Grid>
     </Grid>
   );

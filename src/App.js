@@ -1,7 +1,7 @@
 import "./App.css";
 import { Box, Grid, Typography } from "@mui/material";
 import Navbar from "./layout/Navbar/Navbar";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage";
 import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
 import PresentationPage from "./pages/PresentationsPage/PresentationsPage";
@@ -42,12 +42,21 @@ function App() {
           element: <HomePage />,
           //loader: homeLoader,
         },
-        { path: "/:memberDetail", element: <MemberDetail /> },
+        { path: "/member/:memberDetail", element: <MemberDetail /> },
         { path: "/fields", element: <FieldsPage /> },
         { path: "/projects", element: <ProjectsPage /> },
         { path: "/presentations", element: <PresentationPage /> },
         { path: "/events", element: <CommunityEvents /> },
         { path: "/donate", element: <DonatePage /> },
+        {
+          path: "/error",
+          element: <ErrorPage />,
+        },
+        {
+          path: "*",
+          element: <Navigate to="/error" />,
+        }
+
       ],
     },
   ]);

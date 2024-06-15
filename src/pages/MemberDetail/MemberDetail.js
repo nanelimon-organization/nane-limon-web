@@ -5,18 +5,36 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, Navigate, useLocation, useParams } from "react-router-dom";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import { useState } from "react";
+import {members} from "../../constants/constants"
+const validMembers = ["tarik-kaan-koc", "seyma-sarigil","eray-buyukkanat","murat-koklu","elif-sarigil","erdinc-dal"];
+
 function MemberDetail() {
 
+  const { memberDetail } = useParams();
+
+  
   useState(() => {
     window.scrollTo({top: 0,behavior: "smooth"})
   }, [])
   let location = useLocation();
- 
+ // Check if memberDetail is valid
+ if (!validMembers.includes(memberDetail)) {
+  return <Navigate to="/error" />;
+}
+
+if(location.state == null  && validMembers.includes(memberDetail) ){
+  const member = members.find((member)=>member.slug === memberDetail )
+  location.state = member
+}
+
+
+
+
   return (
     <Grid
       display="flex"
@@ -39,7 +57,7 @@ function MemberDetail() {
           {location.state.name}
         </Typography>
       </Breadcrumbs>
-      <Card  sx={{display: "flex", width: "60%", flexDirection: {xs: "column", md: "row"},padding: 5,margin: 10}}>
+      <Card  sx={{display: "flex", width: "60%", flexDirection: {xs: "column", md: "row"},padding: 5,margin: 5}}>
         <Grid
           justifyContent="center"
           display="flex"

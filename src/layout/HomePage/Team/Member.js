@@ -17,7 +17,7 @@ function Member({member }) {
       
       <Avatar src={member.src} sx={{ width: 100, height: 100 }}></Avatar>
       </Box>
-      <NavLink state={member} style={{textDecoration: "none", color: "black"}} to={member.slug}>
+      <NavLink state={member} style={{textDecoration: "none", color: "black"}} to={"member/"+member.slug}>
       <Typography
         variant="h6"
         sx={{

@@ -5,25 +5,24 @@ import axios from "axios";
 import Medium from "../../layout/Medium/Medium";
 import Summary from "../../layout/Summary/Summary";
 import { useLoaderData } from "react-router-dom";
-import Team from "../../layout/Team/Team";
-import ContactForm from "../../layout/ContactForm/ContactForm";
+import Team from "../../layout/HomePage/Team/Team";
+import ContactForm from "../../layout/HomePage/ContactForm/ContactForm";
 import { useEffect, useState } from "react";
 
 function HomePage() {
   const posts = useLoaderData();
   useEffect(() => {
-    window.scrollTo({top: 0,behavior: "smooth"})
-  }, [])
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
     setOpen(true);
-    
   };
 
   const handleClose = (reason) => {
-    if (reason === 'clickaway') {
+    if (reason === "clickaway") {
       return;
     }
 
@@ -31,29 +30,30 @@ function HomePage() {
   };
   return (
     <>
-    <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+      <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
         <Alert
           onClose={handleClose}
           severity="success"
           variant="filled"
-          sx={{ width: '100%', margin: 2}}
+          sx={{ width: "100%", margin: 2 }}
         >
           Mesajın başarıyla iletildi!
         </Alert>
       </Snackbar>
-      <Banner />
-      <Box sx={{ paddingX: { xs: 0, md: 20 } }}>
-        {/* medium ve özet kısmı */}
 
+      <Banner />
+
+      <Box sx={{ paddingX: { xs: 0, md: 20 } }}>
         <Grid justifyContent="center" container>
           {/* <Medium posts={posts} /> */}
           <Summary />
         </Grid>
-        {/* medium ve özet kısmı */}
       </Box>
+
       <Divider />
+
       <Team />
-      <Divider />
+
       <Box sx={{ paddingX: { xs: 0, md: 20 } }}>
         <ContactForm handleClick={handleClick} />
       </Box>
