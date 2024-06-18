@@ -8,6 +8,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import DeleteIcon from '@mui/icons-material/Delete';
 import CloseIcon from "@mui/icons-material/Close";
 import FloatingActionButton from "./FAB";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
@@ -34,6 +35,10 @@ function ChatBox() {
 
   function handleFAB() {
     setIsChatBoxOpen(!isChatBoxOpen);
+  }
+
+  function clearChatBox() {
+    setQuestions([]);
   }
 
   const [input, setInput] = useState("");
@@ -104,22 +109,39 @@ function ChatBox() {
                   }}
                   
                 >
+                  <Grid>
                   <Typography
                     fontFamily="roboto-bold"
                     fontSize={{xs:14,md:24}}
                     color="black"
+                  
                   >
                     Nane&Limon Chatbot
                   </Typography>
+                  </Grid>
+                  <Grid padding={1} display="flex" flexDirection="row">
                   <Button
-                    onClick={handleFAB}
+                    onClick={clearChatBox}
+                    disabled={isAsked}
                     disableRipple={true}
                     disableFocusRipple
                     disableTouchRipple
-                    sx={{ margin: 2, zIndex: 1000 }}
+                    
+                    sx={{  zIndex: 100,color: "black",  }}
                   >
-                    <CloseIcon sx={{ color: "red" }} />
+                    <DeleteIcon sx={{ width:25,heigth: 25}}/>
                   </Button>
+                  <Button
+                    onClick={handleFAB}
+                    
+                    disableRipple={true}
+                    disableFocusRipple
+                    disableTouchRipple
+                    sx={{ zIndex: 1000,color:"red" }}
+                  >
+                    <CloseIcon sx={{ width:25,heigth: 25 }} />
+                  </Button>
+                  </Grid>
                 </Grid>
                 <Grid
                   container
@@ -235,14 +257,15 @@ function ChatBox() {
                           disableUnderline: true,
                         }}
                         onKeyDown={(e) => {
-                          if (e.key === "Enter") {
+                          if (e.key === "Enter" && input !== "" && !isAsked) {
                             handleSubmit();
                           }
                         }}
                       />
                       <IconButton
-                        disabled={input == "" ? true : false}
+                        disabled={input === "" || isAsked ? true : false}
                         sx={{ marginLeft: 2 }}
+                        
                         onClick={handleSubmit}
                       >
                         <ArrowUpwardIcon sx={{ width: 25, height: 25 }} />
