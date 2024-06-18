@@ -23,11 +23,9 @@ function FloatingActionButton({ style, onClick }) {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1, type: "spring", stiffness: 100 }}
     >
-      <Box
-        component="img"
-        src={src}
-        sx={{ width: {xs: 75,md:100}, height: {xs:75,md: 100}}}
-      />
+      <IconButton >
+        <ChatIcon sx={{color:"black"}} />
+      </IconButton>
     </Fab>
   );
 }
