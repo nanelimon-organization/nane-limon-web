@@ -5,6 +5,9 @@ import zeltech from "../images/projects/zeltech.jpg";
 import turkishnlp from "../images/projects/turkishnlp.jpg";
 import datacleaning from "../images/projects/datacleaning.jpg";
 import datalabeling from "../images/projects/datalabelling.jpg";
+import bertbase from "../images/projects/bertbase.png";
+import bertbase2 from "../images/projects/bertbase2.png";
+import turkceacildurum from "../images/projects/turkceacildurum.png";
 
 export const projects = [
   {
@@ -135,7 +138,39 @@ export const projects = [
         <li><b>Ofansif Dil Algılama:</b> Metinlerde yer alan ofansif, saldırgan veya incitici ifadeleri yüksek doğrulukla tespit eder.</li>
         <li><b>Çeşitli Kullanım Alanları:</b> Sosyal medya platformları, forumlar, bloglar ve diğer çevrimiçi mecralarda içerik denetimi, moderasyon ve analiz gibi görevlerde kullanılabilir.</li>
         <li><b>Kolay Entegrasyon:</b> Hugging Face platformunda yer alan bu model, projelerinize hızlı ve kolay bir şekilde entegre edilebilir.</li></ul>BERT-Base Turkish Offensive modeli, özellikle çevrimiçi topluluklar, sosyal medya yöneticileri ve içerik moderatörleri için değerli bir kaynaktır. Ofansif dilin tespiti ve yönetimi konusundaki projelerde yüksek performans sağlar. Hugging Face platformunda herkesin erişimine açık olan bu model, projelerinizde hemen kullanılabilir.`,
-    imageUrl: datalabeling,
+    imageUrl: bertbase,
     buttonLink: "https://huggingface.co/nanelimon/bert-base-turkish-offensive",
+  },
+  {
+    title: "Türkçe İş İlanı Sınıflandırma Modeli",
+    subtitle: "düzenlenecek",
+    description: `BERT-Base Turkish Job Advertisement modeli, Türkçe iş ilanları verisi kullanılarak özel olarak eğitilmiş bir dil modelidir. Bu model, iş ilanlarının analiz edilmesi, kategorize edilmesi ve çeşitli doğal dil işleme (NLP) görevlerinde kullanılması amacıyla geliştirilmiştir. Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanmıştır.
+    
+    <b>Özellikler:</b>
+      <ul><b><li>Türkçe Metinlere Özel:</b> Model, Türkçe iş ilanları veritabanı kullanılarak eğitilmiştir, bu sayede Türkçe dil yapısına ve iş ilanlarının kendine has terminolojisine uyum sağlar.</li>
+        <li><b>Çeşitli NLP Görevleri İçin Uygun:</b> Metin sınıflandırma, duygu analizi, adlandırılmış varlık tanıma ve diğer NLP görevlerinde yüksek performans gösterir.</li>
+        <li><b>Kapsamlı Eğitim Verisi:</b> Geniş bir Türkçe iş ilanları veritabanı üzerinde eğitilmiştir, bu sayede geniş bir iş alanı yelpazesinde tutarlı sonuçlar verir.</li></ul>Bu model, özellikle Türkçe iş ilanlarını analiz eden, işverenlerin ve adayların ihtiyaçlarına yönelik çözümler geliştiren veri bilimciler ve NLP uzmanları için değerli bir kaynaktır. Hugging Face platformunda herkesin erişimine açık olan bu model, projelerinizde hızlı ve etkili bir şekilde kullanılabilir.`,
+    imageUrl: bertbase2,
+    buttonLink: "https://huggingface.co/nanelimon/bert-base-turkish-job-advertisement",
+  },
+  {
+    title: "Türkçe Acil Durum Yönetim Modeli",
+    subtitle: "düzenlenecek",
+    description: `Akbank tarafından düzenlenen hackathon kapsamında geliştirilmiş ve Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanmıştır. Bu model, doğal dil işleme (NLP) ve makine öğrenimi projelerinde kullanılmak üzere özel olarak eğitilmiştir.
+
+    <b>Özellikler:</b>
+      <ul><b><li>Hackathon İçin Geliştirildi:</b> Akbank Hackathon kapsamında ortaya çıkan ihtiyaçlar ve problemler göz önünde bulundurularak tasarlanmış ve optimize edilmiştir.</li>
+        <li><b>Türkçe Metinlere Uygun:</b> Model, Türkçe metinlerin analiz edilmesi, işlenmesi ve çeşitli NLP görevlerinde kullanılması için özel olarak eğitilmiştir.</li>
+        <li><b>Geniş Uygulama Alanı:</b> Metin sınıflandırma, duygu analizi, adlandırılmış varlık tanıma, soru-cevap sistemleri ve daha birçok NLP görevinde yüksek performans gösterir.</li>
+        <li><b>Kolay Entegrasyon:</b> Hugging Face platformunda bulunan bu model, projelerinize hızlı ve kolay bir şekilde entegre edilebilir.</li></ul>Zeltech Akbank Hackathon modeli, veri bilimciler, NLP uzmanları ve hackathon katılımcıları için güçlü ve esnek bir araçtır. Akbank'ın desteğiyle geliştirilen bu model, Türkçe dil işleme projelerinde yüksek doğruluk ve performans sağlar. Hugging Face platformunda herkesin erişimine açık olan bu model, projelerinizde hemen kullanılabilir.`,
+    imageUrl: turkceacildurum,
+    buttonLink: "https://huggingface.co/nanelimon/zeltech-akbank-hackathon",
+  },
+  {
+    title: "Veri Temizleme Aracı",
+    subtitle: "düzenlenecek",
+    description: `Veri ön işleme, modellemeye hazırlık aşamasında modelin başarısı için kritik öneme sahiptir. Özellikle doğal dil işleme (NLP) alanında, metin verilerinin temizlenmesi her modelleme sürecinde önemli bir adımdır. Bu ihtiyacı karşılamak ve Türkçe metinlerde doğal dil işleme literatürüne katkı sağlamak amacıyla text-data-cleaner aracı geliştirilmiştir. \n\ntext-data-cleaner, veri temizleme sürecini herkes için erişilebilir ve basit hale getiren bir araçtır. Bu araç, veri bilimcilerin ve NLP uzmanlarının modelleme öncesi verilerini temizlenmesine yardımcı olarak daha yüksek performanslı modeller geliştirmelerine olanak tanır.`,
+    imageUrl: datacleaning,
+    buttonLink: "https://github.com/nanelimon-organization/text-data-cleaner",
   },
 ];

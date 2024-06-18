@@ -20,9 +20,6 @@ const images = [
     imgPath: img1,
   },
   {
-    imgPath: img2,
-  },
-  {
     imgPath: img3,
   },
   {
@@ -30,6 +27,9 @@ const images = [
   },
   {
     imgPath: img5,
+  },
+  {
+    imgPath: img10,
   },
   {
     imgPath: img6,
@@ -44,7 +44,7 @@ const images = [
     imgPath: img9,
   },
   {
-    imgPath: img10,
+    imgPath: img2,
   },
   {
     imgPath: img11,

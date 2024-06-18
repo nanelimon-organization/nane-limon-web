@@ -35,9 +35,8 @@ function ProjectCard({imageUrl,subtitle,title,description,buttonLink}) {
     >
       <CardMedia
         component="img"
-        sx={{ borderRadius: 3, width: "100%", objectFit:"contain" }}
+        sx={{ borderRadius: 3, width: "100%", objectFit:"contain",height: {xs: 200,md:500} }}
         alt="green iguana"
-        height="500"
         image={imageUrl}
       />
       <CardContent sx={{ margin: 1 }}>

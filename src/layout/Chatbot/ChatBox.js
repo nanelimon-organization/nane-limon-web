@@ -90,6 +90,7 @@ function ChatBox() {
               <Grid
                 display="flex"
                 flexDirection="column"
+                height="60%"
                 justifyContent="center"
                 component={motion.div}
                   initial={{ opacity: 0 }}
