@@ -5,7 +5,7 @@ import LogoMenuContainer from "./components/LogoMenuContainer";
 import MobileMenuToggle from "./components/MobileMenuToggle";
 import NavbarItemsContainer from "./components/NavbarItemsContainer";
 import NavbarItems, { NavbarItemsMobile } from "./components/NavbarItems";
-function Navbar() {
+function Navbar({sticky,scrollToSection}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -13,17 +13,17 @@ function Navbar() {
   };
 
   return (
-    <NavbarContainer>
+    <NavbarContainer sticky={sticky}>
       <LogoMenuContainer>
         <NavbarLogo />
         <MobileMenuToggle toggleMenu={toggleMenu} />
       </LogoMenuContainer>
       <NavbarItemsContainer>
-        <NavbarItems />
+        <NavbarItems scrollToSection={scrollToSection} />
       </NavbarItemsContainer>
 
       {isMenuOpen && (
-        <NavbarItemsMobile toggleMenu={toggleMenu} />
+        <NavbarItemsMobile toggleMenu={toggleMenu} sticky={sticky}/>
       )}
     </NavbarContainer>
   );

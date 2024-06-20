@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import NavbarButton from "./NavbarButton";
 import { NavLink } from "react-router-dom";
 
-function NavbarItems() {
+function NavbarItems({ scrollToSection }) {
   return (
     <>
       <Grid display="flex" flexDirection="row">
@@ -14,7 +14,7 @@ function NavbarItems() {
           exit={{ opacity: 0 }}
           transition={{ delay: 0.3, type: "tween", stiffness: 100 }}
         >
-          <NavbarButton title="Anasayfa" to="/" />
+          <NavbarButton title="Anasayfa" onClick={() => scrollToSection('home')} />
         </Grid>
         <Grid
           component={motion.div}
@@ -23,7 +23,7 @@ function NavbarItems() {
           exit={{ opacity: 0 }}
           transition={{ delay: 0.5, type: "tween", stiffness: 100 }}
         >
-          <NavbarButton title="Projeler" to="/projects" />
+          <NavbarButton title="Projeler"  onClick={() => scrollToSection('projects')} />
         </Grid>
         <Grid
           component={motion.div}
@@ -32,7 +32,16 @@ function NavbarItems() {
           exit={{ opacity: 0 }}
           transition={{ delay: 0.7, type: "tween", stiffness: 100 }}
         >
-          <NavbarButton title="Etkinlikler" to="/events" />
+          <NavbarButton title="Etkinlikler" onClick={() => scrollToSection('events')}  />
+        </Grid>
+        <Grid
+          component={motion.div}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ delay: 0.7, type: "tween", stiffness: 100 }}
+        >
+          <NavbarButton title="Bize Ulaşın" onClick={() => scrollToSection('contact')}  />
         </Grid>
       </Grid>
       <Grid
@@ -57,7 +66,7 @@ function NavbarItems() {
 export default NavbarItems;
 
 
-function NavbarItemsMobile({toggleMenu}){
+function NavbarItemsMobile({toggleMenu,sticky}){
     return <Grid
     container
     direction="column"
@@ -65,7 +74,7 @@ function NavbarItemsMobile({toggleMenu}){
     position="absolute"
     top="90%"
     padding={5}
-    bgcolor="#F5F5F5"
+    bgcolor={"#111111"}
     borderRadius="8px"
     component={motion.div}
     initial={{ opacity: 0 }}
@@ -104,6 +113,7 @@ function NavbarItemsMobile({toggleMenu}){
         onClick={toggleMenu}
       />
     </Grid>
+    
     <Grid
       component={motion.div}
       initial={{ opacity: 0 }}

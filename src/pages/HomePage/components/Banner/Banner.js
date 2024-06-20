@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
-import { Box, Button } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import img1 from "../../../../images/img1.jpg";
 import img2 from "../../../../images/img2.jpg";
@@ -14,6 +14,9 @@ import img8 from "../../../../images/img8.jpg";
 import img9 from "../../../../images/img9.png";
 import img10 from "../../../../images/img10.jpeg";
 import img11 from "../../../../images/img11.JPG";
+import CustomButton from "../ContactForm/components/Button";
+import style from "./BannerButton.module.css";
+import { NavLink } from "react-router-dom";
 
 const images = [
   {
@@ -49,7 +52,6 @@ const images = [
   {
     imgPath: img11,
   },
-
 ];
 function Banner() {
   const maxSteps = images.length;
@@ -88,21 +90,13 @@ function Banner() {
   return (
     <Box
       sx={{
-        width: "100%",
-        flexGrow: 1,
         alignItems: "center",
         justifyContent: "center",
         display: "flex",
+        textAlign: "center",
+        position: "relative",
       }}
     >
-      <Button
-        onClick={swipeToLeft}
-        sx={{ marginX: { xs: 0, md: 5 }, color: "#008000" }}
-      >
-        <KeyboardArrowLeftRoundedIcon
-          sx={{ paddingX: { xs: 0, md: 5 }, width: 36, height: 36 }}
-        />
-      </Button>
       <Box
         key={member1.imgPath}
         component={motion.img}
@@ -111,24 +105,56 @@ function Banner() {
         exit={{ opacity: 0 }}
         transition={{ delay: 0.3, type: "just", stiffness: 100 }}
         sx={{
-          height: { xs: 200, md: 600 },
-          display: "block",
+          minHeight: "100vh",
+          height: 200,
+          filter: "brightness(0.2)",
+          display: "inline-block", // Değişiklik
           objectFit: "cover",
+          backgroundPosition: "center",
           overflow: "hidden",
           width: "100%",
-          borderRadius: 10,
         }}
         src={member1.imgPath}
         alt={member1.imgPath}
       />
-      <Button
-        onClick={swipeToRight}
-        sx={{ marginX: { xs: 0, md: 5 }, color: "#008000" }}
+      <Box
+        sx={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          zIndex: 3,
+        }}
       >
-        <KeyboardArrowRightRoundedIcon
-          sx={{ paddingX: { xs: 0, md: 5 }, width: 36, height: 36 }}
-        />
-      </Button>
+        <Grid
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Typography
+            sx={{
+              fontSize: 32,
+              color: "#ffffff",
+              textAlign: "start",
+              fontFamily: "roboto-bold",
+            }}
+          >
+            Türkçe Doğal Dil İşleme Gönüllüleri
+          </Typography>
+
+          <Typography
+            sx={{
+              fontSize: 24,
+              color: "#ffffff",
+              textAlign: "start",
+              fontFamily: "roboto-regular",
+            }}
+          >
+            Türkçe Doğal Dil İşleme Gönüllüleri
+          </Typography>
+        </Grid>
+      </Box>
     </Box>
   );
 }

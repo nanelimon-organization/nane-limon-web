@@ -6,7 +6,7 @@ import CommunityEvents from "./pages/CommunityEvents/CommunityEvents";
 import HomePage from "./pages/HomePage/HomePage";
 import Main from "./pages/MainPage";
 import MemberDetail from "./pages/MemberDetail/MemberDetail";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 function App() {
 
   useEffect(() => {
@@ -25,15 +25,39 @@ function App() {
     };
   }, []);
 
+  const homeRef = useRef(null);
+  const projectsRef = useRef(null);
+  const eventsRef = useRef(null);
+  const contactRef = useRef(null);
+
+
+  const scrollToSection = (section) => {
+    const offset = -100; // Yukarıdan başlama mesafesi (piksel cinsinden)
+    let element = null;
+
+    if (section === 'home') element = homeRef.current;
+    if (section === 'projects') element = projectsRef.current;
+    if (section === 'events') element = eventsRef.current;
+    if (section === 'contact') element = contactRef.current;
+    
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
+        top: elementPosition + offset,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Main />,
+      element: <Main scrollToSection={scrollToSection} />,
       errorElement: <ErrorPage />,
       children: [
         {
           path: "/",
-          element: <HomePage />,
+          element: <HomePage refs={{ homeRef, projectsRef, eventsRef, contactRef}} />,
           //loader: homeLoader,
         },
         { path: "/member/:memberDetail", element: <MemberDetail /> },

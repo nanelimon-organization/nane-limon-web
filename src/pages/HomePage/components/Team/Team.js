@@ -1,4 +1,4 @@
-import { Button, Grid } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import Member from "./Member";
 import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
@@ -37,6 +37,13 @@ function Team() {
       justifyContent="center"
       paddingY={5}
     >
+      <Typography
+          textAlign="center"
+          component="div"
+          sx={{ fontFamily: "roboto-bold", fontSize: 24 }}
+        >
+          EKİBİMİZ
+        </Typography>
       <Grid
         item
         xs={12}
@@ -44,6 +51,7 @@ function Team() {
         display={{ md: "flex" }}
         alignItems="center"
         justifyContent="center"
+        margin={2}
       >
         <Grid
           item
