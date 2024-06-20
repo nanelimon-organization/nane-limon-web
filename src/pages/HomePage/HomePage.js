@@ -1,18 +1,16 @@
 import { Alert, Box, Divider, Grid, Snackbar } from "@mui/material";
 
-import Banner from "../../layout/HomePage/Banner/Banner";
-import Medium from "../../layout/HomePage/Medium/Medium";
-import Summary from "../../layout/HomePage/Summary/Summary";
+import Banner from "./components/Banner/Banner";
+import Medium from  "./components/Medium/Medium";
+import Summary from "./components/Summary/Summary";
 import { useLoaderData } from "react-router-dom";
-import Team from "../../layout/HomePage/Team/Team";
-import ContactForm from "../../layout/HomePage/ContactForm/ContactForm";
+import Team from "./components/Team/Team";
+import ContactForm from "./components/ContactForm/ContactForm";
 import { useEffect, useState } from "react";
 
 function HomePage() {
   const posts = useLoaderData();
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+
 
   const [open, setOpen] = useState(false);
 

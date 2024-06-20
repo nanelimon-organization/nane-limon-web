@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 
 function Member({member }) {
   return (
+    <NavLink state={member} style={{textDecoration: "none", color: "black"}} to={"member/"+member.slug}>
     <Card
       sx={{
         alignItems: "center",
@@ -17,7 +18,7 @@ function Member({member }) {
       
       <Avatar src={member.src} sx={{ width: 100, height: 100 }}></Avatar>
       </Box>
-      <NavLink state={member} style={{textDecoration: "none", color: "black"}} to={"member/"+member.slug}>
+      
       <Typography
         variant="h6"
         sx={{
@@ -28,7 +29,6 @@ function Member({member }) {
       >
         {member.name}
       </Typography>
-      </NavLink>
       <Typography textAlign="justify" fontFamily="roboto-regular">
         {member.title}
       </Typography>
@@ -43,6 +43,8 @@ function Member({member }) {
       </Box>
      
     </Card>
+    </NavLink>
+
   );
 }
 

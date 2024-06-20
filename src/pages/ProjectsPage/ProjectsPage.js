@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import { useEffect } from "react";
-import ProjectCard from "../../layout/ProjectsPage/Card";
+import ProjectCard from "./components/Card/Card";
 import { projects } from "../../constants/projects";
 
 function ProjectsPage() {

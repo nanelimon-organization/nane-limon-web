@@ -3,7 +3,7 @@ import Member from "./Member";
 import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 import { useState } from "react";
-import {members} from '../../../constants/constants'
+import {members} from '../../../../constants/members'
 function Team() {
   
   const [index, setIndex] = useState(0);

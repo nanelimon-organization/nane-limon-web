@@ -51,4 +51,6 @@ export const members = [
     },
   ];
 
+  export const validMembers = ["tarik-kaan-koc", "seyma-sarigil","eray-buyukkanat","murat-koklu","elif-sarigil","erdinc-dal"];
+
   

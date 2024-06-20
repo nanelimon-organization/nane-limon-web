@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import style from "./NavbarButton.module.css";
-import CustomButton from "../../../components/Button";
+import CustomButton from "../../../pages/HomePage/components/ContactForm/components/Button";
 import { motion } from "framer-motion";
 function NavbarButton({ title, to, onClick }) {
   return (

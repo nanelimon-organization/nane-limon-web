@@ -1,8 +1,7 @@
 import { Box, Grid } from "@mui/material";
 import { Link } from "react-router-dom";
-
+import { src } from "../../../constants/urls";
 function NavbarLogo() {
-  const src = "https://avatars.githubusercontent.com/u/109470900?s=200&v=4";
   return (
     <Grid item md={2}>
       <Link to="/">

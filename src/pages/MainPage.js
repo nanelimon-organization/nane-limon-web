@@ -5,7 +5,9 @@ import "./MainPage.css"
 import { useEffect } from "react";
 import ChatBox from "../layout/Chatbot/ChatBox";
 function Main(){
-
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, []);
     
     return <>
 

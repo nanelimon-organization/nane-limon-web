@@ -1,7 +1,7 @@
 import { Grid, Input, Typography } from "@mui/material";
-import CustomButton from "../../../components/Button";
-import CustomTextArea from "../../../components/TextArea";
-import CustomTextField from "../../../components/TextField";
+import CustomButton from "./components/Button";
+import CustomTextArea from "./components/TextArea";
+import CustomTextField from "./components/TextField";
 import React, { useRef, useState } from "react";
 
 import emailjs from "@emailjs/browser";
