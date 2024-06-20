@@ -8,7 +8,7 @@ import bursabel from "../../../images/footer/bursabel.png";
 import selcuk from "../../../images/footer/selcuk.png";
 function LogosSection() {
   return (
-    <Grid item xs={12} md={2}>
+    <Grid item xs={12} md={4} >
       <Grid item>
         <Link to="/s">
           <Box
@@ -43,8 +43,6 @@ function LogosSection() {
             }}
           />
         </Link>
-      </Grid>
-      <Grid item>
         <Link to="/">
           <Box
             component="img"
@@ -79,6 +77,7 @@ function LogosSection() {
           />
         </Link>
       </Grid>
+       
     </Grid>
   );
 }

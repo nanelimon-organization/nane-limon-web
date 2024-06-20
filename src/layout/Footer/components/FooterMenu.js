@@ -3,7 +3,7 @@ import { Box, Grid,Link } from "@mui/material";
 function FooterMenu() {
   return (
     <Grid item xs={12} md={1}>
-      <Box padding={2} display="flex" flexDirection="column">
+      <Box padding={2} display="flex" flexDirection="column" alignItems="center">
         <Link
           href="/"
           fontSize={14}
