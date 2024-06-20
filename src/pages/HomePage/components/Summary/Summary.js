@@ -6,9 +6,8 @@ function Summary() {
       <Box sx={{ margin: { xs: 3, md: 8 }, padding: { xs: 2, md: 5 } }}>
         <Box borderRadius={5}>
           <Typography
-            variant="h5"
             sx={{
-              fontSize: 28,
+              fontSize: 24,
               color: "black",
               textAlign: "start",
               fontFamily: "roboto-bold",
@@ -18,9 +17,8 @@ function Summary() {
           </Typography>
         </Box>
         <Typography
-          variant="h6"
           sx={{
-            fontSize: { xs: 12, md: 20 },
+            fontSize: { xs: 12, md: 16 },
             textAlign: "justify",
             fontFamily: "roboto-regular",
           }}

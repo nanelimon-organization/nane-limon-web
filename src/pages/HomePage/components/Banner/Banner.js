@@ -9,6 +9,8 @@ import img3 from "../../../../images/img3.jpg";
 import img4 from "../../../../images/img4.jpg";
 import img5 from "../../../../images/img5.JPG";
 import img6 from "../../../../images/img6.JPG";
+import hf from "../../../../images/hf.png";
+
 import img7 from "../../../../images/img7.jpg";
 import img8 from "../../../../images/img8.jpg";
 import img9 from "../../../../images/img9.png";
@@ -17,7 +19,8 @@ import img11 from "../../../../images/img11.JPG";
 import CustomButton from "../ContactForm/components/Button";
 import style from "./BannerButton.module.css";
 import { NavLink } from "react-router-dom";
-
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 const images = [
   {
     imgPath: img1,
@@ -142,17 +145,17 @@ function Banner() {
           >
             Türkçe Doğal Dil İşleme Gönüllüleri
           </Typography>
-
-          <Typography
-            sx={{
-              fontSize: 24,
-              color: "#ffffff",
-              textAlign: "start",
-              fontFamily: "roboto-regular",
-            }}
-          >
-            Türkçe Doğal Dil İşleme Gönüllüleri
-          </Typography>
+            <Grid display="flex">
+          <Button disableFocusRipple disableRipple>
+            <LinkedInIcon sx={{width:50,height:50,color: "#ffffff"}} />
+          </Button>
+          <Button disableFocusRipple disableRipple>
+            <GitHubIcon sx={{width:50,height:50, color: "#ffffff"}} />
+          </Button>
+          <Button disableFocusRipple disableRipple>
+            <Box component="img" src={hf} sx={{width:50,height:50, objectFit:"contain"}}/>
+          </Button>
+          </Grid>
         </Grid>
       </Box>
     </Box>

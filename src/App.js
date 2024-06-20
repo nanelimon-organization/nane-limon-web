@@ -26,6 +26,7 @@ function App() {
   }, []);
 
   const homeRef = useRef(null);
+  const teamRef = useRef(null);
   const projectsRef = useRef(null);
   const eventsRef = useRef(null);
   const contactRef = useRef(null);
@@ -36,12 +37,13 @@ function App() {
     let element = null;
 
     if (section === 'home') element = homeRef.current;
+    if (section === 'team') element = teamRef.current;
     if (section === 'projects') element = projectsRef.current;
     if (section === 'events') element = eventsRef.current;
     if (section === 'contact') element = contactRef.current;
     
     if (element) {
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
         top: elementPosition + offset,
         behavior: 'smooth'
@@ -57,7 +59,7 @@ function App() {
       children: [
         {
           path: "/",
-          element: <HomePage refs={{ homeRef, projectsRef, eventsRef, contactRef}} />,
+          element: <HomePage refs={{ homeRef, teamRef, projectsRef, eventsRef, contactRef}} />,
           //loader: homeLoader,
         },
         { path: "/member/:memberDetail", element: <MemberDetail /> },

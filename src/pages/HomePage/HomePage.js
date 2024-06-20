@@ -55,7 +55,9 @@ function HomePage({refs}) {
 
       <Divider />
 
+      <div ref={refs.teamRef}>
       <Team />
+      </div>
 
       <Divider />
 
