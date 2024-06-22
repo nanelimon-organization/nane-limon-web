@@ -7,6 +7,8 @@ import HomePage from "./pages/HomePage/HomePage";
 import Main from "./pages/MainPage";
 import MemberDetail from "./pages/MemberDetail/MemberDetail";
 import { useEffect, useRef } from "react";
+import Loading from "./layout/Loading/Loading";
+import { LoadingProvider } from "./contexts/LoadingContext";
 function App() {
 
   useEffect(() => {
@@ -78,7 +80,12 @@ function App() {
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return (
+    <LoadingProvider>
+      <Loading />
+      <RouterProvider router={router} />
+    </LoadingProvider>
+  );
 }
 
 export default App;

@@ -21,6 +21,7 @@ import style from "./BannerButton.module.css";
 import { NavLink } from "react-router-dom";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { useLoading } from "../../../../contexts/LoadingContext";
 
 const images = [
   {
@@ -58,30 +59,45 @@ const images = [
   },
 ];
 
-function preloadImages(imageArray) {
-  imageArray.forEach(image => {
-    const img = new Image();
-    img.src = image.imgPath;
-  });
-}
-
-
 function Banner() {
+
+  const { showLoading, hideLoading } = useLoading();
+  const [allImagesLoaded, setAllImagesLoaded] = useState(false);
+
+  useEffect(() => {
+    const handleImageLoad = () => {
+      setAllImagesLoaded((prev) => prev + 1);
+    };
+
+    showLoading();
+
+    const imageElements = images.map(({ imgPath }) => {
+      const img = new Image();
+      img.src = imgPath;
+      img.onload = handleImageLoad;
+      return img;
+    });
+
+    return () => {
+      imageElements.forEach((img) => {
+        img.onload = null;
+      });
+    };
+  }, [showLoading]);
+
+  useEffect(() => {
+    if (allImagesLoaded === images.length) {
+      hideLoading();
+    }
+  }, [allImagesLoaded, hideLoading]);
+  
   const maxSteps = images.length;
 
   const [index, setIndex] = useState(0);
 
   const member1 = images[0 + index];
 
-  useEffect(()=>{
-    preloadImages(images);
-
-  },[])
-
   useEffect(() => {
-
-
-
     const interval = setInterval(() => {
       if (index < maxSteps - 1) {
         setIndex(index + 1);
@@ -91,9 +107,9 @@ function Banner() {
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [index, maxSteps]);
+  }, [index,maxSteps]);
 
-
+  if (!allImagesLoaded) return null;
 
   return (
     <Box
