@@ -21,6 +21,7 @@ import style from "./BannerButton.module.css";
 import { NavLink } from "react-router-dom";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+
 const images = [
   {
     imgPath: img1,
@@ -64,6 +65,7 @@ function Banner() {
   const member1 = images[0 + index];
 
   useEffect(() => {
+
     const interval = setInterval(() => {
       if (index < maxSteps - 1) {
         setIndex(index + 1);
@@ -75,20 +77,7 @@ function Banner() {
     return () => clearInterval(interval);
   }, [index, maxSteps]);
 
-  function swipeToRight() {
-    if (index < maxSteps - 1) {
-      setIndex(index + 1);
-    } else {
-      setIndex(0);
-    }
-  }
-  function swipeToLeft() {
-    if (index > 0) {
-      setIndex(index - 1);
-    } else {
-      setIndex(maxSteps - 1);
-    }
-  }
+
 
   return (
     <Box
@@ -103,9 +92,7 @@ function Banner() {
       <Box
         key={member1.imgPath}
         component={motion.img}
-        initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
         transition={{ delay: 0.3, type: "just", stiffness: 100 }}
         sx={{
           minHeight: "100vh",
