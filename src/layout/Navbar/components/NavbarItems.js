@@ -32,7 +32,7 @@ function NavbarItems({ scrollToSection }) {
           exit={{ opacity: 0 }}
           transition={{ delay: 0.5, type: "tween", stiffness: 100 }}
         >
-          <NavbarButton title="Projeler"  onClick={() => scrollToSection('projects')} />
+          <NavbarButton title="Projeler" onClick={() => scrollToSection('projects')} />
         </Grid>
         <Grid
           component={motion.div}
