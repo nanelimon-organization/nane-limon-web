@@ -57,6 +57,15 @@ const images = [
     imgPath: img11,
   },
 ];
+
+function preloadImages(imageArray) {
+  imageArray.forEach(image => {
+    const img = new Image();
+    img.src = image.imgPath;
+  });
+}
+
+
 function Banner() {
   const maxSteps = images.length;
 
@@ -64,7 +73,14 @@ function Banner() {
 
   const member1 = images[0 + index];
 
+  useEffect(()=>{
+    preloadImages(images);
+
+  },[])
+
   useEffect(() => {
+
+
 
     const interval = setInterval(() => {
       if (index < maxSteps - 1) {
@@ -92,7 +108,6 @@ function Banner() {
       <Box
         key={member1.imgPath}
         component={motion.img}
-        animate={{ opacity: 1 }}
         transition={{ delay: 0.3, type: "just", stiffness: 100 }}
         sx={{
           minHeight: "100vh",
