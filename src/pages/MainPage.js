@@ -14,7 +14,7 @@ function Main({scrollToSection}){
 
       useEffect(()=>{
         window.addEventListener('scroll',()=>{
-          window.scrollY > 800 ? setSticky(true) : setSticky(false)
+          window.scrollY > 790 ? setSticky(true) : setSticky(false)
         })
       },[])
 
