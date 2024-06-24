@@ -7,7 +7,6 @@ function BreadCrumbs({location}){
       style={{ textDecoration: "none" }}
       underline="hover"
       color="inherit"
-      href="/"
       to="/"
     >
       <Typography fontFamily="roboto-bold" color="text.primary">

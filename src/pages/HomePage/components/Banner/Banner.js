@@ -3,24 +3,10 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import imagePaths from "../../../../assets/imagePaths";
 import { useLoading } from "../../../../contexts/LoadingContext";
-import preloadImages  from "../../../../utils/preloadImages"  
 
-function Banner() {
+function Banner({preloadedImages,visible}) {
   const [index, setIndex] = useState(0);
-  const [preloadedImages, setPreloadedImages] = useState([]);
-  const [visible, setVisible] = useState(false);
-  const { showLoading, hideLoading } = useLoading();
-
-  useEffect(() => {
-    showLoading();
-    preloadImages(imagePaths).then((images) => {
-      setPreloadedImages(images);
-      setVisible(true);
-      hideLoading();
-    });
-  }, [showLoading, hideLoading]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -37,9 +23,9 @@ function Banner() {
         justifyContent: "center",
         display: "flex",
         textAlign: "center",
-        position: "relative",
         visibility: visible ? "visible" : "hidden", 
         opacity: visible ? 1 : 0, 
+        position: "relative",
         transition: "opacity 0.3s ease-in-out", 
       }}
     >

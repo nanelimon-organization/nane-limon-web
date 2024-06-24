@@ -1,9 +1,22 @@
 import { Button, Grid, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import NavbarButton from "./NavbarButton";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 function NavbarItems({ scrollToSection }) {
+  const location = useLocation()
+
+  const handleClick = (value) => {
+    if (location.pathname == "/") {
+      scrollToSection(value);
+    } else {
+      setTimeout(() => {
+        scrollToSection(value);
+      }, 1000); 
+    }
+  };
+  
+
   return (
     <>
       <Grid display="flex" flexDirection="row">
@@ -16,7 +29,8 @@ function NavbarItems({ scrollToSection }) {
         >
           <NavbarButton
             title="Anasayfa"
-            onClick={() => scrollToSection("home")}
+            to="/"
+            onClick={()=>handleClick("home")} 
           />
         </Grid>
         <Grid
@@ -28,7 +42,8 @@ function NavbarItems({ scrollToSection }) {
         >
           <NavbarButton
             title="Ekibimiz"
-            onClick={() => scrollToSection("team")}
+            to="/"
+            onClick={()=>handleClick("team")} 
           />
         </Grid>
         <Grid
@@ -40,7 +55,8 @@ function NavbarItems({ scrollToSection }) {
         >
           <NavbarButton
             title="Projeler"
-            onClick={() => scrollToSection("projects")}
+            to="/"
+            onClick={()=>handleClick("projects")} 
           />
         </Grid>
         <Grid
@@ -52,7 +68,8 @@ function NavbarItems({ scrollToSection }) {
         >
           <NavbarButton
             title="Etkinlikler"
-            onClick={() => scrollToSection("events")}
+            to="/"
+            onClick={()=>handleClick("events")} 
           />
         </Grid>
         <Grid
@@ -64,7 +81,8 @@ function NavbarItems({ scrollToSection }) {
         >
           <NavbarButton
             title="Bize Ulaşın"
-            onClick={() => scrollToSection("contact")}
+            to="/"
+            onClick={()=>handleClick("contact")} 
           />
         </Grid>
       </Grid>
@@ -89,7 +107,19 @@ function NavbarItems({ scrollToSection }) {
 
 export default NavbarItems;
 
-function NavbarItemsMobile({ toggleMenu, sticky, scrollToSection }) {
+function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
+
+  const location = useLocation()
+
+  const handleClick = (value) => {
+    if (location.pathname == "/") {
+      scrollToSection(value);
+    } else {
+      setTimeout(() => {
+        scrollToSection(value);
+      }, 1000); 
+    }
+  };
   return (
     <Grid
       container
@@ -115,7 +145,9 @@ function NavbarItemsMobile({ toggleMenu, sticky, scrollToSection }) {
       >
         <NavbarButton
           title="Anasayfa"
-          onClick={() => {scrollToSection("home"); toggleMenu()}}
+          onClick={() => {handleClick("home"); toggleMenu()}}
+          to="/"
+
         />
       </Grid>
       <Grid
@@ -127,7 +159,9 @@ function NavbarItemsMobile({ toggleMenu, sticky, scrollToSection }) {
         >
           <NavbarButton
             title="Ekibimiz"
-            onClick={() => {scrollToSection("team"); toggleMenu()}}
+            to="/"
+
+            onClick={() => {handleClick("team"); toggleMenu()}}
           />
         </Grid>
         <Grid
@@ -139,7 +173,9 @@ function NavbarItemsMobile({ toggleMenu, sticky, scrollToSection }) {
         >
           <NavbarButton
             title="Projeler"
-            onClick={() => {scrollToSection("projects"); toggleMenu()}}
+            to="/"
+
+            onClick={() => {handleClick("projects"); toggleMenu()}}
           />
         </Grid>
         <Grid
@@ -151,7 +187,9 @@ function NavbarItemsMobile({ toggleMenu, sticky, scrollToSection }) {
         >
           <NavbarButton
             title="Etkinlikler"
-            onClick={() => {scrollToSection("events"); toggleMenu()}}
+            to="/"
+
+            onClick={() => {handleClick("events"); toggleMenu()}}
           />
         </Grid>
         <Grid
@@ -163,7 +201,9 @@ function NavbarItemsMobile({ toggleMenu, sticky, scrollToSection }) {
         >
           <NavbarButton
             title="Bize Ulaşın"
-            onClick={() => {scrollToSection("contact"); toggleMenu()}}
+            to="/"
+
+            onClick={() => {handleClick("contact"); toggleMenu()}}
           />
         </Grid>
         <Grid

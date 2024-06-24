@@ -1,25 +1,33 @@
-import {
-  Alert,
-  Box,
-  Divider,
-  Grid,
-  Snackbar,
-} from "@mui/material";
+import { Alert, Box, Divider, Grid, Snackbar } from "@mui/material";
 import Banner from "./components/Banner/Banner";
 import Summary from "./components/Summary/Summary";
 import { useLoaderData } from "react-router-dom";
 import Team from "./components/Team/Team";
 import ContactForm from "./components/ContactForm/ContactForm";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { events } from "../../constants/events";
 import {
   InfoLayoutLeft,
   InfoLayoutRight,
 } from "../CommunityEvents/components/InfoLayout/InfoLayout";
+import preloadImages from "../../utils/preloadImages";
+import imagePaths from "../../assets/imagePaths";
 
 import Projects from "./components/Projects/Projects";
 import Medium from "./components/Medium/Medium";
+import { useLoading } from "../../contexts/LoadingContext";
 function HomePage({ refs, scrollToSection }) {
+  const { showLoading, hideLoading } = useLoading();
+  const [preloadedImages, setPreloadedImages] = useState([]);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    preloadImages(imagePaths).then((images) => {
+      setPreloadedImages(images);
+      setVisible(true);
+    });
+  }, [showLoading, hideLoading]);
+
   const posts = useLoaderData();
   const [open, setOpen] = useState(false);
 
@@ -33,9 +41,6 @@ function HomePage({ refs, scrollToSection }) {
     }
     setOpen(false);
   };
-
-  
-
 
   return (
     <>
@@ -51,7 +56,7 @@ function HomePage({ refs, scrollToSection }) {
       </Snackbar>
 
       <div ref={refs.homeRef}>
-        <Banner />
+        <Banner visible={visible} preloadedImages={preloadedImages} />
       </div>
 
       <Box sx={{ paddingX: { xs: 0, md: 20 } }}>
