@@ -4,25 +4,23 @@ import { motion } from "framer-motion";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import imagePaths from "../../../../assets/imagePaths";
-import usePreloadImages from "../../../../hooks/usePreloadImages";
 import { useLoading } from "../../../../contexts/LoadingContext";
+import preloadImages  from "../../../../utils/preloadImages"  
 
 function Banner() {
-  const [loading, setLoading] = useState(true); 
-  const { preloadedImages, allImagesLoaded } = usePreloadImages(Object.values(imagePaths.banner), setLoading);
-  const { showLoading, hideLoading } = useLoading();
   const [index, setIndex] = useState(0);
+  const [preloadedImages, setPreloadedImages] = useState([]);
   const [visible, setVisible] = useState(false);
+  const { showLoading, hideLoading } = useLoading();
 
   useEffect(() => {
-    if (allImagesLoaded) {
-      hideLoading();
+    showLoading();
+    preloadImages(imagePaths).then((images) => {
+      setPreloadedImages(images);
       setVisible(true);
-    } else {
-      showLoading();
-      setVisible(false);
-    }
-  }, [allImagesLoaded, showLoading, hideLoading]);
+      hideLoading();
+    });
+  }, [showLoading, hideLoading]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -96,7 +94,6 @@ function Banner() {
             <Button disableFocusRipple disableRipple>
               <GitHubIcon sx={{ width: 50, height: 50, color: "#ffffff" }} />
             </Button>
-            
           </Grid>
         </Grid>
       </Box>

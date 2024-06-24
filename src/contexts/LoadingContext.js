@@ -1,4 +1,6 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import imagePaths from '../assets/imagePaths'; 
+import preloadImages from "../utils/preloadImages"
 
 const LoadingContext = createContext();
 
@@ -7,6 +9,12 @@ export const LoadingProvider = ({ children }) => {
 
   const showLoading = () => setLoading(true);
   const hideLoading = () => setLoading(false);
+
+  useEffect(() => {
+    preloadImages(imagePaths).then(() => {
+      hideLoading();
+    });
+  }, []);
 
   return (
     <LoadingContext.Provider value={{ loading, showLoading, hideLoading }}>
