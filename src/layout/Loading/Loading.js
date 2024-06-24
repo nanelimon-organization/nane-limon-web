@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box, CircularProgress } from '@mui/material';
 import { src } from '../../constants/urls';
 import { useLoading } from '../../contexts/LoadingContext';
 
 const Loading = () => {
+
+  
+
   const { loading } = useLoading();
 
   if (!loading) return null;

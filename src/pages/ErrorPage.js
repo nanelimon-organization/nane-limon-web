@@ -1,8 +1,15 @@
 import { Box, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-
+import { useLoading } from "../contexts/LoadingContext";
+import { useEffect } from "react";
+import { src } from "../constants/urls";
 function ErrorPage() {
-  const src = "https://avatars.githubusercontent.com/u/109470900?s=200&v=4";
+  const { showLoading, hideLoading } = useLoading();
+
+  useEffect(() => {
+    hideLoading();
+    return () => showLoading();
+  }, []);
 
   return (
     <Grid

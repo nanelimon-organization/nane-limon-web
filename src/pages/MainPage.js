@@ -5,11 +5,7 @@ import "./MainPage.css";
 import { useEffect, useState } from "react";
 import ChatBox from "../layout/Chatbot/ChatBox";
 function Main({ scrollToSection }) {
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-  
+ 
   const [sticky, setIsScrolled] = useState(false);
 
   const handleScroll = () => {
@@ -31,7 +27,6 @@ function Main({ scrollToSection }) {
 
   return (
     <>
-
       <div className="app-container">
         <Navbar sticky={sticky} scrollToSection={scrollToSection} />
 

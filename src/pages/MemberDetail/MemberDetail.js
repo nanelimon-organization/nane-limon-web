@@ -14,6 +14,7 @@ function MemberDetail() {
 
   useEffect(() => {
     hideLoading();
+    return () => showLoading();
   }, []);
 
   let location = useLocation();

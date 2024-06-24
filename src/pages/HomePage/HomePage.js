@@ -18,6 +18,7 @@ import {
 } from "../CommunityEvents/components/InfoLayout/InfoLayout";
 
 import Projects from "./components/Projects/Projects";
+import Medium from "./components/Medium/Medium";
 function HomePage({ refs, scrollToSection }) {
   const posts = useLoaderData();
   const [open, setOpen] = useState(false);
