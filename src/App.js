@@ -1,11 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Navigate,
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage";
-import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
 import CommunityEvents from "./pages/CommunityEvents/CommunityEvents";
 import HomePage from "./pages/HomePage/HomePage";
 import Main from "./pages/MainPage";
@@ -15,6 +14,8 @@ import { LoadingProvider, useLoading } from "./contexts/LoadingContext";
 
 const MainApp = () => {
   const { loading } = useLoading();
+
+
 
   useEffect(() => {
     const handleVisibilityChange = () => {
@@ -69,11 +70,12 @@ const MainApp = () => {
           element: (
             <HomePage
               refs={{ homeRef, teamRef, projectsRef, eventsRef, contactRef }}
+              scrollToSection={scrollToSection}
+
             />
           ),
         },
         { path: "/member/:memberDetail", element: <MemberDetail /> },
-        { path: "/projects", element: <ProjectsPage /> },
         { path: "/events", element: <CommunityEvents /> },
         {
           path: "/error",

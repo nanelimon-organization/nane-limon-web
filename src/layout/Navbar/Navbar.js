@@ -23,7 +23,7 @@ function Navbar({sticky,scrollToSection}) {
       </NavbarItemsContainer>
 
       {isMenuOpen && (
-        <NavbarItemsMobile toggleMenu={toggleMenu} sticky={sticky}/>
+        <NavbarItemsMobile toggleMenu={toggleMenu} scrollToSection={scrollToSection} sticky={sticky}/>
       )}
     </NavbarContainer>
   );
