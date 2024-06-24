@@ -2,7 +2,8 @@ import { Badge, Button, Card, CardActions, CardContent, Typography } from "@mui/
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import firstplace from "../../../../images/1stplace.png";
+
+import imagePaths from "../../../../assets/imagePaths";
 
 function CardNew() {
   return (
@@ -33,7 +34,7 @@ function CardNew() {
           alignItems: "center",
         }}
         badgeContent={
-          <img src={firstplace} alt="badge" style={{ width: 50, height: 50 }} />
+          <img src={imagePaths.icons.firstPlace} alt="badge" style={{ width: 50, height: 50 }} />
         }
       >
         <CardContent>

@@ -1,10 +1,9 @@
-// src/contexts/LoadingContext.js
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 const LoadingContext = createContext();
 
 export const LoadingProvider = ({ children }) => {
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
 
   const showLoading = () => setLoading(true);
   const hideLoading = () => setLoading(false);
@@ -17,5 +16,9 @@ export const LoadingProvider = ({ children }) => {
 };
 
 export const useLoading = () => {
-  return useContext(LoadingContext);
+  const context = useContext(LoadingContext);
+  if (context === undefined) {
+    throw new Error('useLoading must be used within a LoadingProvider');
+  }
+  return context;
 };

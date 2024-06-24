@@ -25,7 +25,6 @@ const Loading = () => {
       }}
     >
       <img src={src} alt="Logo" style={{ width: '100px', marginBottom: '20px' }} />
-      <CircularProgress sx={{color: "black"}} />
     </Box>
   );
 };

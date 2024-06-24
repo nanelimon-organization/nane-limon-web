@@ -1,26 +1,23 @@
 import { Box, Grid } from "@mui/material";
 import { Link } from "react-router-dom";
-import teknofest from "../../../images/footer/teknofest.png";
-import akbank from "../../../images/footer/akbank.jpg";
-import borusan from "../../../images/footer/borusan.jpg";
-import odeal from "../../../images/footer/ödeal.png";
-import bursabel from "../../../images/footer/bursabel.png";
-import selcuk from "../../../images/footer/selcuk.png";
+
+import imagePaths from "../../../assets/imagePaths";
+
 function LogosSection() {
   return (
-    <Grid item xs={12} md={4} >
+    <Grid item xs={12} md={4}>
       <Grid item>
         <Link to="/s">
           <Box
             component="img"
-            src={teknofest}
+            src={imagePaths.footer.teknofest}
             sx={{ width: 72, height: 72, objectFit: "contain", margin: 1 }}
           />
         </Link>
         <Link to="/">
           <Box
             component="img"
-            src={akbank}
+            src={imagePaths.footer.akbank}
             sx={{
               width: 72,
               height: 72,
@@ -33,7 +30,7 @@ function LogosSection() {
         <Link to="/">
           <Box
             component="img"
-            src={borusan}
+            src={imagePaths.footer.borusan}
             sx={{
               width: 72,
               height: 72,
@@ -46,14 +43,14 @@ function LogosSection() {
         <Link to="/">
           <Box
             component="img"
-            src={odeal}
+            src={imagePaths.footer.odeal}
             sx={{ width: 72, height: 72, objectFit: "contain", margin: 1 }}
           />
         </Link>
         <Link to="/">
           <Box
             component="img"
-            src={bursabel}
+            src={imagePaths.footer.bursabel}
             sx={{
               width: 72,
               height: 72,
@@ -66,7 +63,7 @@ function LogosSection() {
         <Link to="/">
           <Box
             component="img"
-            src={selcuk}
+            src={imagePaths.footer.selcuk}
             sx={{
               width: 72,
               height: 72,
@@ -77,7 +74,6 @@ function LogosSection() {
           />
         </Link>
       </Grid>
-       
     </Grid>
   );
 }
