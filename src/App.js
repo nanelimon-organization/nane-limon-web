@@ -12,6 +12,7 @@ import MemberDetail from "./pages/MemberDetail/MemberDetail";
 import Loading from "./layout/Loading/Loading";
 import { LoadingProvider, useLoading } from "./contexts/LoadingContext";
 import './App.css'
+import { AnimatePresence } from "framer-motion";
 const MainApp = () => {
   const { loading } = useLoading();
 

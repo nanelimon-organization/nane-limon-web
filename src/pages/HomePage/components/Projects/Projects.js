@@ -2,9 +2,11 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { projects } from "../../../../constants/projects";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import ProjectCard from "./ProjectCard";
+import { useScroll } from "framer-motion";
 function Projects({ refs, scrollToSection }) {
+
   const [showAllProjects, setShowAllProjects] = useState(false);
 
   const toggleProjects = () => {

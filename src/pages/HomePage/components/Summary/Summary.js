@@ -6,7 +6,17 @@ function Summary() {
     <Grid item xs={12} md={6}>
       <Box sx={{ margin: { xs: 3, md: 8 }, padding: { xs: 2, md: 5 } }}>
         <Box borderRadius={5}>
-        <AnimatedTitle text="Türkçe Doğal Dil İşleme Gönüllüleri" fontSize={26} fontFamily="roboto-bold" color="#111111" />
+        <Typography
+          sx={{
+            fontSize: { xs: 20, md: 24 },
+            textAlign: "justify",
+            fontFamily: "roboto-bold",
+          }}
+          paddingTop={2}
+        >
+          Türkçe Doğal Dil İşleme Gönüllüleri
+        </Typography>
+
         </Box>
         <Typography
           sx={{
