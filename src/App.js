@@ -11,7 +11,7 @@ import Main from "./pages/MainPage";
 import MemberDetail from "./pages/MemberDetail/MemberDetail";
 import Loading from "./layout/Loading/Loading";
 import { LoadingProvider, useLoading } from "./contexts/LoadingContext";
-
+import './App.css'
 const MainApp = () => {
   const { loading } = useLoading();
 

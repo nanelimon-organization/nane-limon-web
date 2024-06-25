@@ -1,20 +1,12 @@
 import { Box, Grid, Typography } from "@mui/material";
+import AnimatedTitle from "../../../../animations/AnimatedTitle";
 
 function Summary() {
   return (
     <Grid item xs={12} md={6}>
       <Box sx={{ margin: { xs: 3, md: 8 }, padding: { xs: 2, md: 5 } }}>
         <Box borderRadius={5}>
-          <Typography
-            sx={{
-              fontSize: 24,
-              color: "black",
-              textAlign: "start",
-              fontFamily: "roboto-bold",
-            }}
-          >
-            Türkçe Doğal Dil İşleme Gönüllüleri
-          </Typography>
+        <AnimatedTitle text="Türkçe Doğal Dil İşleme Gönüllüleri" fontSize={26} fontFamily="roboto-bold" color="#111111" />
         </Box>
         <Typography
           sx={{

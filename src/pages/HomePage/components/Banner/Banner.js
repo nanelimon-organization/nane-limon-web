@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { useLoading } from "../../../../contexts/LoadingContext";
+import AnimatedTitle from "../../../../animations/AnimatedTitle";
 
 function Banner({preloadedImages,visible}) {
   const [index, setIndex] = useState(0);
@@ -63,16 +64,7 @@ function Banner({preloadedImages,visible}) {
           justifyContent="center"
           alignItems="center"
         >
-          <Typography
-            sx={{
-              fontSize: 32,
-              color: "#ffffff",
-              textAlign: "start",
-              fontFamily: "roboto-bold",
-            }}
-          >
-            Türkçe Doğal Dil İşleme Gönüllüleri
-          </Typography>
+          <AnimatedTitle text="Türkçe Doğal Dil İşleme Gönüllüleri" fontSize={32} fontFamily="roboto-regular" color="#ffffff" />
           <Grid display="flex">
             <Button disableFocusRipple disableRipple>
               <LinkedInIcon sx={{ width: 50, height: 50, color: "#ffffff" }} />
