@@ -77,7 +77,7 @@ function HomePage({ refs, scrollToSection }) {
 
       <Divider />
 
-      <div ref={refs.eventsRef}>
+      <Box paddingX={10} ref={refs.eventsRef}>
         {events.map((event, index) => {
           if (index % 2 === 0) {
             return (
@@ -99,7 +99,7 @@ function HomePage({ refs, scrollToSection }) {
             );
           }
         })}
-      </div>
+      </Box>
 
       <Box ref={refs.contactRef} sx={{ paddingX: { xs: 0, md: 20 } }}>
         <ContactForm handleClick={handleClick} />
