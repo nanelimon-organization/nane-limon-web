@@ -60,24 +60,24 @@ function HomePage({ refs, scrollToSection }) {
         </div>
         
           <Box sx={{ paddingTop: "100vh" }}>
-            <Grid justifyContent="center" bgcolor="white" container>
+            <Grid justifyContent="center"  bgcolor="#ffffff"  container>
               <Summary />
             </Grid>
           </Box>
 
-          <Divider />
+          <Divider sx={{bgcolor: "#111111"}} />
 
           <div ref={refs.teamRef}>
             <Team />
           </div>
 
-          <Divider />
+          <Divider sx={{bgcolor: "#111111"}} />
 
           <Projects refs={refs} scrollToSection={scrollToSection} />
 
-          <Divider />
+          <Divider sx={{bgcolor: "#111111"}} />
 
-          <Box bgcolor="white" paddingX={10} ref={refs.eventsRef}>
+          <Box  bgcolor="#ffffff"  paddingX={10} ref={refs.eventsRef}>
             {events.map((event, index) => {
               if (index % 2 === 0) {
                 return (
@@ -101,7 +101,7 @@ function HomePage({ refs, scrollToSection }) {
             })}
           </Box>
 
-          <Box bgcolor="white" ref={refs.contactRef} sx={{ paddingX: { xs: 0, md: 20 }, marginTop: 0, marginBottom: 0}}>
+          <Box bgcolor="#ffffff" ref={refs.contactRef} sx={{ paddingX: { xs: 0, md: 20 }, marginTop: 0, marginBottom: 0}}>
             <ContactForm handleClick={handleClick} />
           </Box>
     </>

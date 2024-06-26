@@ -10,6 +10,9 @@ function NavbarContainer({ children, sticky }) {
   return (
     <Grid
       container
+      sx={{
+        transition: "background-color 0.3s ease",
+      }}
       bgcolor={isMobile ? "#111111" : sticky || location.pathname !== "/" ? "#111111" : "transparent"}
       width="100%"
       flexDirection="row"
