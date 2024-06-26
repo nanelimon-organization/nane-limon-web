@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { NavLink } from "react-router-dom";
-
+import animation from '../../../../animations/animation.gif'
 function Member({ member }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -39,9 +39,13 @@ function Member({ member }) {
         <Box
           justifyContent="center"
           display="flex"
-          bgcolor="#888888"
+          sx={{
+            backgroundImage: `url(${animation})`,
+            backgroundSize: 'contain',
+            backgroundPosition: 'center',
+          }}
           width="100%"
-          height={40}
+        height={60}
           marginBottom={6}
           padding={2}
         >
