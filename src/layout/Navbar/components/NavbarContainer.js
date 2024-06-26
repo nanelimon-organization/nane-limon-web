@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 function NavbarContainer({ children, sticky }) {
   const location = useLocation();
-  const theme = createTheme(); // Tema oluştur
+  const theme = createTheme();
 
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 

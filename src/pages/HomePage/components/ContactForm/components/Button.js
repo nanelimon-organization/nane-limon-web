@@ -9,23 +9,32 @@ function CustomButton({
   paddingX,
   disabled,
   fontSize,
-  color
+  color,
 }) {
   return (
     <Button
       onClick={onClick}
       component={motion.div}
       disableRipple
+      disableElevation
+      disableFocusRipple
+      disableTouchRipple
       disabled={disabled}
-      sx={[
-        useStyle.button,
-        { border: border, borderColor: borderColor, paddingX: paddingX },
-      ]}
+      sx={{
+        color: color ? color : "#ffffff",
+        "&:hover": { boxShadow: "none !important", bgcolor: "transparent" },
+        "&:active": {
+          boxShadow: "none !important",
+          color: "#ffffff",
+        },
+        border: border,
+        borderColor: borderColor,
+        paddingX: paddingX,
+      }}
     >
       <Typography
         textTransform="capitalize"
         fontSize={fontSize}
-        color={color}
         fontFamily="roboto-medium"
       >
         {title}
@@ -36,16 +45,3 @@ function CustomButton({
 
 export default CustomButton;
 
-const useStyle = {
-  button: {
-    color: "#ffffff",
-
-    "&:hover": {
-      boxShadow: "none !important",
-    },
-    "&:active": {
-      boxShadow: "none !important",
-      color: "black",
-    },
-  },
-};

@@ -1,4 +1,5 @@
 import { Card } from "@mui/material";
+import { motion } from "framer-motion";
 
 function DetailCardContainer({ children }) {
   return (
@@ -11,8 +12,12 @@ function DetailCardContainer({ children }) {
         margin: 5,
         borderRadius: 10
     }}
-      elevation={0}
-      
+      elevation={2}
+      component={motion.div}
+      initial={{  opacity: 0.5}}
+      animate={{opacity: 1}}
+      exit={{  opacity: 0.5}}
+      transition={{ duration: 0.5, ease: "easeInOut" }} 
     >
       {children}
     </Card>

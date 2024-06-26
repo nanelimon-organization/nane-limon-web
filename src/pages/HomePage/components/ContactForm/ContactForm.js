@@ -203,6 +203,7 @@ function ContactForm({ handleClick }) {
             title="Gönder"
             disabled={!capVal}
             border={1}
+            color="#111111"
             paddingX={5}
             onClick={sendEmail}
           />

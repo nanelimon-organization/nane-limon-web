@@ -1,50 +1,72 @@
 import { Avatar, Box, Card, Typography } from "@mui/material";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 
-function Member({member }) {
+function Member({ member }) {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
+  const yProgress = useTransform(scrollYProgress, [0, 1], [-20, 0]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
   return (
-    <NavLink state={member} style={{textDecoration: "none", color: "black"}} to={"member/"+member.slug}>
-    <Card
-      sx={{
-        alignItems: "center",
-        borderRadius:5,
-        display: "flex",
-        flexDirection: "column",
-      }}
+    <NavLink
+      state={member}
+      style={{ textDecoration: "none", color: "black" }}
+      to={"member/" + member.slug}
     >
-      <Box  justifyContent="center" display="flex"  bgcolor="#888888" width="100%" height={40} marginBottom={6} padding={2}>
-      
-      <Avatar src={member.src} sx={{ width: 100, height: 100 }}></Avatar>
-      </Box>
-      
-      <Typography
-        variant="h6"
+      <Card
+        component={motion.div}
+
+        ref={ref}
+        style={{
+          y: yProgress,
+          opacity: opacityProgress,
+        }}
         sx={{
-          fontSize: 20,
-          textAlign: "center",
-          fontFamily: "roboto-bold",
+          alignItems: "center",
+          borderRadius: 5,
+          paddingBottom: 2,
+          display: "flex",
+          flexDirection: "column",
         }}
       >
-        {member.name}
-      </Typography>
-      <Typography textAlign="justify" fontFamily="roboto-regular">
-        {member.title}
-      </Typography>
-
-      <Box display="flex" marginY={1}>
-        <FaGithub size={22} />
-        <Box paddingX={1}>
-        <FaLinkedin size={22}/>
+        <Box
+          justifyContent="center"
+          display="flex"
+          bgcolor="#888888"
+          width="100%"
+          height={40}
+          marginBottom={6}
+          padding={2}
+        >
+          <Avatar src={member.src} sx={{ width: 100, height: 100 }}></Avatar>
         </Box>
-        <IoIosMail size={22} />
 
-      </Box>
-     
-    </Card>
+        <Typography
+          variant="h6"
+          sx={{
+            fontSize: 20,
+            textAlign: "center",
+            fontFamily: "roboto-bold",
+          }}
+        >
+          {member.name}
+        </Typography>
+        <Typography
+          textAlign="justify"
+          fontSize={14}
+          fontFamily="roboto-regular"
+        >
+          {member.title}
+        </Typography>
+      </Card>
     </NavLink>
-
   );
 }
 

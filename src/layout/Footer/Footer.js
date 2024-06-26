@@ -3,10 +3,10 @@ import LogosSection from "./components/LogosSection";
 import AboutUs from "./components/AboutUs";
 import BrandSection from "./components/BrandSection";
 import FooterContainer from "./components/FooterContainer";
-function Footer() {
+function Footer({scrollToSection}) {
   return (
     <FooterContainer>
-      <FooterMenu />
+      <FooterMenu scrollToSection={scrollToSection} />
       <LogosSection />
       <AboutUs />
       <BrandSection />

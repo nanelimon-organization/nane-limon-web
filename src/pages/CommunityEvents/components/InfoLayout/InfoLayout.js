@@ -3,23 +3,16 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 export function InfoLayoutRight({ title, description, src }) {
-  const [hasAnimated, setHasAnimated] = useState(false);
 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.33 1"],
   });
-  const xProgress = useTransform(scrollYProgress, [0, 1], [70, 0]);
+  const xProgress = useTransform(scrollYProgress, [0, 1], [40, 0]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
-  useEffect(() => {
-    scrollYProgress.onChange((latest) => {
-      if (latest === 1) {
-        setHasAnimated(true);
-      }
-    });
-  }, [scrollYProgress]);
+ 
 
   return (
     <>
@@ -29,8 +22,8 @@ export function InfoLayoutRight({ title, description, src }) {
         component={motion.div}
         ref={ref}
         style={{
-          x: hasAnimated ? 0 : xProgress,
-          opacity: hasAnimated ? 1 : opacityProgress,
+          x: xProgress,
+          opacity: opacityProgress,
         }}
         display="flex"
         justifyContent="center"
@@ -85,22 +78,15 @@ export function InfoLayoutRight({ title, description, src }) {
 }
 
 export function InfoLayoutLeft({ title, description, src }) {
-  const [hasAnimated, setHasAnimated] = useState(false);
 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1.33 1"],
+    offset: ["0 2", "1.33 1"],
   });
-  const xProgress = useTransform(scrollYProgress, [0, 1], [-70, 0]);
+  const xProgress = useTransform(scrollYProgress, [0, 1], [-40, 0]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
-  useEffect(() => {
-    scrollYProgress.onChange((latest) => {
-      if (latest === 1) {
-        setHasAnimated(true);
-      }
-    });
-  }, [scrollYProgress]);
+  
   return (
     <>
       <Grid
@@ -108,8 +94,8 @@ export function InfoLayoutLeft({ title, description, src }) {
         component={motion.div}
         ref={ref}
         style={{
-          x: hasAnimated ? 0 : xProgress,
-          opacity: hasAnimated ? 1 : opacityProgress,
+          x: xProgress,
+          opacity: opacityProgress,
         }}
         display="flex"
         justifyContent="center"

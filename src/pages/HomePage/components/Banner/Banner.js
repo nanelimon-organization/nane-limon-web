@@ -5,6 +5,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { useLoading } from "../../../../contexts/LoadingContext";
 import AnimatedTitle from "../../../../animations/AnimatedTitle";
+import { Link } from "react-router-dom";
+import imagePaths from "../../../../assets/imagePaths";
 
 function Banner({preloadedImages,visible}) {
   const [index, setIndex] = useState(0);
@@ -66,12 +68,21 @@ function Banner({preloadedImages,visible}) {
         >
           <AnimatedTitle text="Türkçe Doğal Dil İşleme Gönüllüleri" fontSize={32} fontFamily="roboto-regular" color="#ffffff" />
           <Grid display="flex">
+            <Link target="_blank" to='https://www.linkedin.com/company/nane-limon'>
             <Button disableFocusRipple disableRipple>
               <LinkedInIcon sx={{ width: 50, height: 50, color: "#ffffff" }} />
             </Button>
+            </Link>
+            <Link target="_blank" to='https://github.com/nanelimon-organization'>
             <Button disableFocusRipple disableRipple>
               <GitHubIcon sx={{ width: 50, height: 50, color: "#ffffff" }} />
             </Button>
+            </Link>
+            <Link target="_blank" to='https://huggingface.co/nanelimon'>
+            <Button disableFocusRipple disableRipple>
+              <Box component="img" src={imagePaths.icons.hf} width={50} height={50} sx={{objectFit: "contain"}}  />
+            </Button>
+            </Link>
           </Grid>
         </Grid>
       </Box>

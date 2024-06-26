@@ -11,11 +11,16 @@ function FloatingActionButton({ style, onClick }) {
       color="default"
       sx={{
         ...style,
-        
+        bgcolor: "#ffffff",
+        width: 60,
+        height:60,
+        "&:hover":{
+          bgcolor: "#ffffff"
+        }
       }}
-      disableRipple={true}
-      disableFocusRipple={true}
-      disableTouchRipple={true}
+      disableRipplee
+      disableFocusRipple
+      disableTouchRipple
       onClick={onClick}
       component={motion.div}
             whileHover={{ scale: 1.18 }}
@@ -23,9 +28,7 @@ function FloatingActionButton({ style, onClick }) {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1, type: "spring", stiffness: 100 }}
     >
-      <IconButton >
         <ChatIcon sx={{color:"black"}} />
-      </IconButton>
     </Fab>
   );
 }

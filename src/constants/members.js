@@ -11,6 +11,7 @@ export const members = [
       name: "Şeyma Sarıgil",
       slug: "seyma-sarigil",
       title: "Ekip Lideri & AI Mühendisi",
+      email: "seymasargil@nanelimon.ai",
       description:
         "Şeyma SarıgilThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
       linkedin: "https://www.linkedin.com/in/eraybuyukkanat/",
@@ -20,6 +21,7 @@ export const members = [
       name: "Erdinç Dal",
       slug: "erdinc-dal",
       title: "Veri Analisti",
+      email: "erdincdal@nanelimon.ai",
       description:
         "ErdinçDalThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
       linkedin: "https://www.linkedin.com/in/eraybuyukkanat/",
@@ -29,6 +31,7 @@ export const members = [
       name: "Tarık Kaan Koç",
       slug: "tarik-kaan-koc",
       title: "Gen AI Mühendisi",
+      email: "tarikkaankoc@nanelimon.ai",
       description:
         "TarıkKaanThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
       src: "https://media.licdn.com/dms/image/D4D35AQFRWJTI1-Z0wA/profile-framedphoto-shrink_200_200/0/1709022442816?e=1710615600&v=beta&t=QJ8NbW7tHVHHzRRetdBCl4YPEWJmQBFtY5tOsD5QBFg",
@@ -45,9 +48,12 @@ export const members = [
       name: "Eray Büyükkanat",
       slug: "eray-buyukkanat",
       title: "Önyüz Geliştirici",
+      email: "eray.buyukkanat@nanelimon.ai",
+      linkedin: "https://www.linkedin.com/in/eraybuyukkanat",
+      github: "https://www.github.com/eraybuyukkanat",
       description:
         "ErayThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
-      src: "https://media.licdn.com/dms/image/D4D03AQGU7O0XOJlK8g/profile-displayphoto-shrink_200_200/0/1701177246831?e=1713398400&v=beta&t=ApRp5LGPxnTg2riIToixUR22u1qPwLm8VuczHiuFg-o",
+      src: "https://media.licdn.com/dms/image/D4D03AQGU7O0XOJlK8g/profile-displayphoto-shrink_200_200/0/1701177246831?e=1724889600&v=beta&t=nMmKYchvEZahWmtDLxFy43fMjxcFQQ1Vy6dmnqS8pdk",
     },
   ];
 

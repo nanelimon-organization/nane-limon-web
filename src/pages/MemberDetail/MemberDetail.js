@@ -9,6 +9,11 @@ import CardDetail from "./components/CardContent";
 import { useLoading } from "../../contexts/LoadingContext";
 
 function MemberDetail() {
+
+  useEffect(()=>{
+    window.scrollTo({top: 0,behavior: "smooth"})
+  },[])
+
   const { memberDetail } = useParams();
   const { showLoading, hideLoading } = useLoading();
 
