@@ -60,8 +60,8 @@ function HomePage({ refs, scrollToSection }) {
           <Banner visible={visible} preloadedImages={preloadedImages} />
         </div>
         
-          <Box sx={{ paddingTop: "100vh" }}>
-            <Grid justifyContent="center"  bgcolor="#ffffff"  container>
+          <Box sx={{ paddingTop: "100vh"}}  >
+            <Grid justifyContent="center" bgcolor="#ffffff"  container>
             <Medium posts={posts}/>
               <Summary />
             </Grid>

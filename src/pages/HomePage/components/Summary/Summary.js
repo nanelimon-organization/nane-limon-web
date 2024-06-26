@@ -1,6 +1,9 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import AnimatedTitle from "../../../../animations/AnimatedTitle";
-
+import { Link } from "react-router-dom";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import imagePaths from "../../../../assets/imagePaths";
 function Summary() {
   return (
     <Grid item xs={12} md={6} bgcolor="white">
@@ -37,8 +40,31 @@ function Summary() {
           doğal dil işlemede yapacak çok işimiz var ve heyecanla sizlerle
           paylaşmayı bekliyoruz! Sevgiler...
         </Typography>
-
+        <Grid container justifyContent="center" alignItems="center" spacing={2} padding={4}>
+          <Grid item>
+            <Link target="_blank" to='https://www.linkedin.com/company/nane-limon'>
+              <Button disableFocusRipple disableRipple>
+                <LinkedInIcon sx={{ width: 50, height: 50, color: "#111111" }} />
+              </Button>
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link target="_blank" to='https://github.com/nanelimon-organization'>
+              <Button disableFocusRipple disableRipple>
+                <GitHubIcon sx={{ width: 50, height: 50, color: "#111111" }} />
+              </Button>
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link target="_blank" to='https://huggingface.co/nanelimon'>
+              <Button disableFocusRipple disableRipple>
+                <Box component="img" src={imagePaths.icons.hf} width={50} height={50} sx={{ objectFit: "contain" }} />
+              </Button>
+            </Link>
+          </Grid>
+        </Grid>
       </Box>
+      
     </Grid>
   );
 }
