@@ -3,7 +3,7 @@ import AnimatedTitle from "../../../../animations/AnimatedTitle";
 
 function Summary() {
   return (
-    <Grid item xs={12} md={6}>
+    <Grid item xs={12} md={6} bgcolor="white">
       <Box sx={{ margin: { xs: 3, md: 8 }, padding: { xs: 2, md: 5 } }}>
         <Box borderRadius={5}>
         <Typography

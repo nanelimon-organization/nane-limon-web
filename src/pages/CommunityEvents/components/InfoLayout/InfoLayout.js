@@ -1,6 +1,6 @@
-import { Box, Divider, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 export function InfoLayoutRight({ title, description, src }) {
 
@@ -19,6 +19,7 @@ export function InfoLayoutRight({ title, description, src }) {
       <Grid
         container
         overflow="hidden"
+  
         component={motion.div}
         ref={ref}
         style={{
@@ -72,7 +73,6 @@ export function InfoLayoutRight({ title, description, src }) {
           ></Box>
         </Grid>
       </Grid>
-      <Divider sx={{ marginX: "20%" }} />
     </>
   );
 }
@@ -91,6 +91,7 @@ export function InfoLayoutLeft({ title, description, src }) {
     <>
       <Grid
         container
+        
         component={motion.div}
         ref={ref}
         style={{
@@ -144,7 +145,6 @@ export function InfoLayoutLeft({ title, description, src }) {
           </Typography>
         </Grid>
       </Grid>
-      <Divider sx={{ marginX: "20%" }} />
     </>
   );
 }

@@ -33,6 +33,7 @@ function Team() {
       container
       width="100%"
       display="flex"
+      bgcolor="white"
       flexDirection="row"
       justifyContent="center"
       paddingY={5}

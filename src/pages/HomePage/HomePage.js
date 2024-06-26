@@ -16,6 +16,7 @@ import imagePaths from "../../assets/imagePaths";
 import Projects from "./components/Projects/Projects";
 import Medium from "./components/Medium/Medium";
 import { useLoading } from "../../contexts/LoadingContext";
+
 function HomePage({ refs, scrollToSection }) {
   const { showLoading, hideLoading } = useLoading();
   const [preloadedImages, setPreloadedImages] = useState([]);
@@ -54,56 +55,55 @@ function HomePage({ refs, scrollToSection }) {
           Mesajın başarıyla iletildi!
         </Alert>
       </Snackbar>
+        <div ref={refs.homeRef}>
+          <Banner visible={visible} preloadedImages={preloadedImages} />
+        </div>
+        
+          <Box sx={{ paddingTop: "100vh" }}>
+            <Grid justifyContent="center" bgcolor="white" container>
+              <Summary />
+            </Grid>
+          </Box>
 
-      <div ref={refs.homeRef}>
-        <Banner visible={visible} preloadedImages={preloadedImages} />
-      </div>
+          <Divider />
 
-      <Box sx={{ paddingX: { xs: 0, md: 20 } }}>
-        <Grid justifyContent="center" container>
-          <Summary />
-        </Grid>
-      </Box>
+          <div ref={refs.teamRef}>
+            <Team />
+          </div>
 
-      <Divider />
+          <Divider />
 
-      <div ref={refs.teamRef}>
-        <Team />
-      </div>
+          <Projects refs={refs} scrollToSection={scrollToSection} />
 
-      <Divider />
+          <Divider />
 
-      <Projects refs={refs} scrollToSection={scrollToSection} />
+          <Box bgcolor="white" paddingX={10} ref={refs.eventsRef}>
+            {events.map((event, index) => {
+              if (index % 2 === 0) {
+                return (
+                  <InfoLayoutLeft
+                    key={index}
+                    title={event.title}
+                    description={event.description}
+                    src={event.src}
+                  />
+                );
+              } else {
+                return (
+                  <InfoLayoutRight
+                    key={index}
+                    title={event.title}
+                    description={event.description}
+                    src={event.src}
+                  />
+                );
+              }
+            })}
+          </Box>
 
-      <Divider />
-
-      <Box paddingX={10} ref={refs.eventsRef}>
-        {events.map((event, index) => {
-          if (index % 2 === 0) {
-            return (
-              <InfoLayoutLeft
-                key={index}
-                title={event.title}
-                description={event.description}
-                src={event.src}
-              />
-            );
-          } else {
-            return (
-              <InfoLayoutRight
-                key={index}
-                title={event.title}
-                description={event.description}
-                src={event.src}
-              />
-            );
-          }
-        })}
-      </Box>
-
-      <Box ref={refs.contactRef} sx={{ paddingX: { xs: 0, md: 20 } }}>
-        <ContactForm handleClick={handleClick} />
-      </Box>
+          <Box bgcolor="white" ref={refs.contactRef} sx={{ paddingX: { xs: 0, md: 20 }, marginTop: 0, marginBottom: 0}}>
+            <ContactForm handleClick={handleClick} />
+          </Box>
     </>
   );
 }

@@ -2,9 +2,8 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { projects } from "../../../../constants/projects";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import ProjectCard from "./ProjectCard";
-import { useScroll } from "framer-motion";
 function Projects({ refs, scrollToSection }) {
 
   const [showAllProjects, setShowAllProjects] = useState(false);
@@ -21,6 +20,7 @@ function Projects({ refs, scrollToSection }) {
       display="flex"
       justifyContent="center"
       alignItems="center"
+      bgcolor="white"
       ref={refs.projectsRef}
       flexDirection="column"
       paddingY={5}

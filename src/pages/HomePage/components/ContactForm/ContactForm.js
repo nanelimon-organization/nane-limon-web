@@ -1,4 +1,4 @@
-import { Grid, Input, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import CustomButton from "./components/Button";
 import CustomTextArea from "./components/TextArea";
 import CustomTextField from "./components/TextField";
@@ -16,15 +16,12 @@ function ContactForm({ handleClick }) {
   });
   const form = useRef();
 
-
- 
-  function inputHandler(event){
+  function inputHandler(event) {
     const { name, value } = event.target;
-    console.log(name)
-    console.log(value)
+    console.log(name);
+    console.log(value);
     setFormValues({ ...formValues, [name]: value });
-   
-  } 
+  }
   const [isFirstRender, setIsFirstRender] = useState(true);
   const [capVal, setCapVal] = useState(null);
 
@@ -53,12 +50,12 @@ function ContactForm({ handleClick }) {
           }
         );
       handleClick();
-      clear()
+      clear();
     } else {
       setIsFirstRender(false);
     }
   };
-  function clear(){
+  function clear() {
     setFormValues({
       name: "",
       email: "",
@@ -68,24 +65,26 @@ function ContactForm({ handleClick }) {
     });
   }
 
-
   const [error, setError] = useState(false);
 
   const formatPhoneNumber = (value) => {
-    const digits = value.replace(/\D/g, '');
+    const digits = value.replace(/\D/g, "");
 
     if (digits.length > 11) {
       return formValues.phone;
     }
 
-    if (!digits.startsWith('0')) {
-      return '0' + digits.slice(0, 10);
+    if (!digits.startsWith("0")) {
+      return "0" + digits.slice(0, 10);
     }
 
     const match = digits.match(/^(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,4})$/);
 
     if (match) {
-      return [match[1], match[2], match[3], match[4]].filter(Boolean).join(' ').trim();
+      return [match[1], match[2], match[3], match[4]]
+        .filter(Boolean)
+        .join(" ")
+        .trim();
     }
     return digits;
   };
@@ -93,23 +92,22 @@ function ContactForm({ handleClick }) {
   const handleChange = (e) => {
     const { value } = e.target;
     const formattedValue = formatPhoneNumber(value);
-    setFormValues((prev)=>({...prev,phone: formattedValue}));
-    console.log(value)
+    setFormValues((prev) => ({ ...prev, phone: formattedValue }));
+    console.log(value);
     const phonePattern = /^0\d{3} \d{3} \d{4}$/;
     if (value.length < 14) {
       if (phonePattern.test(formattedValue)) {
-        setError(false); 
+        setError(false);
       } else {
         setError(true);
       }
     } else {
-      
       setError(false);
     }
   };
 
   return (
-    <Grid container marginY={5} padding={5}>
+    <Grid container marginY={5} bgcolor="white" padding={5} marginTop={0} marginBottom={0}>
       <Grid
         item
         xs={12}
@@ -159,22 +157,20 @@ function ContactForm({ handleClick }) {
               (formValues.email === "" || !formValues.email.includes("@"))
             }
           />
-          
-      
-      <CustomTextField
-        type="tel"
-        id="phone"
-        name="phone"
-        label="Telefon Numarası"
-        
-        value={formValues.phone}
-        onChange={handleChange}
-        error={
-          !isFirstRender &&
-          (formValues.phone === "" || error || formValues.phone.length < 11)
-        }
-      />
-          
+
+          <CustomTextField
+            type="tel"
+            id="phone"
+            name="phone"
+            label="Telefon Numarası"
+            value={formValues.phone}
+            onChange={handleChange}
+            error={
+              !isFirstRender &&
+              (formValues.phone === "" || error || formValues.phone.length < 11)
+            }
+          />
+
           <CustomTextField
             formValue="title"
             value={formValues.title}
