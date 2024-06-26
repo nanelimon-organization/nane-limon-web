@@ -1,8 +1,6 @@
 import { Avatar, Box, Card, Typography } from "@mui/material";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { IoIosMail } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 import animation from '../../../../animations/animation.gif'
 function Member({ member }) {

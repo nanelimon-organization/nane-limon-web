@@ -11,6 +11,7 @@ import Main from "./pages/MainPage";
 import MemberDetail from "./pages/MemberDetail/MemberDetail";
 import Loading from "./layout/Loading/Loading";
 import { LoadingProvider, useLoading } from "./contexts/LoadingContext";
+import ProjectDetail from "./pages/ProjectDetail/ProjectDetail";
 const MainApp = () => {
   const { loading } = useLoading();
 
@@ -77,6 +78,7 @@ const MainApp = () => {
         },
         { path: "/member/:memberDetail", element: <MemberDetail /> },
         { path: "/events", element: <CommunityEvents /> },
+        { path: "/projects/:projectDetail", element: <ProjectDetail /> },
         {
           path: "/error",
           element: <ErrorPage />,

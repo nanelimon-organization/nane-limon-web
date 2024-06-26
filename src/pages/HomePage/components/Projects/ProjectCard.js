@@ -13,7 +13,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import imagePaths from "../../../../assets/imagePaths";
 import { useRef } from "react";
 
-function ProjectCard({ title, shortDescription, status }) {
+function ProjectCard({project }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -27,10 +27,10 @@ function ProjectCard({ title, shortDescription, status }) {
     secondPlace: imagePaths.icons.secondPlace,
     thirdPlace: imagePaths.icons.thirdPlace,
     academic: imagePaths.icons.academic,
-    finalist: imagePaths.icons.finalist
+    finalist: imagePaths.icons.finalist,
   };
 
-  const badgeImage = status ? statusImageMapping[status] : null;
+  const badgeImage = project.status ? statusImageMapping[project.status] : null;
 
   return (
     <motion.div
@@ -79,7 +79,7 @@ function ProjectCard({ title, shortDescription, status }) {
             component="div"
             sx={{ fontFamily: "roboto-bold", fontSize: { xs: 15, md: 18 } }}
           >
-            {title}
+            {project.title}
           </Typography>
         </CardContent>
         <Typography
@@ -91,12 +91,12 @@ function ProjectCard({ title, shortDescription, status }) {
             marginX: 2,
           }}
         >
-          {shortDescription}
+          {project.shortDescription}
         </Typography>
         <CardActions
           sx={{ display: "flex", justifyContent: "center", margin: 1 }}
         >
-          <NavLink to="" target="_blank">
+          <NavLink state={project} to={"projects/" + project.slug}>
             <Button
               disableTouchRipple
               sx={{

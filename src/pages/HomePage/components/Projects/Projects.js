@@ -5,7 +5,6 @@ import { projects } from "../../../../constants/projects";
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 function Projects({ refs, scrollToSection }) {
-
   const [showAllProjects, setShowAllProjects] = useState(false);
 
   const toggleProjects = () => {
@@ -20,7 +19,7 @@ function Projects({ refs, scrollToSection }) {
       display="flex"
       justifyContent="center"
       alignItems="center"
-      bgcolor="#ffffff"       
+      bgcolor="#ffffff"
       ref={refs.projectsRef}
       flexDirection="column"
       paddingY={5}
@@ -49,10 +48,12 @@ function Projects({ refs, scrollToSection }) {
           .slice(0, showAllProjects ? projects.length : 4)
           .map((project, index) => (
             <ProjectCard
+              project={project}
               key={index}
               title={project.title}
               shortDescription={project.shortDescription}
               status={project.status}
+              slug={project.slug}
             />
           ))}
       </Grid>

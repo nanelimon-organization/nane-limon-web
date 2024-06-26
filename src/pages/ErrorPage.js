@@ -8,7 +8,6 @@ function ErrorPage() {
 
   useEffect(() => {
     hideLoading();
-    return () => showLoading();
   }, []);
 
   return (
