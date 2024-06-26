@@ -8,13 +8,14 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import DeleteIcon from '@mui/icons-material/Delete';
+import DeleteIcon from "@mui/icons-material/Delete";
 import CloseIcon from "@mui/icons-material/Close";
 import FloatingActionButton from "./FAB";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { useEffect, useRef, useState } from "react";
 import { delay, motion } from "framer-motion";
 import { postQuestion } from "../../requests/requests";
+import imagePaths from "../../assets/imagePaths";
 function ChatBox() {
   const animations = {
     initial: { scale: 0, opacity: 0 },
@@ -84,7 +85,13 @@ function ChatBox() {
           pointerEvents: isChatBoxOpen ? "auto" : "none",
         }}
       >
-        <Grid container display="flex" flexDirection={{xs:"column",md:"row"}} alignItems="flex-end" justifyContent="flex-end">
+        <Grid
+          container
+          display="flex"
+          flexDirection={{ xs: "column", md: "row" }}
+          alignItems="flex-end"
+          justifyContent="flex-end"
+        >
           {isChatBoxOpen && (
             <>
               <Grid
@@ -93,9 +100,9 @@ function ChatBox() {
                 height="60%"
                 justifyContent="center"
                 component={motion.div}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.1, type: "spring", stiffness: 100 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.1, type: "spring", stiffness: 100 }}
               >
                 <Grid
                   width={{ xs: 300, md: 450 }}
@@ -108,40 +115,44 @@ function ChatBox() {
                   sx={{
                     borderRadius: "20px 20px 0px 0px",
                   }}
-                  
                 >
                   <Grid>
-                  <Typography
-                    fontFamily="roboto-bold"
-                    fontSize={{xs:14,md:24}}
-                    color="black"
-                  
-                  >
-                    Nane&Limon Chatbot
-                  </Typography>
+                    <Typography
+                      fontFamily="roboto-bold"
+                      fontSize={{ xs: 14, md: 24 }}
+                      color="black"
+                    >
+                      Nane&Limon Chatbot
+                    </Typography>
                   </Grid>
                   <Grid padding={1} display="flex" flexDirection="row">
-                  <Button
-                    onClick={clearChatBox}
-                    disabled={isAsked}
-                    disableRipple={true}
-                    disableFocusRipple
-                    disableTouchRipple
-                    
-                    sx={{  zIndex: 100,color: "black",  }}
-                  >
-                    <DeleteIcon sx={{ width:25,heigth: 25}}/>
-                  </Button>
-                  <Button
-                    onClick={handleFAB}
-                    
-                    disableRipple={true}
-                    disableFocusRipple
-                    disableTouchRipple
-                    sx={{ zIndex: 1000,color:"red" }}
-                  >
-                    <CloseIcon sx={{ width:25,heigth: 25 }} />
-                  </Button>
+                    <Button
+                      onClick={clearChatBox}
+                      disabled={isAsked}
+                      disableRipple={true}
+                      disableFocusRipple
+                      disableTouchRipple
+                      sx={{ zIndex: 100, color: "black" }}
+                    >
+                      <Button disableFocusRipple disableRipple sx={{"&:hover":{bgcolor: "transparent"}}}>
+                        <Box
+                          component="img"
+                          src={imagePaths.icons.clear}
+                          width={30}
+                          height={30}
+                          sx={{ objectFit: "contain" }}
+                        />
+                      </Button>
+                    </Button>
+                    <Button
+                      onClick={handleFAB}
+                      disableRipple={true}
+                      disableFocusRipple
+                      disableTouchRipple
+                      sx={{ zIndex: 1000, color: "red" }}
+                    >
+                      <CloseIcon sx={{ width: 25, heigth: 25 }} />
+                    </Button>
                   </Grid>
                 </Grid>
                 <Grid
@@ -153,7 +164,6 @@ function ChatBox() {
                   bgcolor="#EEEEEE"
                   width={{ xs: 300, md: 450 }}
                   height={{ xs: 600, md: 600 }}
-                  
                   marginRight={2}
                   padding={0.2}
                   style={{ pointerEvents: "auto" }}
@@ -266,7 +276,6 @@ function ChatBox() {
                       <IconButton
                         disabled={input === "" || isAsked ? true : false}
                         sx={{ marginLeft: 2 }}
-                        
                         onClick={handleSubmit}
                       >
                         <ArrowUpwardIcon sx={{ width: 25, height: 25 }} />
@@ -279,7 +288,11 @@ function ChatBox() {
           )}
           <Grid item>
             <FloatingActionButton
-              style={{ marginLeft: {xs: "0px",md:"20px"},marginTop:{xs: "20px",md:"0px"}, pointerEvents: "auto" }}
+              style={{
+                marginLeft: { xs: "0px", md: "20px" },
+                marginTop: { xs: "20px", md: "0px" },
+                pointerEvents: "auto",
+              }}
               onClick={handleFAB}
             />
           </Grid>

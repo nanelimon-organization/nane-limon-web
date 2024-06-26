@@ -9,12 +9,11 @@ function CardDetail({ location }) {
     <>
       <Grid
         justifyContent="center"
-        
         display="flex"
         flexDirection="column"
         alignItems="center"
       >
-        <Card sx={{ height: 250, width: 250 }}>
+        <Card sx={{ height: 250, width: 250, borderRadius: 5 }}>
           <Box
             component="img"
             width="250px"

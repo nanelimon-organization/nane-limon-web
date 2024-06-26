@@ -15,7 +15,9 @@ export const projects = [
     subtitle: "düzenlenecek",
     shortDescription:
       "PromoPilot projesi, ÖDEAL a ait üye iş yerlerinin karşılaştıkları sorunları etkin bir şekilde çözmek ve operasyonel destek sağlamak amacıyla geliştirilmiştir. Bu proje, üye iş yerlerinin sadakatini artırmak, operasyonlarını optimize etmek ve müşteri memnuniyetini sağlamak için çeşitli analiz ve stratejiler sunar.",
-    description: `PromoPilot projesi, ÖDEAL a ait üye iş yerlerinin karşılaştıkları sorunları etkin bir şekilde çözmek ve operasyonel destek sağlamak amacıyla geliştirilmiştir. Bu proje, üye iş yerlerinin sadakatini artırmak, operasyonlarını optimize etmek ve müşteri memnuniyetini sağlamak için çeşitli analiz ve stratejiler sunar. 
+      status: "firstPlace",
+
+      description: `PromoPilot projesi, ÖDEAL a ait üye iş yerlerinin karşılaştıkları sorunları etkin bir şekilde çözmek ve operasyonel destek sağlamak amacıyla geliştirilmiştir. Bu proje, üye iş yerlerinin sadakatini artırmak, operasyonlarını optimize etmek ve müşteri memnuniyetini sağlamak için çeşitli analiz ve stratejiler sunar. 
 
       <b>Sağlanan Katma Değer:</b>
       <ul><li><b>Operasyonel Destek:</b> Üye iş yerlerinin sorunlarını hızlı ve etkin bir şekilde çözecek bir platform sunar.</li>
@@ -59,7 +61,8 @@ export const projects = [
     subtitle: "düzenlenecek",
     shortDescription:
       "QLink, doğal afetler sırasında enerji dağıtım ağının kontrolünü optimize etmek ve enerji kesintilerinden kaynaklanan riskleri minimize etmek amacıyla Bursa Deprem Hackathon’u kapsamında geliştirilmiştir.",
-    description: `QLink, doğal afetler sırasında enerji dağıtım ağının kontrolünü optimize etmek ve enerji kesintilerinden kaynaklanan riskleri minimize etmek amacıyla Bursa Deprem Hackathon’u kapsamında geliştirilmiştir.
+      status: "thirdPlace",
+      description: `QLink, doğal afetler sırasında enerji dağıtım ağının kontrolünü optimize etmek ve enerji kesintilerinden kaynaklanan riskleri minimize etmek amacıyla Bursa Deprem Hackathon’u kapsamında geliştirilmiştir.
     
       <b>Problemler:</b>
       <ul><li>Enerji dağıtımının kontrol edilememesi ve kesintiler.</li>
@@ -84,7 +87,8 @@ export const projects = [
     shortDescription:
       "ZelTech tarafından geliştirilen ve Akbank tarafından desteklenen TR-NLPGUIDE projesi, doğal afetler sırasında yardım koordinasyonunu ve lojistik yönetimini optimize etmek için modern teknolojilerden faydalanmaktadır.",
 
-    description: `ZelTech tarafından geliştirilen ve Akbank tarafından desteklenen TR-NLPGUIDE projesi, doğal afetler sırasında yardım koordinasyonunu ve lojistik yönetimini optimize etmek için modern teknolojilerden faydalanmaktadır. Bu sistem, sosyal medyadan alınan anlık ihbarları yapay zeka destekli algoritmalarla sınıflandırarak, sivil toplum kuruluşlarının yardım envanterlerini merkezi bir platformda yönetmelerini sağlar. Projenin temel özellikleri şunlardır:
+    status: "finalist",
+      description: `ZelTech tarafından geliştirilen ve Akbank tarafından desteklenen TR-NLPGUIDE projesi, doğal afetler sırasında yardım koordinasyonunu ve lojistik yönetimini optimize etmek için modern teknolojilerden faydalanmaktadır. Bu sistem, sosyal medyadan alınan anlık ihbarları yapay zeka destekli algoritmalarla sınıflandırarak, sivil toplum kuruluşlarının yardım envanterlerini merkezi bir platformda yönetmelerini sağlar. Projenin temel özellikleri şunlardır:
     
     <b>Anlık Sosyal Medya İhbar İzleme:</b>
       <ul><li>Çerçeve: Twitter üzerinden yapılan yardım çağrıları ve ihbarlar gerçek zamanlı olarak taranır.</li>
@@ -113,7 +117,9 @@ export const projects = [
     shortDescription:
       "Mintlemon Turkish NLP, Türkçe metinlerle çalışmak için geliştirilmiş kapsamlı ve güçlü bir doğal dil işleme (NLP) araç kütüphanesidir. Bu kütüphane, dil işleme görevlerini kolaylaştırmak ve hızlandırmak amacıyla PyPI platformunda Nane&Limon topluluğu tarafından yayınlanmıştır.",
 
-    description: `Mintlemon Turkish NLP, Türkçe metinlerle çalışmak için geliştirilmiş kapsamlı ve güçlü bir doğal dil işleme (NLP) araç kütüphanesidir. Bu kütüphane, dil işleme görevlerini kolaylaştırmak ve hızlandırmak amacıyla PyPI platformunda Nane&Limon topluluğu tarafından yayınlanmıştır.
+      status: "firstPlace",
+
+      description: `Mintlemon Turkish NLP, Türkçe metinlerle çalışmak için geliştirilmiş kapsamlı ve güçlü bir doğal dil işleme (NLP) araç kütüphanesidir. Bu kütüphane, dil işleme görevlerini kolaylaştırmak ve hızlandırmak amacıyla PyPI platformunda Nane&Limon topluluğu tarafından yayınlanmıştır.
     
     <b>Özellikler:</b>
       <ul><b><li>Türkçe Dil Desteği:</b> Türkçe metinler için özel olarak optimize edilmiş dil işleme araçları içerir.</li>
@@ -131,7 +137,9 @@ export const projects = [
     shortDescription:
       "Easy Data Labeling Engine, veri etiketleme sürecini hızlandırmak ve kolaylaştırmak amacıyla geliştirilmiş bir araçtır. Nane&Limon topluluğu tarafından GitHub'da yayınlanan bu araç, verilerinizi hızlı, verimli ve doğru bir şekilde etiketlemenize yardımcı olur.",
 
-    description: `Easy Data Labeling Engine, veri etiketleme sürecini hızlandırmak ve kolaylaştırmak amacıyla geliştirilmiş bir araçtır. Nane&Limon topluluğu tarafından GitHub'da yayınlanan bu araç, verilerinizi hızlı, verimli ve doğru bir şekilde etiketlemenize yardımcı olur.
+      status: "firstPlace",
+
+      description: `Easy Data Labeling Engine, veri etiketleme sürecini hızlandırmak ve kolaylaştırmak amacıyla geliştirilmiş bir araçtır. Nane&Limon topluluğu tarafından GitHub'da yayınlanan bu araç, verilerinizi hızlı, verimli ve doğru bir şekilde etiketlemenize yardımcı olur.
     
     <b>Özellikler:</b>
       <ul><b><li>Kullanıcı Dostu Arayüz:</b> Basit ve anlaşılır bir arayüz ile veri etiketleme işlemlerini hızlı bir şekilde gerçekleştirebilirsiniz.</li>
@@ -151,7 +159,9 @@ export const projects = [
     shortDescription:
       "BERT-Base Turkish Offensive modeli, Türkçe metinlerde ofansif dil kullanımı algılamak amacıyla özel olarak eğitilmiş bir dil modelidir. Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanan bu model, çevrimiçi ortamda ofansif içeriklerin tespiti ve yönetilmesi için güçlü bir araç sunar.",
 
-    description: `BERT-Base Turkish Offensive modeli, Türkçe metinlerde ofansif dil kullanımı algılamak amacıyla özel olarak eğitilmiş bir dil modelidir. Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanan bu model, çevrimiçi ortamda ofansif içeriklerin tespiti ve yönetilmesi için güçlü bir araç sunar.
+      status: "firstPlace",
+
+      description: `BERT-Base Turkish Offensive modeli, Türkçe metinlerde ofansif dil kullanımı algılamak amacıyla özel olarak eğitilmiş bir dil modelidir. Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanan bu model, çevrimiçi ortamda ofansif içeriklerin tespiti ve yönetilmesi için güçlü bir araç sunar.
     
     <b>Özellikler:</b>
       <ul><b><li>Türkçe Metinlere Özel:</b> Model, Türkçe dil yapısına ve ofansif dil özelliklerine uygun olacak şekilde eğitilmiştir.</li>
@@ -167,7 +177,8 @@ export const projects = [
     shortDescription:
       "BERT-Base Turkish Job Advertisement modeli, Türkçe iş ilanları verisi kullanılarak özel olarak eğitilmiş bir dil modelidir. Bu model, iş ilanlarının analiz edilmesi, kategorize edilmesi ve çeşitli doğal dil işleme (NLP) görevlerinde kullanılması amacıyla geliştirilmiştir. Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanmıştır.",
 
-    description: `BERT-Base Turkish Job Advertisement modeli, Türkçe iş ilanları verisi kullanılarak özel olarak eğitilmiş bir dil modelidir. Bu model, iş ilanlarının analiz edilmesi, kategorize edilmesi ve çeşitli doğal dil işleme (NLP) görevlerinde kullanılması amacıyla geliştirilmiştir. Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanmıştır.
+      status: "academic",
+      description: `BERT-Base Turkish Job Advertisement modeli, Türkçe iş ilanları verisi kullanılarak özel olarak eğitilmiş bir dil modelidir. Bu model, iş ilanlarının analiz edilmesi, kategorize edilmesi ve çeşitli doğal dil işleme (NLP) görevlerinde kullanılması amacıyla geliştirilmiştir. Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanmıştır.
     
     <b>Özellikler:</b>
       <ul><b><li>Türkçe Metinlere Özel:</b> Model, Türkçe iş ilanları veritabanı kullanılarak eğitilmiştir, bu sayede Türkçe dil yapısına ve iş ilanlarının kendine has terminolojisine uyum sağlar.</li>
@@ -183,7 +194,8 @@ export const projects = [
     shortDescription:
       "Akbank tarafından düzenlenen hackathon kapsamında geliştirilmiş ve Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanmıştır. Bu model, doğal dil işleme (NLP) ve makine öğrenimi projelerinde kullanılmak üzere özel olarak eğitilmiştir.",
 
-    description: `Akbank tarafından düzenlenen hackathon kapsamında geliştirilmiş ve Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanmıştır. Bu model, doğal dil işleme (NLP) ve makine öğrenimi projelerinde kullanılmak üzere özel olarak eğitilmiştir.
+      status: "finalist",
+      description: `Akbank tarafından düzenlenen hackathon kapsamında geliştirilmiş ve Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanmıştır. Bu model, doğal dil işleme (NLP) ve makine öğrenimi projelerinde kullanılmak üzere özel olarak eğitilmiştir.
 
     <b>Özellikler:</b>
       <ul><b><li>Hackathon İçin Geliştirildi:</b> Akbank Hackathon kapsamında ortaya çıkan ihtiyaçlar ve problemler göz önünde bulundurularak tasarlanmış ve optimize edilmiştir.</li>
@@ -199,7 +211,9 @@ export const projects = [
     shortDescription:
       "Veri ön işleme, modellemeye hazırlık aşamasında modelin başarısı için kritik öneme sahiptir. Özellikle doğal dil işleme (NLP) alanında, metin verilerinin temizlenmesi her modelleme sürecinde önemli bir adımdır. Bu ihtiyacı karşılamak ve Türkçe metinlerde doğal dil işleme literatürüne katkı sağlamak amacıyla text-data-cleaner aracı geliştirilmiştir.",
 
-    description: `Veri ön işleme, modellemeye hazırlık aşamasında modelin başarısı için kritik öneme sahiptir. Özellikle doğal dil işleme (NLP) alanında, metin verilerinin temizlenmesi her modelleme sürecinde önemli bir adımdır. Bu ihtiyacı karşılamak ve Türkçe metinlerde doğal dil işleme literatürüne katkı sağlamak amacıyla text-data-cleaner aracı geliştirilmiştir. \n\ntext-data-cleaner, veri temizleme sürecini herkes için erişilebilir ve basit hale getiren bir araçtır. Bu araç, veri bilimcilerin ve NLP uzmanlarının modelleme öncesi verilerini temizlenmesine yardımcı olarak daha yüksek performanslı modeller geliştirmelerine olanak tanır.`,
+      status: "firstPlace",
+
+      description: `Veri ön işleme, modellemeye hazırlık aşamasında modelin başarısı için kritik öneme sahiptir. Özellikle doğal dil işleme (NLP) alanında, metin verilerinin temizlenmesi her modelleme sürecinde önemli bir adımdır. Bu ihtiyacı karşılamak ve Türkçe metinlerde doğal dil işleme literatürüne katkı sağlamak amacıyla text-data-cleaner aracı geliştirilmiştir. \n\ntext-data-cleaner, veri temizleme sürecini herkes için erişilebilir ve basit hale getiren bir araçtır. Bu araç, veri bilimcilerin ve NLP uzmanlarının modelleme öncesi verilerini temizlenmesine yardımcı olarak daha yüksek performanslı modeller geliştirmelerine olanak tanır.`,
     imageUrl: datacleaning,
     buttonLink: "https://github.com/nanelimon-organization/text-data-cleaner",
   },

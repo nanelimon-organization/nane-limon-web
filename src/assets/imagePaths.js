@@ -30,6 +30,16 @@ import teknofest from "../images/footer/teknofest.png";
 // icons
 import hf from "../images/icons/hf.png";
 import firstPlace from "../images/icons/1stplace.png";
+import clear from "../images/icons/clear.png";
+import thirdPlace from '../images/icons/thirdplace.png'
+import academic from '../images/icons/academic.png'
+import finalist from '../images/icons/finalist.png'
+
+// members
+import seymasarigil from '../images/members/seyma-sarigil.jpeg'
+import muratkoklu from '../images/members/murat-koklu.jpg'
+import erdincdal from '../images/members/erdinc-dal.jpeg'
+import eraybuyukkanat from '../images/members/eray-buyukkanat.jpeg'
 
 const imagePaths = {
   banner: {
@@ -64,7 +74,17 @@ const imagePaths = {
   icons: {
     hf,
     firstPlace,
+    clear,
+    thirdPlace,
+    academic,
+    finalist
   },
+  member: {
+    muratkoklu,
+    seymasarigil,
+    erdincdal,
+    eraybuyukkanat
+  }
 };
 
 export default imagePaths;

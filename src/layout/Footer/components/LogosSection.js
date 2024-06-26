@@ -5,7 +5,7 @@ import imagePaths from "../../../assets/imagePaths";
 
 function LogosSection() {
   return (
-    <Grid item xs={12} md={4}>
+    <Grid item xs={12} md={2}>
       <Grid item>
         <Link to="/s">
           <Box
@@ -40,6 +40,8 @@ function LogosSection() {
             }}
           />
         </Link>
+      </Grid>
+      <Grid>
         <Link to="/">
           <Box
             component="img"

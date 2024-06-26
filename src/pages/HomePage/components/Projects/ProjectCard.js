@@ -26,6 +26,8 @@ function ProjectCard({ title, shortDescription, status }) {
     firstPlace: imagePaths.icons.firstPlace,
     secondPlace: imagePaths.icons.secondPlace,
     thirdPlace: imagePaths.icons.thirdPlace,
+    academic: imagePaths.icons.academic,
+    finalist: imagePaths.icons.finalist
   };
 
   const badgeImage = status ? statusImageMapping[status] : null;

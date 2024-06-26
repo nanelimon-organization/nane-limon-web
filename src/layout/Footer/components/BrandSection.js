@@ -8,10 +8,10 @@ function BrandSection() {
       alignItems="center"
       item
       xs={12}
-      md={3}
+      md={4}
     >
       <Link to="/">
-        <Box component="img" src={src} sx={{ width: 96, height: 96 }} />
+        <Box component="img" src={src} sx={{ width: 128, height: 128 }} />
       </Link>
       <Box display="flex" flexDirection="column">
         <Typography
@@ -21,6 +21,14 @@ function BrandSection() {
           fontFamily="roboto-medium"
         >
           Nane & Limon
+        </Typography>
+        <Typography
+          textAlign="center"
+          fontSize={11}
+          color="white"
+          fontFamily="roboto-mediumitalic"
+        >
+          Copyright © 2024 Tüm Hakları Saklıdır.
         </Typography>
       </Box>
     </Grid>
