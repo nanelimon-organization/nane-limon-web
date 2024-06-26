@@ -14,8 +14,12 @@ import {
 
 function Medium({ posts }) {
 
+   function decodeHtmlEntities(text) {
+    const textArea = document.createElement('textarea');
+    textArea.innerHTML = text;
+    return textArea.value;
+  }
   
-
   return (
     <Grid item xs={12} md={6}>
       <Card sx={{ margin: {xs: 3,md: 8}, padding: {xs: 2,md: 5}, boxShadow: 20, borderRadius: 10, alignItems:"center", display:"flex",flexDirection:"column" }}>
@@ -41,7 +45,7 @@ function Medium({ posts }) {
                   <ListItemIcon>
                     <KeyboardArrowRightRoundedIcon />
                   </ListItemIcon>
-                  <ListItemText  primary={<Typography fontFamily="roboto-medium">{post.title}</Typography>} />
+                  <ListItemText  primary={<Typography fontFamily="roboto-medium">{decodeHtmlEntities(post.title)}</Typography>} />
                 </ListItemButton>
               </ListItem>
             );

@@ -16,6 +16,7 @@ import imagePaths from "../../assets/imagePaths";
 import Projects from "./components/Projects/Projects";
 import Medium from "./components/Medium/Medium";
 import { useLoading } from "../../contexts/LoadingContext";
+import axios from "axios";
 
 function HomePage({ refs, scrollToSection }) {
   const { showLoading, hideLoading } = useLoading();
@@ -61,6 +62,7 @@ function HomePage({ refs, scrollToSection }) {
         
           <Box sx={{ paddingTop: "100vh" }}>
             <Grid justifyContent="center"  bgcolor="#ffffff"  container>
+            <Medium posts={posts}/>
               <Summary />
             </Grid>
           </Box>
@@ -109,3 +111,18 @@ function HomePage({ refs, scrollToSection }) {
 }
 
 export default HomePage;
+
+export const homeLoader = async ({ request, params }) => {
+ 
+
+  try {
+    const response = await axios.get(
+      "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/nane-limon"
+    );
+    
+    console.log(response)
+    return await response.data.items.slice(0, 3);
+  } catch {
+    console.log("hata");
+  }
+};

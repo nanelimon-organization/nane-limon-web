@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage";
 import CommunityEvents from "./pages/CommunityEvents/CommunityEvents";
-import HomePage from "./pages/HomePage/HomePage";
+import HomePage, { homeLoader } from "./pages/HomePage/HomePage";
 import Main from "./pages/MainPage";
 import MemberDetail from "./pages/MemberDetail/MemberDetail";
 import Loading from "./layout/Loading/Loading";
@@ -70,9 +70,10 @@ const MainApp = () => {
             <HomePage
               refs={{ homeRef, teamRef, projectsRef, eventsRef, contactRef }}
               scrollToSection={scrollToSection}
-
+              
             />
           ),
+          loader: homeLoader
         },
         { path: "/member/:memberDetail", element: <MemberDetail /> },
         { path: "/events", element: <CommunityEvents /> },
