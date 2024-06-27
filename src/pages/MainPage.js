@@ -4,6 +4,7 @@ import Footer from "../layout/Footer/Footer";
 import "./MainPage.css";
 import { useEffect, useState } from "react";
 import ChatBox from "../layout/Chatbot/ChatBox";
+import { Divider } from "@mui/material";
 function Main({ scrollToSection }) {
  
   const [sticky, setIsScrolled] = useState(false);
@@ -33,6 +34,7 @@ function Main({ scrollToSection }) {
         <main>
           <Outlet />
         </main>
+        <Divider sx={{ bgcolor: "green",borderWidth:1}} />
 
         <Footer scrollToSection={scrollToSection} />
       </div>

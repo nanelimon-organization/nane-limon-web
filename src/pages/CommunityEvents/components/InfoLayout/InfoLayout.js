@@ -28,10 +28,27 @@ export function InfoLayoutRight({ title, description, src }) {
         }}
         display="flex"
         justifyContent="center"
-        paddingY={10}
+        paddingY={5}
         flexDirection={{ xs: "column", md: "row" }}
         alignItems="center"
       >
+        <Grid>
+          <Box
+            sx={{
+              borderRadius: 2,
+              borderColor: "#F2F2F2",
+              height: { xs: 100, md: 150 },
+              width: { xs: 200, md: 300 },
+              display: {xs: "block",md:"none"}
+            }}
+            component={motion.img}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.1, type: "just", stiffness: 100 }}
+            variant="outlined"
+            src={src}
+          ></Box>
+        </Grid>
         <Grid item marginY={5}>
           <Typography
             component={motion.h2}
@@ -63,6 +80,7 @@ export function InfoLayoutRight({ title, description, src }) {
               borderColor: "#F2F2F2",
               height: { xs: 100, md: 150 },
               width: { xs: 200, md: 300 },
+              display: {xs: "none",md:"block"}
             }}
             component={motion.img}
             initial={{ opacity: 0 }}
@@ -111,6 +129,7 @@ export function InfoLayoutLeft({ title, description, src }) {
               borderColor: "#F2F2F2",
               height: { xs: 100, md: 150 },
               width: { xs: 200, md: 300 },
+              
             }}
             variant="outlined"
             component={motion.img}

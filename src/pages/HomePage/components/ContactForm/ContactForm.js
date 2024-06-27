@@ -107,7 +107,7 @@ function ContactForm({ handleClick }) {
   };
 
   return (
-    <Grid container marginY={5} bgcolor="white" padding={5} marginTop={0} marginBottom={0}>
+    <Grid container marginY={5} bgcolor="#F4F4F4" padding={5} marginTop={0} marginBottom={0}>
       <Grid
         item
         xs={12}

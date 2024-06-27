@@ -22,6 +22,7 @@ function Medium({ posts }) {
   
   return (
     <Grid item xs={12} md={6}>
+
       <Card sx={{ margin: {xs: 3,md: 8}, padding: {xs: 2,md: 5}, boxShadow: 20, borderRadius: 10, alignItems:"center", display:"flex",flexDirection:"column" }}>
         <Box component="a" target="_blank" href="https://medium.com/nane-limon">
           <Box

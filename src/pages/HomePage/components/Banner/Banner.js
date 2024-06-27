@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Box, Button, Grid } from "@mui/material";
+import { Box, Button, Divider, Grid } from "@mui/material";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import { Link } from "react-router-dom";
@@ -73,6 +73,8 @@ function Banner({ preloadedImages, visible }) {
         <AnimatedTitle text="Türkçe Doğal Dil İşleme Gönüllüleri" fontSize={{xs: 20,md:26}} fontFamily="roboto-regular" color="#ffffff" />
 
       </Box>
+      <Divider sx={{ bgcolor: "red" }} />
+
     </Box>
   );
 }

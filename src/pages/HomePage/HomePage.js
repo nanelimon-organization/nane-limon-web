@@ -67,17 +67,17 @@ function HomePage({ refs, scrollToSection }) {
         </Grid>
       </Box>
 
-      <Divider sx={{ bgcolor: "#111111" }} />
+      <Divider sx={{ bgcolor: "green" }} />
 
       <div ref={refs.teamRef}>
         <Team />
       </div>
 
-      <Divider sx={{ bgcolor: "#111111" }} />
+      <Divider sx={{ bgcolor: "green" }} />
 
       <Projects refs={refs} scrollToSection={scrollToSection} />
 
-      <Divider sx={{ bgcolor: "#111111" }} />
+      <Divider sx={{ bgcolor: "green" }} />
 
       <Box bgcolor="#F4F4F4" paddingX={10} ref={refs.eventsRef}>
         {events.map((event, index) => {
@@ -102,7 +102,7 @@ function HomePage({ refs, scrollToSection }) {
           }
         })}
       </Box>
-
+      <Divider sx={{ bgcolor: "green" }} />
       <Box
         bgcolor="#F5F5F5"
         ref={refs.contactRef}
