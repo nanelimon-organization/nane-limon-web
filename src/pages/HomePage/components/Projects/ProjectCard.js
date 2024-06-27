@@ -13,7 +13,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import imagePaths from "../../../../assets/imagePaths";
 import { useRef } from "react";
 
-function ProjectCard({project }) {
+function ProjectCard({ project }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -45,7 +45,7 @@ function ProjectCard({project }) {
           width: { xs: 400, md: 500 },
           height: { xs: 300, md: 250 },
           borderRadius: 2,
-          padding: 3,
+          padding: 4,
           margin: 2,
           position: "relative",
           display: "flex",
@@ -75,7 +75,7 @@ function ProjectCard({project }) {
         )}
         <CardContent>
           <Typography
-            textAlign="center"
+            textAlign="start"
             component="div"
             sx={{ fontFamily: "roboto-bold", fontSize: { xs: 15, md: 18 } }}
           >
@@ -83,7 +83,7 @@ function ProjectCard({project }) {
           </Typography>
         </CardContent>
         <Typography
-          textAlign="justify"
+          textAlign="start"
           sx={{
             fontFamily: "roboto-regular",
             wordBreak: "break-word",
@@ -93,10 +93,12 @@ function ProjectCard({project }) {
         >
           {project.shortDescription}
         </Typography>
-        <CardActions
-          sx={{ display: "flex", justifyContent: "center", margin: 1 }}
-        >
-          <NavLink state={project} to={"projects/" + project.slug}>
+        <CardActions sx={{ display: "flex", justifyContent: "start" }}>
+          <NavLink
+            state={project}
+            to={"projects/" + project.slug}
+            style={{ textDecoration: "none" }}
+          >
             <Button
               disableTouchRipple
               sx={{
@@ -105,17 +107,20 @@ function ProjectCard({project }) {
                 "&:hover": {
                   backgroundColor: "#ffffff",
                 },
+                display: "flex",
+                alignItems: "start",
+                justifyContent: "start",
               }}
               size="small"
               variant="text"
             >
               <Typography
-                variant="h6"
                 sx={{
                   fontSize: 16,
                   fontFamily: "roboto-bold",
                   color: "#008000",
                   textTransform: "capitalize",
+                  textAlign: "start",
                 }}
               >
                 Projeyi İncele
