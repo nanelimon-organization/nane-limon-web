@@ -19,7 +19,7 @@ function Projects({ refs, scrollToSection }) {
       display="flex"
       justifyContent="center"
       alignItems="center"
-      bgcolor="#ffffff"
+      bgcolor="#F8F8F8"
       ref={refs.projectsRef}
       flexDirection="column"
       paddingY={5}

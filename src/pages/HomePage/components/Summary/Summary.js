@@ -6,7 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import imagePaths from "../../../../assets/imagePaths";
 function Summary() {
   return (
-    <Grid item xs={12} md={6} bgcolor="white">
+    <Grid item xs={12} md={6} bgcolor="#F8F8F8">
       <Box sx={{ margin: { xs: 3, md: 8 }, padding: { xs: 2, md: 5 } }}>
         <Box borderRadius={5}>
         <Typography

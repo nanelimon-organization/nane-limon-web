@@ -51,9 +51,10 @@ function ProjectCard({ project }) {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
+          boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
         }}
         layout
-        elevation={1}
+        elevation={0}
         component={motion.div}
         whileHover={{ scale: 1.02 }}
         initial={{ opacity: 0 }}
