@@ -40,7 +40,7 @@ function Summary() {
           doğal dil işlemede yapacak çok işimiz var ve heyecanla sizlerle
           paylaşmayı bekliyoruz! Sevgiler...
         </Typography>
-        <Grid container justifyContent="center" alignItems="center" spacing={2} padding={4}>
+        <Grid container display="flex" justifyContent={{xs:"center",md:"start"}} alignItems="start" spacing={2} paddingY={2}>
           <Grid item>
             <Link target="_blank" to='https://www.linkedin.com/company/nane-limon'>
               <Button disableFocusRipple disableRipple>

@@ -56,56 +56,60 @@ function HomePage({ refs, scrollToSection }) {
           Mesajın başarıyla iletildi!
         </Alert>
       </Snackbar>
-        <div ref={refs.homeRef}>
-          <Banner visible={visible} preloadedImages={preloadedImages} />
-        </div>
-        
-          <Box sx={{ paddingTop: "100vh"}}  >
-            <Grid justifyContent="center" bgcolor="#F8F8F8"  container>
-            <Medium posts={posts}/>
-              <Summary />
-            </Grid>
-          </Box>
+      <div ref={refs.homeRef}>
+        <Banner visible={visible} preloadedImages={preloadedImages} />
+      </div>
 
-          <Divider sx={{bgcolor: "#111111"}} />
+      <Box sx={{ paddingTop: "100vh" }}>
+        <Grid justifyContent="center" bgcolor="#F8F8F8" container>
+          <Medium posts={posts} />
+          <Summary />
+        </Grid>
+      </Box>
 
-          <div ref={refs.teamRef}>
-            <Team />
-          </div>
+      <Divider sx={{ bgcolor: "#111111" }} />
 
-          <Divider sx={{bgcolor: "#111111"}} />
+      <div ref={refs.teamRef}>
+        <Team />
+      </div>
 
-          <Projects refs={refs} scrollToSection={scrollToSection} />
+      <Divider sx={{ bgcolor: "#111111" }} />
 
-          <Divider sx={{bgcolor: "#111111"}} />
+      <Projects refs={refs} scrollToSection={scrollToSection} />
 
-          <Box  bgcolor="#F4F4F4"  paddingX={10} ref={refs.eventsRef}>
-            {events.map((event, index) => {
-              if (index % 2 === 0) {
-                return (
-                  <InfoLayoutLeft
-                    key={index}
-                    title={event.title}
-                    description={event.description}
-                    src={event.src}
-                  />
-                );
-              } else {
-                return (
-                  <InfoLayoutRight
-                    key={index}
-                    title={event.title}
-                    description={event.description}
-                    src={event.src}
-                  />
-                );
-              }
-            })}
-          </Box>
+      <Divider sx={{ bgcolor: "#111111" }} />
 
-          <Box bgcolor="#F5F5F5" ref={refs.contactRef} sx={{ paddingX: { xs: 0, md: 20 }, marginTop: 0, marginBottom: 0}}>
-            <ContactForm handleClick={handleClick} />
-          </Box>
+      <Box bgcolor="#F4F4F4" paddingX={10} ref={refs.eventsRef}>
+        {events.map((event, index) => {
+          if (index % 2 === 0) {
+            return (
+              <InfoLayoutLeft
+                key={index}
+                title={event.title}
+                description={event.description}
+                src={event.src}
+              />
+            );
+          } else {
+            return (
+              <InfoLayoutRight
+                key={index}
+                title={event.title}
+                description={event.description}
+                src={event.src}
+              />
+            );
+          }
+        })}
+      </Box>
+
+      <Box
+        bgcolor="#F5F5F5"
+        ref={refs.contactRef}
+        sx={{ paddingX: { xs: 0, md: 20 }, marginTop: 0, marginBottom: 0 }}
+      >
+        <ContactForm handleClick={handleClick} />
+      </Box>
     </>
   );
 }
@@ -113,14 +117,12 @@ function HomePage({ refs, scrollToSection }) {
 export default HomePage;
 
 export const homeLoader = async ({ request, params }) => {
- 
-
   try {
     const response = await axios.get(
       "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/nane-limon"
     );
-    
-    console.log(response)
+
+    console.log(response);
     return await response.data.items.slice(0, 3);
   } catch {
     console.log("hata");

@@ -42,10 +42,10 @@ function ProjectCard({ project }) {
     >
       <Card
         sx={{
-          width: { xs: 400, md: 500 },
+          width: { xs: 300, md: 500 },
           height: { xs: 300, md: 250 },
           borderRadius: 2,
-          padding: 4,
+          padding: {xs: 4,md:4},
           margin: 2,
           position: "relative",
           display: "flex",
