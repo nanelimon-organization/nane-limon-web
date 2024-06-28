@@ -73,7 +73,6 @@ function Banner({ preloadedImages, visible }) {
         <AnimatedTitle text="Türkçe Doğal Dil İşleme Gönüllüleri" fontSize={{xs: 20,md:26}} fontFamily="roboto-regular" color="#ffffff" />
 
       </Box>
-      <Divider sx={{ bgcolor: "red" }} />
 
     </Box>
   );

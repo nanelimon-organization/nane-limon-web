@@ -18,6 +18,7 @@ function FloatingActionButton({ style, onClick }) {
           bgcolor: "#ffffff"
         }
       }}
+      
       disableRipplee
       disableFocusRipple
       disableTouchRipple

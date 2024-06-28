@@ -8,12 +8,11 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import DeleteIcon from "@mui/icons-material/Delete";
 import CloseIcon from "@mui/icons-material/Close";
 import FloatingActionButton from "./FAB";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { useEffect, useRef, useState } from "react";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { postQuestion } from "../../requests/requests";
 import imagePaths from "../../assets/imagePaths";
 function ChatBox() {
@@ -78,10 +77,11 @@ function ChatBox() {
         container
         position="fixed"
         zIndex={2000}
-        bottom={{ xs: "30px", md: "75px" }}
-        right={{ xs: "30px", md: "75px" }}
+        bottom={isChatBoxOpen ? {xs: 0, md: "100px"} : { xs: "50px", md: "100px" }}
+        right={isChatBoxOpen ? {xs: 0, md: "100px"} :{ xs: "50px", md: "100px" }}
         style={{
-          height: "98vh",
+          height: "100vh",
+          width: { xs: "100vw", md: "auto" },
           pointerEvents: isChatBoxOpen ? "auto" : "none",
         }}
       >
@@ -89,7 +89,7 @@ function ChatBox() {
           container
           display="flex"
           flexDirection={{ xs: "column", md: "row" }}
-          alignItems="flex-end"
+          alignItems={isChatBoxOpen ? {xs: null,md:"flex-end"} : "flex-end"}
           justifyContent="flex-end"
         >
           {isChatBoxOpen && (
@@ -97,7 +97,7 @@ function ChatBox() {
               <Grid
                 display="flex"
                 flexDirection="column"
-                height="60%"
+                height={{ xs: "100%", md: "60%" }}
                 justifyContent="center"
                 component={motion.div}
                 initial={{ opacity: 0 }}
@@ -105,7 +105,7 @@ function ChatBox() {
                 transition={{ delay: 0.1, type: "spring", stiffness: 100 }}
               >
                 <Grid
-                  width={{ xs: 300, md: 450 }}
+                  width={{ xs: "100%", md: 450 }}
                   display="flex"
                   flexDirection="row"
                   paddingX={2}
@@ -113,7 +113,7 @@ function ChatBox() {
                   justifyContent="space-between"
                   alignItems="center"
                   sx={{
-                    borderRadius: "20px 20px 0px 0px",
+                    borderRadius: { xs: 0, md: "20px 20px 0px 0px" },
                   }}
                 >
                   <Grid>
@@ -162,8 +162,8 @@ function ChatBox() {
                   display="flex"
                   flexDirection="column"
                   bgcolor="#EEEEEE"
-                  width={{ xs: 300, md: 450 }}
-                  height={{ xs: 600, md: 600 }}
+                  width={{ xs: "100%", md: 450 }}
+                  height={{ xs: "100%", md: 600 }}
                   marginRight={2}
                   padding={0.2}
                   style={{ pointerEvents: "auto" }}
@@ -181,7 +181,7 @@ function ChatBox() {
                       sx={{
                         flex: 1,
                         marginTop: 2,
-                        maxWidth: { xs: 300, md: 450 },
+                        maxWidth: { xs: "100%", md: 450 },
                       }}
                     >
                       {questions.length === 0 && (
@@ -207,7 +207,7 @@ function ChatBox() {
                           width="50%"
                           maxWidth={30}
                           borderRadius={3}
-                          alignSelf={index % 2 == 0 ? "end" : "start"}
+                          alignSelf={index % 2 === 0 ? "end" : "start"}
                           alignItems="center"
                           display="flex"
                           justifyContent="flex-start"
@@ -215,7 +215,7 @@ function ChatBox() {
                           marginY={1}
                           marginRight={3}
                           marginLeft={3}
-                          bgcolor={index % 2 == 0 ? "#DBE098" : "#ffffff"}
+                          bgcolor={index % 2 === 0 ? "#DBE098" : "#ffffff"}
                           sx={{
                             borderRadius:
                               index % 2 !== 0
@@ -289,6 +289,8 @@ function ChatBox() {
           <Grid item>
             <FloatingActionButton
               style={{
+                display: isChatBoxOpen ? {xs: "none",md: "flex"} : {xs: "flex",md: "flex"},
+
                 marginLeft: { xs: "0px", md: "20px" },
                 marginTop: { xs: "20px", md: "0px" },
                 pointerEvents: "auto",
