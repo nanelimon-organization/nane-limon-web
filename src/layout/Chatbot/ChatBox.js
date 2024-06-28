@@ -80,7 +80,7 @@ function ChatBox() {
         bottom={isChatBoxOpen ? {xs: 0, md: "100px"} : { xs: "50px", md: "100px" }}
         right={isChatBoxOpen ? {xs: 0, md: "100px"} :{ xs: "50px", md: "100px" }}
         style={{
-          height: "100vh",
+          height: "calc(100vh - 56px)",
           width: { xs: "100vw", md: "auto" },
           pointerEvents: isChatBoxOpen ? "auto" : "none",
         }}
