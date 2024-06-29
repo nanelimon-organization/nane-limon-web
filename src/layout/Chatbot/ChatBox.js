@@ -189,7 +189,7 @@ function ChatBox() {
                     sx={{ overflowY: "auto" }}
                     display="flex"
                     flexDirection="column"
-                    height="100%"
+                    height="100vh"
                   >
                     <Grid
                       item
