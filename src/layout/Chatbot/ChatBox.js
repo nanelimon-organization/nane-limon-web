@@ -268,11 +268,11 @@ function ChatBox() {
 
                     <Grid
                       item
-                      margin={3}
+                      padding={3}
                       display="flex"
                       flexDirection="row"
                       alignItems="center"
-                      
+                      bottom={0}
                       position="relative"
                     >
                       <TextField
