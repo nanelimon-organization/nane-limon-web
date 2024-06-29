@@ -181,7 +181,7 @@ function ChatBox() {
                   flexDirection="column"
                   bgcolor="#EEEEEE"
                   width={{ xs: "100%", md: 450 }}
-                  height={{ xs: "calc(100% - 50px)", md: 600 }}
+                  height={{ xs: "calc(100% - 75px)", md: 600 }}
                   padding={0.2}
                   style={{ pointerEvents: "auto" }}
                 >
