@@ -33,12 +33,13 @@ function Main({ scrollToSection }) {
 
         <main>
           <Outlet />
+          <ChatBox />
+
         </main>
         <Divider sx={{ bgcolor: "green",borderWidth:1}} />
 
         <Footer scrollToSection={scrollToSection} />
       </div>
-      <ChatBox />
     </>
   );
 }

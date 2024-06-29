@@ -34,7 +34,7 @@ function MemberDetail() {
 
   return (
     <MemberDetailContainer>
-      <BreadCrumbs location={location} />
+      <BreadCrumbs location={location.state.name} />
       <DetailCardContainer>
         <CardDetail location={location} />
       </DetailCardContainer>

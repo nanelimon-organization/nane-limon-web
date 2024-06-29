@@ -1,7 +1,7 @@
 import { Breadcrumbs, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
-function BreadCrumbs({location}){
+function BreadCrumbs({title}){
     return <Breadcrumbs separator=">" aria-label="breadcrumb">
     <NavLink
       style={{ textDecoration: "none" }}
@@ -14,7 +14,7 @@ function BreadCrumbs({location}){
       </Typography>
     </NavLink>
     <Typography fontFamily="roboto-medium" color="text.primary">
-      {location.state.name}
+      {title}
     </Typography>
   </Breadcrumbs>
 }   
