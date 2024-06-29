@@ -15,6 +15,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { postQuestion } from "../../requests/requests";
 import imagePaths from "../../assets/imagePaths";
+
 function ChatBox() {
   const animations = {
     initial: { scale: 0, opacity: 0 },
@@ -30,11 +31,15 @@ function ChatBox() {
   };
 
   const [questions, setQuestions] = useState([]);
-
   const [isChatBoxOpen, setIsChatBoxOpen] = useState(false);
 
   function handleFAB() {
     setIsChatBoxOpen(!isChatBoxOpen);
+    if (!isChatBoxOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
   }
 
   function clearChatBox() {
@@ -74,22 +79,22 @@ function ChatBox() {
         onClick={handleFAB}
       />
       <Grid
-  container
-  position="fixed"
-  zIndex={9999}
-  bottom={{xs: 0, md:30}}
-  right={{xs: 0, md:30}}
-  height={isChatBoxOpen ? "100vh" : "auto"}
-  width={isChatBoxOpen ? "100vw" : "auto"}
-  style={{
-    pointerEvents: isChatBoxOpen ? "auto" : "none",
-  }}
->
+        container
+        position="fixed"
+        zIndex={9999}
+        bottom={{ xs: 0, md: 30 }}
+        right={{ xs: 0, md: 30 }}
+        height={isChatBoxOpen ? "100vh" : "auto"}
+        width={isChatBoxOpen ? "100vw" : "auto"}
+        style={{
+          pointerEvents: isChatBoxOpen ? "auto" : "none",
+        }}
+      >
         <Grid
           container
           display="flex"
           flexDirection={{ xs: "column", md: "row" }}
-          alignItems={isChatBoxOpen ? {xs: null,md:"flex-end"} : "flex-end"}
+          alignItems={isChatBoxOpen ? { xs: null, md: "flex-end" } : "flex-end"}
           justifyContent="flex-end"
         >
           {isChatBoxOpen && (
@@ -112,8 +117,10 @@ function ChatBox() {
                   bgcolor="#EEEEEE"
                   justifyContent="space-between"
                   alignItems="center"
-                  sx={{ 
+                  sx={{
                     borderRadius: { xs: 0, md: "20px 20px 0px 0px" },
+                    position: 'relative',
+                    zIndex: 10000
                   }}
                 >
                   <Grid>
@@ -134,7 +141,7 @@ function ChatBox() {
                       disableTouchRipple
                       sx={{ zIndex: 100, color: "black" }}
                     >
-                      <Button disableFocusRipple disableRipple sx={{"&:hover":{bgcolor: "transparent"}}}>
+                      <Button disableFocusRipple disableRipple sx={{ "&:hover": { bgcolor: "transparent" } }}>
                         <Box
                           component="img"
                           src={imagePaths.icons.clear}
@@ -151,7 +158,7 @@ function ChatBox() {
                       disableTouchRipple
                       sx={{ zIndex: 1000, color: "red" }}
                     >
-                      <CloseIcon sx={{ width: 25, heigth: 25 }} />
+                      <CloseIcon sx={{ width: 25, height: 25 }} />
                     </Button>
                   </Grid>
                 </Grid>
@@ -289,8 +296,7 @@ function ChatBox() {
           <Grid item>
             <FloatingActionButton
               style={{
-                display: isChatBoxOpen ? {xs: "none",md: "flex"} : {xs: "flex",md: "flex"},
-
+                display: isChatBoxOpen ? { xs: "none", md: "flex" } : { xs: "flex", md: "flex" },
                 marginRight: { xs: "50px", md: "20px" },
                 marginBottom: { xs: "50px", md: "20px" },
                 pointerEvents: "auto",
