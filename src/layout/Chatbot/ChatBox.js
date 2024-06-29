@@ -76,7 +76,7 @@ function ChatBox() {
       <Grid
   container
   position="fixed"
-  zIndex={2000}
+  zIndex={9999}
   bottom={{xs: 0, md:30}}
   right={{xs: 0, md:30}}
   height={isChatBoxOpen ? "100vh" : "auto"}

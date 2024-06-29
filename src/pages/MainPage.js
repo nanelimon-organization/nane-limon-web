@@ -28,9 +28,9 @@ function Main({ scrollToSection }) {
 
   return (
     <>
-              <ChatBox />
 
       <div className="app-container">
+
         <Navbar sticky={sticky} scrollToSection={scrollToSection} />
 
         <main>
@@ -41,6 +41,8 @@ function Main({ scrollToSection }) {
 
         <Footer scrollToSection={scrollToSection} />
       </div>
+      <ChatBox />
+
     </>
   );
 }
