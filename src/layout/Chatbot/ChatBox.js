@@ -8,14 +8,14 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import DeleteIcon from "@mui/icons-material/Delete";
 import CloseIcon from "@mui/icons-material/Close";
 import FloatingActionButton from "./FAB";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 import { postQuestion } from "../../requests/requests";
 import imagePaths from "../../assets/imagePaths";
-
 function ChatBox() {
   const animations = {
     initial: { scale: 0, opacity: 0 },
@@ -23,37 +23,23 @@ function ChatBox() {
     exit: { scale: 0, opacity: 0 },
     transition: { delay: 0.4, type: "spring", stiffness: 900, damping: 70 },
   };
-
   const messagesEndRef = useRef(null);
-
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
-
   const [questions, setQuestions] = useState([]);
   const [isChatBoxOpen, setIsChatBoxOpen] = useState(false);
-
   function handleFAB() {
     setIsChatBoxOpen(!isChatBoxOpen);
-    if (!isChatBoxOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
   }
-
   function clearChatBox() {
     setQuestions([]);
   }
-
   const [input, setInput] = useState("");
-
   function setInputHandler(e) {
     setInput(e.target.value);
   }
-
   const [isAsked, setIsAsked] = useState(false);
-
   async function handleSubmit() {
     setQuestions((prevQuestions) => [...prevQuestions, input]);
     setInput("");
@@ -66,11 +52,9 @@ function ChatBox() {
     }
     setIsAsked(false);
   }
-
   useEffect(() => {
     scrollToBottom();
-  }, [questions]);
-
+  }, [setInputHandler]);
   return (
     <>
       <Backdrop
@@ -81,12 +65,12 @@ function ChatBox() {
       <Grid
         container
         position="fixed"
-        zIndex={9999}
-        bottom={{ xs: 0, md: 30 }}
-        right={{ xs: 0, md: 30 }}
-        height={isChatBoxOpen ? "100vh" : "auto"}
-        width={isChatBoxOpen ? "100vw" : "auto"}
+        zIndex={2000}
+        bottom={isChatBoxOpen ? {xs: 0, md: "100px"} : { xs: "50px", md: "100px" }}
+        right={isChatBoxOpen ? {xs: 0, md: "100px"} :{ xs: "50px", md: "100px" }}
         style={{
+          height: "100vh",
+          width: { xs: "100vw", md: "auto" },
           pointerEvents: isChatBoxOpen ? "auto" : "none",
         }}
       >
@@ -94,7 +78,7 @@ function ChatBox() {
           container
           display="flex"
           flexDirection={{ xs: "column", md: "row" }}
-          alignItems={isChatBoxOpen ? { xs: null, md: "flex-end" } : "flex-end"}
+          alignItems={isChatBoxOpen ? {xs: null,md:"flex-end"} : "flex-end"}
           justifyContent="flex-end"
         >
           {isChatBoxOpen && (
@@ -108,7 +92,6 @@ function ChatBox() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.1, type: "spring", stiffness: 100 }}
-                zIndex={10000}
               >
                 <Grid
                   width={{ xs: "100%", md: 450 }}
@@ -120,9 +103,6 @@ function ChatBox() {
                   alignItems="center"
                   sx={{
                     borderRadius: { xs: 0, md: "20px 20px 0px 0px" },
-                    position: 'sticky',
-                    top: 0,
-                    zIndex: 10001
                   }}
                 >
                   <Grid>
@@ -143,7 +123,7 @@ function ChatBox() {
                       disableTouchRipple
                       sx={{ zIndex: 100, color: "black" }}
                     >
-                      <Button disableFocusRipple disableRipple sx={{ "&:hover": { bgcolor: "transparent" } }}>
+                      <Button disableFocusRipple disableRipple sx={{"&:hover":{bgcolor: "transparent"}}}>
                         <Box
                           component="img"
                           src={imagePaths.icons.clear}
@@ -160,7 +140,7 @@ function ChatBox() {
                       disableTouchRipple
                       sx={{ zIndex: 1000, color: "red" }}
                     >
-                      <CloseIcon sx={{ width: 25, height: 25 }} />
+                      <CloseIcon sx={{ width: 25, heigth: 25 }} />
                     </Button>
                   </Grid>
                 </Grid>
@@ -205,7 +185,6 @@ function ChatBox() {
                           </Typography>
                         </Grid>
                       )}
-
                       {questions.map((text, index) => (
                         <Grid
                           component={motion.div}
@@ -214,6 +193,7 @@ function ChatBox() {
                           key={index}
                           item
                           width="50%"
+                          maxWidth={30}
                           borderRadius={3}
                           alignSelf={index % 2 === 0 ? "end" : "start"}
                           alignItems="center"
@@ -257,7 +237,6 @@ function ChatBox() {
                       )}
                     </Grid>
                     <div ref={messagesEndRef} />
-
                     <Grid
                       item
                       margin={3}
@@ -297,9 +276,10 @@ function ChatBox() {
           <Grid item>
             <FloatingActionButton
               style={{
-                display: isChatBoxOpen ? { xs: "none", md: "flex" } : { xs: "flex", md: "flex" },
-                marginRight: { xs: "50px", md: "20px" },
-                marginBottom: { xs: "50px", md: "20px" },
+                display: isChatBoxOpen ? {xs: "none",md: "flex"} : {xs: "flex",md: "flex"},
+
+                marginLeft: { xs: "0px", md: "20px" },
+                marginTop: { xs: "20px", md: "0px" },
                 pointerEvents: "auto",
               }}
               onClick={handleFAB}
@@ -310,5 +290,4 @@ function ChatBox() {
     </>
   );
 }
-
 export default ChatBox;
