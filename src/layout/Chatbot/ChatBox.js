@@ -77,8 +77,8 @@ function ChatBox() {
   container
   position="fixed"
   zIndex={2000}
-  bottom={0}
-  right={0}
+  bottom={{xs: 0, md:30}}
+  right={{xs: 0, md:30}}
   height={isChatBoxOpen ? "100vh" : "auto"}
   width={isChatBoxOpen ? "100vw" : "auto"}
   style={{
@@ -291,8 +291,8 @@ function ChatBox() {
               style={{
                 display: isChatBoxOpen ? {xs: "none",md: "flex"} : {xs: "flex",md: "flex"},
 
-                marginLeft: { xs: "0px", md: "20px" },
-                marginTop: { xs: "20px", md: "0px" },
+                marginRight: { xs: "50px", md: "20px" },
+                marginBottom: { xs: "50px", md: "20px" },
                 pointerEvents: "auto",
               }}
               onClick={handleFAB}

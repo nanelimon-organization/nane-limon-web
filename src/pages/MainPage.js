@@ -28,12 +28,13 @@ function Main({ scrollToSection }) {
 
   return (
     <>
+              <ChatBox />
+
       <div className="app-container">
         <Navbar sticky={sticky} scrollToSection={scrollToSection} />
 
         <main>
           <Outlet />
-          <ChatBox />
 
         </main>
         <Divider sx={{ bgcolor: "green",borderWidth:1}} />
