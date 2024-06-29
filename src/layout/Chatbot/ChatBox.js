@@ -23,23 +23,33 @@ function ChatBox() {
     exit: { scale: 0, opacity: 0 },
     transition: { delay: 0.4, type: "spring", stiffness: 900, damping: 70 },
   };
+
   const messagesEndRef = useRef(null);
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+
   const [questions, setQuestions] = useState([]);
+
   const [isChatBoxOpen, setIsChatBoxOpen] = useState(false);
+
   function handleFAB() {
     setIsChatBoxOpen(!isChatBoxOpen);
   }
+
   function clearChatBox() {
     setQuestions([]);
   }
+
   const [input, setInput] = useState("");
+
   function setInputHandler(e) {
     setInput(e.target.value);
   }
+
   const [isAsked, setIsAsked] = useState(false);
+
   async function handleSubmit() {
     setQuestions((prevQuestions) => [...prevQuestions, input]);
     setInput("");
@@ -52,9 +62,11 @@ function ChatBox() {
     }
     setIsAsked(false);
   }
+
   useEffect(() => {
     scrollToBottom();
   }, [setInputHandler]);
+
   return (
     <>
       <Backdrop
@@ -66,19 +78,19 @@ function ChatBox() {
         container
         position="fixed"
         zIndex={2000}
-        bottom={isChatBoxOpen ? {xs: 0, md: "100px"} : { xs: "50px", md: "100px" }}
-        right={isChatBoxOpen ? {xs: 0, md: "100px"} :{ xs: "50px", md: "100px" }}
+        bottom={{ xs: "0px", md: "75px" }}
+        right={{ xs: "0px", md: "75px" }}
         style={{
-          height: "100vh",
-          width: { xs: "100vw", md: "auto" },
+          height: { xs: "100vh", md: "98vh" },
           pointerEvents: isChatBoxOpen ? "auto" : "none",
         }}
+        
       >
         <Grid
           container
           display="flex"
           flexDirection={{ xs: "column", md: "row" }}
-          alignItems={isChatBoxOpen ? {xs: null,md:"flex-end"} : "flex-end"}
+          alignItems="flex-end"
           justifyContent="flex-end"
         >
           {isChatBoxOpen && (
@@ -86,23 +98,36 @@ function ChatBox() {
               <Grid
                 display="flex"
                 flexDirection="column"
-                height={{ xs: "100%", md: "60%" }}
                 justifyContent="center"
                 component={motion.div}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+                marginRight={4}
+
                 transition={{ delay: 0.1, type: "spring", stiffness: 100 }}
+                sx={{
+                  width: { xs: "100vw", md: "auto" },
+                  height: { xs: "100vh", md: "auto" },
+                  position: { xs: "fixed", md: "relative" },
+                  
+                  top: { xs: 0, md: "auto" },
+                  left: { xs: 0, md: "auto" },
+                  backgroundColor: { xs: "#EEEEEE", md: "transparent" },
+                  zIndex: 2000,
+                  pointerEvents: "auto",
+                }}
               >
                 <Grid
-                  width={{ xs: "100%", md: 450 }}
+                  width={{ xs: "100vw", md: 450 }}
                   display="flex"
                   flexDirection="row"
                   paddingX={2}
+                  
                   bgcolor="#EEEEEE"
                   justifyContent="space-between"
                   alignItems="center"
                   sx={{
-                    borderRadius: { xs: 0, md: "20px 20px 0px 0px" },
+                    borderRadius: "20px 20px 0px 0px",
                   }}
                 >
                   <Grid>
@@ -123,7 +148,11 @@ function ChatBox() {
                       disableTouchRipple
                       sx={{ zIndex: 100, color: "black" }}
                     >
-                      <Button disableFocusRipple disableRipple sx={{"&:hover":{bgcolor: "transparent"}}}>
+                      <Button
+                        disableFocusRipple
+                        disableRipple
+                        sx={{ "&:hover": { bgcolor: "transparent" } }}
+                      >
                         <Box
                           component="img"
                           src={imagePaths.icons.clear}
@@ -152,8 +181,7 @@ function ChatBox() {
                   flexDirection="column"
                   bgcolor="#EEEEEE"
                   width={{ xs: "100%", md: 450 }}
-                  height={{ xs: "100%", md: 600 }}
-                  marginRight={2}
+                  height={{ xs: "calc(100% - 50px)", md: 600 }}
                   padding={0.2}
                   style={{ pointerEvents: "auto" }}
                 >
@@ -170,7 +198,7 @@ function ChatBox() {
                       sx={{
                         flex: 1,
                         marginTop: 2,
-                        maxWidth: { xs: "100%", md: 450 },
+                        maxWidth: { xs: "100vw", md: 450 },
                       }}
                     >
                       {questions.length === 0 && (
@@ -185,6 +213,7 @@ function ChatBox() {
                           </Typography>
                         </Grid>
                       )}
+
                       {questions.map((text, index) => (
                         <Grid
                           component={motion.div}
@@ -193,9 +222,8 @@ function ChatBox() {
                           key={index}
                           item
                           width="50%"
-                          maxWidth={30}
                           borderRadius={3}
-                          alignSelf={index % 2 === 0 ? "end" : "start"}
+                          alignSelf={index % 2 == 0 ? "end" : "start"}
                           alignItems="center"
                           display="flex"
                           justifyContent="flex-start"
@@ -203,7 +231,7 @@ function ChatBox() {
                           marginY={1}
                           marginRight={3}
                           marginLeft={3}
-                          bgcolor={index % 2 === 0 ? "#DBE098" : "#ffffff"}
+                          bgcolor={index % 2 == 0 ? "#DBE098" : "#ffffff"}
                           sx={{
                             borderRadius:
                               index % 2 !== 0
@@ -237,12 +265,14 @@ function ChatBox() {
                       )}
                     </Grid>
                     <div ref={messagesEndRef} />
+
                     <Grid
                       item
                       margin={3}
                       display="flex"
                       flexDirection="row"
                       alignItems="center"
+                      
                       position="relative"
                     >
                       <TextField
@@ -276,10 +306,8 @@ function ChatBox() {
           <Grid item>
             <FloatingActionButton
               style={{
-                display: isChatBoxOpen ? {xs: "none",md: "flex"} : {xs: "flex",md: "flex"},
-
-                marginLeft: { xs: "0px", md: "20px" },
-                marginTop: { xs: "20px", md: "0px" },
+                marginRight: { xs: "30px", md: "20px" },
+                marginBottom: { xs: "30px", md: "0px" },
                 pointerEvents: "auto",
               }}
               onClick={handleFAB}
@@ -290,4 +318,5 @@ function ChatBox() {
     </>
   );
 }
+
 export default ChatBox;
