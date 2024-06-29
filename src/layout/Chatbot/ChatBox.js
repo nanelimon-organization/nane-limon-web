@@ -107,14 +107,14 @@ function ChatBox() {
                 transition={{ delay: 0.1, type: "spring", stiffness: 100 }}
                 sx={{
                   width: { xs: "100vw", md: "auto" },
-                  height: { xs: "100%", md: "auto" },
+                  height: { xs: "100vh", md: "auto" },
                   position: { xs: "fixed", md: "relative" },
                   
                   top: { xs: 0, md: "auto" },
                   left: { xs: 0, md: "auto" },
                   bottom: {xs: 0,md: "auto"},
                   backgroundColor: { xs: "#EEEEEE", md: "transparent" },
-                  zIndex: 2000,
+                  zIndex: 2001,
                   pointerEvents: "auto",
                 }}
               >
