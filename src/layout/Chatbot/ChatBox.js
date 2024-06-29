@@ -69,7 +69,7 @@ function ChatBox() {
 
   useEffect(() => {
     scrollToBottom();
-  }, [setInputHandler]);
+  }, [questions]);
 
   return (
     <>
@@ -212,7 +212,6 @@ function ChatBox() {
                           key={index}
                           item
                           width="50%"
-                          maxWidth={30}
                           borderRadius={3}
                           alignSelf={index % 2 === 0 ? "end" : "start"}
                           alignItems="center"
