@@ -112,7 +112,8 @@ function ChatBox() {
                 transition={{ delay: 0.1, type: "spring", stiffness: 100 }}
                 sx={{
                   width: { xs: "100vw", md: "auto" },
-                  height: { xs: "100vh", md: "auto" },
+                  height: { xs: "100%", md: "auto" },
+                  position: { xs: "fixed", md: "relative" },
                   
                   top: { xs: 0, md: "auto" },
                   left: { xs: 0, md: "auto" },
@@ -313,6 +314,7 @@ function ChatBox() {
             <FloatingActionButton
               style={{
                 display: isChatBoxOpen ? { xs: "none", md: "flex" } : { xs: "flex", md: "flex" },
+
                 marginRight: { xs: "30px", md: "20px" },
                 marginBottom: { xs: "30px", md: "0px" },
                 pointerEvents: "auto",
