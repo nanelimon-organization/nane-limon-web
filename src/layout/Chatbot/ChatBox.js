@@ -108,6 +108,7 @@ function ChatBox() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.1, type: "spring", stiffness: 100 }}
+                zIndex={10000}
               >
                 <Grid
                   width={{ xs: "100%", md: 450 }}
@@ -119,8 +120,9 @@ function ChatBox() {
                   alignItems="center"
                   sx={{
                     borderRadius: { xs: 0, md: "20px 20px 0px 0px" },
-                    position: 'relative',
-                    zIndex: 10000
+                    position: 'sticky',
+                    top: 0,
+                    zIndex: 10001
                   }}
                 >
                   <Grid>
