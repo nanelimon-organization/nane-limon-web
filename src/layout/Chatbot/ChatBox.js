@@ -74,17 +74,17 @@ function ChatBox() {
         onClick={handleFAB}
       />
       <Grid
-        container
-        position="fixed"
-        zIndex={2000}
-        bottom={isChatBoxOpen ? {xs: 0, md: "100px"} : { xs: "50px", md: "100px" }}
-        right={isChatBoxOpen ? {xs: 0, md: "100px"} :{ xs: "50px", md: "100px" }}
-        style={{
-          height: "100%",
-          width: "100vw",
-          pointerEvents: isChatBoxOpen ? "auto" : "none",
-        }}
-      >
+  container
+  position="fixed"
+  zIndex={2000}
+  bottom={0}
+  right={0}
+  height={isChatBoxOpen ? "100vh" : "auto"}
+  width={isChatBoxOpen ? "100vw" : "auto"}
+  style={{
+    pointerEvents: isChatBoxOpen ? "auto" : "none",
+  }}
+>
         <Grid
           container
           display="flex"
