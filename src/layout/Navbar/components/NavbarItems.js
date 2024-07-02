@@ -4,7 +4,7 @@ import NavbarButton from "./NavbarButton";
 import { NavLink, useLocation } from "react-router-dom";
 
 function NavbarItems({ scrollToSection }) {
-  const location = useLocation()
+  const location = useLocation();
 
   const handleClick = (value) => {
     if (location.pathname == "/") {
@@ -12,14 +12,18 @@ function NavbarItems({ scrollToSection }) {
     } else {
       setTimeout(() => {
         scrollToSection(value);
-      }, 1000); 
+      }, 1000);
     }
   };
-  
 
   return (
     <>
-      <Grid display="flex" flexDirection="row" alignItems="center" justifyContent="center">
+      <Grid
+        display="flex"
+        flexDirection="row"
+        alignItems="center"
+        justifyContent="center"
+      >
         <Grid
           component={motion.div}
           initial={{ opacity: 0 }}
@@ -30,7 +34,7 @@ function NavbarItems({ scrollToSection }) {
           <NavbarButton
             title="Anasayfa"
             to="/"
-            onClick={()=>handleClick("home")} 
+            onClick={() => handleClick("home")}
           />
         </Grid>
         <Grid
@@ -43,7 +47,7 @@ function NavbarItems({ scrollToSection }) {
           <NavbarButton
             title="Ekibimiz"
             to="/"
-            onClick={()=>handleClick("team")} 
+            onClick={() => handleClick("team")}
           />
         </Grid>
         <Grid
@@ -56,7 +60,7 @@ function NavbarItems({ scrollToSection }) {
           <NavbarButton
             title="Projeler"
             to="/"
-            onClick={()=>handleClick("projects")} 
+            onClick={() => handleClick("projects")}
           />
         </Grid>
         <Grid
@@ -69,7 +73,7 @@ function NavbarItems({ scrollToSection }) {
           <NavbarButton
             title="Etkinlikler"
             to="/"
-            onClick={()=>handleClick("events")} 
+            onClick={() => handleClick("events")}
           />
         </Grid>
         <Grid
@@ -82,7 +86,7 @@ function NavbarItems({ scrollToSection }) {
           <NavbarButton
             title="Bize Ulaşın"
             to="/"
-            onClick={()=>handleClick("contact")} 
+            onClick={() => handleClick("contact")}
           />
         </Grid>
         <Grid
@@ -92,12 +96,14 @@ function NavbarItems({ scrollToSection }) {
           exit={{ opacity: 0 }}
           transition={{ delay: 0.7, type: "tween", stiffness: 100 }}
         >
-          <NavbarButton
-            title="CooLLiMe"
-            to="https://cool-lime.vercel.app/" target="_blank"
-            sx={styles.coolLime}
-            color="white"
-          />
+          <NavLink to="https://cool-lime.vercel.app/" target="_blank">
+            <Button disableRipple sx={styles.coolLime}>
+              <Typography textTransform="capitalize" fontFamily="roboto-medium">
+                CooLLiMe
+              </Typography>
+            </Button>
+          </NavLink>
+         
         </Grid>
       </Grid>
       <Grid
@@ -122,8 +128,7 @@ function NavbarItems({ scrollToSection }) {
 export default NavbarItems;
 
 function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
-
-  const location = useLocation()
+  const location = useLocation();
 
   const handleClick = (value) => {
     if (location.pathname == "/") {
@@ -131,7 +136,7 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
     } else {
       setTimeout(() => {
         scrollToSection(value);
-      }, 1000); 
+      }, 1000);
     }
   };
   return (
@@ -159,68 +164,78 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
       >
         <NavbarButton
           title="Anasayfa"
-          onClick={() => {handleClick("home"); toggleMenu()}}
+          onClick={() => {
+            handleClick("home");
+            toggleMenu();
+          }}
           to="/"
-
         />
       </Grid>
       <Grid
-          component={motion.div}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ delay: 0.5, type: "tween", stiffness: 100 }}
-        >
-          <NavbarButton
-            title="Ekibimiz"
-            to="/"
-
-            onClick={() => {handleClick("team"); toggleMenu()}}
-          />
-        </Grid>
-        <Grid
-          component={motion.div}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ delay: 0.5, type: "tween", stiffness: 100 }}
-        >
-          <NavbarButton
-            title="Projeler"
-            to="/"
-
-            onClick={() => {handleClick("projects"); toggleMenu()}}
-          />
-        </Grid>
-        <Grid
-          component={motion.div}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ delay: 0.7, type: "tween", stiffness: 100 }}
-        >
-          <NavbarButton
-            title="Etkinlikler"
-            to="/"
-
-            onClick={() => {handleClick("events"); toggleMenu()}}
-          />
-        </Grid>
-        <Grid
-          component={motion.div}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ delay: 0.7, type: "tween", stiffness: 100 }}
-        >
-          <NavbarButton
-            title="Bize Ulaşın"
-            to="/"
-
-            onClick={() => {handleClick("contact"); toggleMenu()}}
-          />
-        </Grid>
-        <Grid
+        component={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ delay: 0.5, type: "tween", stiffness: 100 }}
+      >
+        <NavbarButton
+          title="Ekibimiz"
+          to="/"
+          onClick={() => {
+            handleClick("team");
+            toggleMenu();
+          }}
+        />
+      </Grid>
+      <Grid
+        component={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ delay: 0.5, type: "tween", stiffness: 100 }}
+      >
+        <NavbarButton
+          title="Projeler"
+          to="/"
+          onClick={() => {
+            handleClick("projects");
+            toggleMenu();
+          }}
+        />
+      </Grid>
+      <Grid
+        component={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ delay: 0.7, type: "tween", stiffness: 100 }}
+      >
+        <NavbarButton
+          title="Etkinlikler"
+          to="/"
+          onClick={() => {
+            handleClick("events");
+            toggleMenu();
+          }}
+        />
+      </Grid>
+      <Grid
+        component={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ delay: 0.7, type: "tween", stiffness: 100 }}
+      >
+        <NavbarButton
+          title="Bize Ulaşın"
+          to="/"
+          onClick={() => {
+            handleClick("contact");
+            toggleMenu();
+          }}
+        />
+      </Grid>
+      <Grid
         component={motion.div}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -256,12 +271,11 @@ const styles = {
   coolLime: {
     backgroundColor: "transparent",
     borderRadius: 2,
-    transition: "box-shadow 0.3s ease-in-out",
+    color: "#ffffff",
+    transition: "box-shadow 0.1s ease-in-out",
     "&:hover": {
       backgroundColor: "black",
-
       boxShadow: "0 0 20px rgba(0, 255, 0, 0.5)",
     },
   },
-
 };
