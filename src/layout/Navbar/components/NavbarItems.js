@@ -236,6 +236,22 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
         />
       </Grid>
       <Grid
+          component={motion.div}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ delay: 0.7, type: "tween", stiffness: 100 }}
+        >
+          <NavLink to="https://cool-lime.vercel.app/" target="_blank">
+            <Button disableRipple sx={styles.coolLime}>
+              <Typography textTransform="capitalize" fontFamily="roboto-medium">
+                CooLLiMe
+              </Typography>
+            </Button>
+          </NavLink>
+         
+        </Grid>
+      <Grid
         component={motion.div}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
