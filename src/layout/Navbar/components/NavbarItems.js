@@ -96,7 +96,7 @@ function NavbarItems({ scrollToSection }) {
             title="CooLLiMe"
             to="https://cool-lime.vercel.app/" target="_blank"
             sx={styles.coolLime}
-            color="black"
+            color="white"
           />
         </Grid>
       </Grid>
@@ -254,17 +254,14 @@ const styles = {
     },
   },
   coolLime: {
-    backgroundColor: "white",
-    boxShadow: "0 0 20px rgba(0, 255, 0, 0.5)",
+    backgroundColor: "black",
     borderRadius: 2,
-    animation: "glow 1.5s infinite alternate",
-  },
-  "@keyframes glow": {
-    "0%": {
-      boxShadow: "0 0 10px rgba(0, 123, 255, 0.5)",
-    },
-    "100%": {
-      boxShadow: "0 0 20px rgba(0, 123, 255, 1)",
+    transition: "box-shadow 0.3s ease-in-out",
+    "&:hover": {
+      backgroundColor: "black",
+
+      boxShadow: "0 0 20px rgba(0, 255, 0, 0.5)",
     },
   },
+
 };
