@@ -254,7 +254,7 @@ const styles = {
     },
   },
   coolLime: {
-    backgroundColor: "black",
+    backgroundColor: "transparent",
     borderRadius: 2,
     transition: "box-shadow 0.3s ease-in-out",
     "&:hover": {
