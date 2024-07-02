@@ -93,8 +93,10 @@ function NavbarItems({ scrollToSection }) {
           transition={{ delay: 0.7, type: "tween", stiffness: 100 }}
         >
           <NavbarButton
-            title="CooLLime"
+            title="CooLLiMe"
             to="https://cool-lime.vercel.app/" target="_blank"
+            sx={styles.coolLime}
+            color="black"
           />
         </Grid>
       </Grid>
@@ -249,6 +251,20 @@ const styles = {
       color: "white",
       backgroundColor: "green",
       borderRadius: 2,
+    },
+  },
+  coolLime: {
+    backgroundColor: "white",
+    boxShadow: "0 0 20px rgba(0, 255, 0, 0.5)",
+    borderRadius: 2,
+    animation: "glow 1.5s infinite alternate",
+  },
+  "@keyframes glow": {
+    "0%": {
+      boxShadow: "0 0 10px rgba(0, 123, 255, 0.5)",
+    },
+    "100%": {
+      boxShadow: "0 0 20px rgba(0, 123, 255, 1)",
     },
   },
 };
