@@ -47,7 +47,7 @@ function Member({ member }) {
           marginBottom={6}
           padding={2}
         >
-          <Avatar src={member.src} sx={{ width: 100, height: 100 }}></Avatar>
+          <Box component="img" src={member.src} sx={{ width: 100, height: 100, objectFit: "cover", borderRadius: "50%"}}></Box>
         </Box>
 
         <Typography

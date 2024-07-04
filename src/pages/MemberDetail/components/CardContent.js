@@ -60,6 +60,7 @@ function CardDetail({ location }) {
             component="img"
             width="250px"
             height="250px"
+            sx={{objectFit:"cover"}}
             src={location.state.src}
           />
         </Card>

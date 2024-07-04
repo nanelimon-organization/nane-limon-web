@@ -30,7 +30,7 @@ function ChatBox() {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const [questions, setQuestions] = useState([]);
+  const [questions, setQuestions] = useState(["Merhaba, ben Nane&Limon Chatbot. Nası yardımcı olabilirim?"]);
 
   const [isChatBoxOpen, setIsChatBoxOpen] = useState(false);
 
@@ -230,7 +230,7 @@ function ChatBox() {
                           item
                           width="50%"
                           borderRadius={3}
-                          alignSelf={index % 2 == 0 ? "end" : "start"}
+                          alignSelf={index % 2 !== 0 ? "end" : "start"}
                           alignItems="center"
                           display="flex"
                           justifyContent="flex-start"
@@ -238,12 +238,12 @@ function ChatBox() {
                           marginY={1}
                           marginRight={3}
                           marginLeft={3}
-                          bgcolor={index % 2 == 0 ? "#DBE098" : "#ffffff"}
+                          bgcolor={index % 2 !== 0 ? "#DBE098" : "#ffffff"}
                           sx={{
                             borderRadius:
                               index % 2 !== 0
-                                ? "20px 20px 20px 0px"
-                                : "20px 20px 0px 20px",
+                                ? "20px 20px 0px 20px"
+                                : "20px 20px 20px 0px",
                           }}
                         >
                           <Typography

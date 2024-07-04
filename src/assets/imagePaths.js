@@ -40,6 +40,8 @@ import seymasarigil from '../images/members/seyma-sarigil.jpeg'
 import muratkoklu from '../images/members/murat-koklu.jpg'
 import erdincdal from '../images/members/erdinc-dal.jpeg'
 import eraybuyukkanat from '../images/members/eray-buyukkanat.jpeg'
+import elifsarigil from '../images/members/elif-sarigil.jpg'
+import kaankoc from '../images/members/kaan-koc.jpg'
 
 const imagePaths = {
   banner: {
@@ -83,7 +85,9 @@ const imagePaths = {
     muratkoklu,
     seymasarigil,
     erdincdal,
-    eraybuyukkanat
+    eraybuyukkanat,
+    elifsarigil,
+    kaankoc
   }
 };
 

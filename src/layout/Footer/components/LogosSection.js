@@ -5,13 +5,13 @@ import imagePaths from "../../../assets/imagePaths";
 
 function LogosSection() {
   return (
-    <Grid item xs={12} md={2}>
+    <Grid item xs={12} md={2} display="flex" flexDirection="column" alignItems="center">
       <Grid item>
         <Link to="/s">
           <Box
             component="img"
             src={imagePaths.footer.teknofest}
-            sx={{ width: 72, height: 72, objectFit: "contain", margin: 1 }}
+            sx={{ width: {xs: 48,md:64}, height: {xs: 48,md:64}, objectFit: "contain", margin: 1 }}
           />
         </Link>
         <Link to="/">
@@ -19,8 +19,7 @@ function LogosSection() {
             component="img"
             src={imagePaths.footer.akbank}
             sx={{
-              width: 72,
-              height: 72,
+              width: {xs: 48,md:64}, height: {xs: 48,md:64},
               objectFit: "contain",
               borderRadius: 5,
               margin: 1,
@@ -32,8 +31,7 @@ function LogosSection() {
             component="img"
             src={imagePaths.footer.borusan}
             sx={{
-              width: 72,
-              height: 72,
+              width: {xs: 48,md:64}, height: {xs: 48,md:64},
               objectFit: "contain",
               borderRadius: 5,
               margin: 1,
@@ -46,7 +44,8 @@ function LogosSection() {
           <Box
             component="img"
             src={imagePaths.footer.odeal}
-            sx={{ width: 72, height: 72, objectFit: "contain", margin: 1 }}
+            sx={{               width: {xs: 48,md:64}, height: {xs: 48,md:64},
+            objectFit: "contain", margin: 1 }}
           />
         </Link>
         <Link to="/">
@@ -54,8 +53,7 @@ function LogosSection() {
             component="img"
             src={imagePaths.footer.bursabel}
             sx={{
-              width: 72,
-              height: 72,
+              width: {xs: 48,md:64}, height: {xs: 48,md:64},
               objectFit: "contain",
               borderRadius: 5,
               margin: 1,
@@ -67,8 +65,7 @@ function LogosSection() {
             component="img"
             src={imagePaths.footer.selcuk}
             sx={{
-              width: 72,
-              height: 72,
+              width: {xs: 48,md:64}, height: {xs: 48,md:64},
               objectFit: "contain",
               borderRadius: 5,
               margin: 1,

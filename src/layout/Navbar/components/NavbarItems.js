@@ -1,4 +1,4 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Button, Divider, Grid, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import NavbarButton from "./NavbarButton";
 import { NavLink, useLocation } from "react-router-dom";
@@ -103,7 +103,6 @@ function NavbarItems({ scrollToSection }) {
               </Typography>
             </Button>
           </NavLink>
-         
         </Grid>
       </Grid>
       <Grid
@@ -142,7 +141,9 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
   return (
     <Grid
       container
-      direction="column"
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
       alignItems="center"
       position="absolute"
       top="90%"
@@ -164,6 +165,7 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
       >
         <NavbarButton
           title="Anasayfa"
+          sx={{ margin: 0 }}
           onClick={() => {
             handleClick("home");
             toggleMenu();
@@ -181,6 +183,7 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
         <NavbarButton
           title="Ekibimiz"
           to="/"
+          sx={{ margin: 0 }}
           onClick={() => {
             handleClick("team");
             toggleMenu();
@@ -197,6 +200,7 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
         <NavbarButton
           title="Projeler"
           to="/"
+          sx={{ margin: 0 }}
           onClick={() => {
             handleClick("projects");
             toggleMenu();
@@ -213,6 +217,7 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
         <NavbarButton
           title="Etkinlikler"
           to="/"
+          sx={{ margin: 0 }}
           onClick={() => {
             handleClick("events");
             toggleMenu();
@@ -229,13 +234,15 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
         <NavbarButton
           title="Bize Ulaşın"
           to="/"
+          sx={{ margin: 0 }}
           onClick={() => {
             handleClick("contact");
             toggleMenu();
           }}
         />
       </Grid>
-      <Grid
+      <Grid display="flex" flexDirection="row" alignItems="center" gap={5}>
+        <Grid
           component={motion.div}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -243,28 +250,36 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
           transition={{ delay: 0.7, type: "tween", stiffness: 100 }}
         >
           <NavLink to="https://cool-lime.vercel.app/" target="_blank">
-            <Button disableRipple sx={styles.coolLime}>
-              <Typography textTransform="capitalize" fontFamily="roboto-medium">
+            <Button disableRipple sx={[styles.coolLime]}>
+              <Typography
+                textTransform="capitalize"
+                textAlign="center"
+                fontFamily="roboto-medium"
+              >
                 CooLLiMe
               </Typography>
             </Button>
           </NavLink>
-         
         </Grid>
-      <Grid
-        component={motion.div}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ delay: 1, type: "tween", stiffness: 100 }}
-      >
-        <NavLink to="https://buymeacoffee.com/nanelimon" target="_blank">
-          <Button disableRipple sx={styles.donateButton}>
-            <Typography textTransform="capitalize" fontFamily="roboto-medium">
-              Bize Destek Olun
-            </Typography>
-          </Button>
-        </NavLink>
+        <Grid
+          component={motion.div}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ delay: 1, type: "tween", stiffness: 100 }}
+        >
+          <NavLink to="https://buymeacoffee.com/nanelimon" target="_blank">
+            <Button disableRipple sx={styles.donateButton}>
+              <Typography
+                textTransform="capitalize"
+                textAlign="center"
+                fontFamily="roboto-medium"
+              >
+                Bize Destek Olun
+              </Typography>
+            </Button>
+          </NavLink>
+        </Grid>
       </Grid>
     </Grid>
   );
@@ -276,7 +291,6 @@ const styles = {
   donateButton: {
     color: "white",
     backgroundColor: "green",
-    marginTop: "10px",
     borderRadius: 2,
     "&:hover": {
       color: "white",
@@ -288,6 +302,7 @@ const styles = {
     backgroundColor: "transparent",
     borderRadius: 2,
     color: "#ffffff",
+    marginY: { xs: 2, md: 0 },
     transition: "box-shadow 0.1s ease-in-out",
     "&:hover": {
       backgroundColor: "black",
