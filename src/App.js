@@ -13,7 +13,6 @@ import Loading from "./layout/Loading/Loading";
 import { LoadingProvider, useLoading } from "./contexts/LoadingContext";
 import ProjectDetail from "./pages/ProjectDetail/ProjectDetail";
 const MainApp = () => {
-  const { loading } = useLoading();
 
 
 
@@ -93,7 +92,7 @@ const MainApp = () => {
 
   return (
     <>
-      {loading && <Loading />}
+      <Loading />
       <RouterProvider router={router} />
     </>
   );

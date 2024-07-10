@@ -6,8 +6,8 @@ import { useLoading } from '../../contexts/LoadingContext';
 const Loading = () => {
 
   
-
   const { loading } = useLoading();
+
 
   if (!loading) return null;
 
