@@ -55,11 +55,11 @@ function CardDetail({ location }) {
         flexDirection="column"
         alignItems="center"
       >
-        <Card sx={{ height: 250, width: 250, borderRadius: 5 }}>
+        <Card sx={{ height: {xs: 100,md: 180}, width: {xs: 100,md: 180}, borderRadius: 5 }}>
           <Box
             component="img"
-            width="250px"
-            height="250px"
+            width={{xs: "100px", md: "180px"}}
+            height={{xs: "100px", md: "180px"}}
             sx={{objectFit:"cover"}}
             src={location.state.src}
           />
@@ -68,24 +68,24 @@ function CardDetail({ location }) {
           textAlign="center"
           marginTop={2}
           fontFamily="roboto-bold"
-          fontSize={24}
+          fontSize={{xs: 16,md:24}}
         >
           {location.state.name}
         </Typography>
-        <Typography textAlign="center" fontFamily="roboto-medium" fontSize={16}>
+        <Typography textAlign="center" fontFamily="roboto-medium" fontSize={{xs:12,md:16}}>
           {location.state.title}
         </Typography>
-        <Typography textAlign="center" fontFamily="roboto-medium" fontSize={16}>
+        <Typography textAlign="center" fontFamily="roboto-medium" fontSize={{xs:12,md:16}}>
           {location.state.email}
         </Typography>
         <Grid marginTop={1} display="flex">
           <Link target="_blank" to={location.state.github}>
             <Button
-              sx={{ "&:hover": { backgroundColor: "#ffffff" } }}
+              sx={{ "&:hover": { backgroundColor: "#ffffff" },display: location.state.github ? "block" : "none" }}
               disableFocusRipple
               disableRipple
             >
-              <GitHubIcon sx={{ width: 40, height: 40, color: "#111111" }} />
+              <GitHubIcon sx={{ width: {xs: 30,md: 40}, height: {xs: 30,md: 40}, color: "#111111" }} />
             </Button>
           </Link>
           <Link target="_blank" to={location.state.linkedin}>
@@ -94,7 +94,7 @@ function CardDetail({ location }) {
               disableFocusRipple
               disableRipple
             >
-              <LinkedInIcon sx={{ width: 40, height: 40, color: "#111111" }} />
+              <LinkedInIcon sx={{ width: {xs: 30,md: 40}, height: {xs: 30,md: 40}, color: "#111111" }} />
             </Button>
           </Link>
           <Link
@@ -105,7 +105,7 @@ function CardDetail({ location }) {
               disableFocusRipple
               disableRipple
             >
-              <EmailIcon sx={{ width: 40, height: 40, color: "#111111" }} />
+              <EmailIcon sx={{ width: {xs: 30,md: 40}, height:{xs: 30,md: 40}, color: "#111111" }} />
             </Button>
           </Link>
         </Grid>
@@ -116,7 +116,7 @@ function CardDetail({ location }) {
           textAlign="justify"
           fontFamily="roboto-regular"
           padding={{ xs: 2, md: 0 }}
-          fontSize={{ xs: 14, md: 16 }}
+          fontSize={{ xs: 12, md: 16 }}
         >
           {location.state.description}
         </Typography>

@@ -89,7 +89,7 @@ function NavbarItems({ scrollToSection }) {
             onClick={() => handleClick("contact")}
           />
         </Grid>
-        <Grid
+        {/* <Grid
           component={motion.div}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -103,7 +103,7 @@ function NavbarItems({ scrollToSection }) {
               </Typography>
             </Button>
           </NavLink>
-        </Grid>
+        </Grid> */}
       </Grid>
       <Grid
         component={motion.div}
@@ -241,8 +241,8 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
           }}
         />
       </Grid>
-      <Grid display="flex" flexDirection="row" alignItems="center" gap={5}>
-        <Grid
+      <Grid marginTop={1}>
+        {/* <Grid
           component={motion.div}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -260,7 +260,7 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
               </Typography>
             </Button>
           </NavLink>
-        </Grid>
+        </Grid> */}
         <Grid
           component={motion.div}
           initial={{ opacity: 0 }}

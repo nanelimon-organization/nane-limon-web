@@ -15,8 +15,9 @@ export const members = [
       slug: "seyma-sarigil",
       title: "Ekip Lideri & AI Mühendisi",
       email: "seyma.sarigil@nanelimon.ai",
+      github: "http://github.com/seymasa",
       description:
-        "Şeyma SarıgilThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+        "Şeyma Sarıgil, Selçuk Üniversitesi'nde Türkçe Doğal Dil İşleme üzerine yüksek lisans eğitimini tamamlamış ve profesyonel olarak Python Backend ve AI&NLP mühendisi olarak uzun yıllar tecrübe kazanmıştır. Softtech A.Ş.'de AI Mühendisi olarak çalışmakta ve uygulamaların Backend servislerini geliştirmektedir. Daha önce Getir Perakende Lojistik A.Ş.'de AI NLP mühendisi olarak chatbot ve NLP projeleri geliştirmiştir. Kariyeri boyunca birçok hackathon ve datathon'da ödüller kazanmıştır. Teknolojiye olan tutkusu ve sürekli öğrenme arzusu ile yenilikçi projelerde yer alarak teknoloji dünyasına değer katmayı hedeflemektedir. Detaylı bilgi için kendisiyle iletişime geçmekten çekinmeyin.",
       linkedin: "https://www.linkedin.com/in/eraybuyukkanat/",
       src: imagePaths.member.seymasarigil,
     },
@@ -26,8 +27,8 @@ export const members = [
       title: "Veri Analisti",
       email: "erdinc.dal@nanelimon.ai",
       description:
-        "ErdinçDalThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
-      linkedin: "https://www.linkedin.com/in/eraybuyukkanat/",
+        "Alaaddin Erdinç DAL, Selçuk Üniversitesi'nde Türkçe Doğal Dil İşleme alanında yüksek lisans yapmış, deneyimli bir AI ve NLP mühendisidir. Hem kamu hem de özel sektörde önemli projelere imza atmış, özellikle T.C. Cumhurbaşkanlığı Dijital Dönüşüm Ofisi'nde Türkçe dil modelini geliştirerek devlet hizmetlerinde yapay zeka yeteneklerini artırmıştır. Python, AWS SageMaker, makine öğrenimi ve veri analizi konularında uzman olan DAL, PromoPilot Chatbot ve MintLemon Türkçe NLP Kütüphanesi gibi projeleri hayata geçirmiştir. Teknofest 2022 ve 2023'te Türkçe NLP yenilikleri için birincilik ödülleri kazanarak başarısını kanıtlamıştır. AI geliştirme ve proje yönetiminde lider olan Erdinç, sürekli öğrenme ve yenilikçilikle bu alandaki çalışmalarını sürdürmektedir.",
+      linkedin: "https://www.linkedin.com/in/aerdincdal/",
       src: imagePaths.member.erdincdal
     },
     {
@@ -45,7 +46,7 @@ export const members = [
       title: "ARGE Mühendisi",
       email: "elif.sarigil@nanelimon.ai",
       description:
-        "ElifSarıgilThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+        "Elif SARIGİL KARA, 2023'ten beri Zorlu Enerji bünyesinde Veri Bilimi ve Analitik Ekip Yöneticisi olarak çalışmaktadır. 2012-2023 yılları arasında Türkiye Halk Bankası A.Ş.'de görev almış, 2012-2017 yılları arasında Mainframe z/OS sistem programcısı ve DB2 on z/OS veri tabanı yöneticisi olarak çalışmıştır. Veri Ambarı ve Analitik Bölümüne olan ilgisi nedeniyle bu alana geçiş yapmıştır. 2017 yılından itibaren, kurumunda çeşitli yazılımsal ve donanımsal teknolojileri harmanlayarak Veri Ambarı, Veri Analitiği ve Veri Bilimi üzerine çalışmaya devam etmektedir. Lisans eğitimini Sakarya Üniversitesi Bilgisayar Mühendisliği bölümünde 2011 yılında tamamlamıştır. 2019 yılında çalıştığı kurumu temsilen İTÜ Büyük Veri ve İş Analitiği Uzmanlığı Sertifika Programı'nı tamamlamıştır. 2022 yılında ise Galatasaray Üniversitesi Fen Bilimleri Enstitüsü Veri Bilimi programında yüksek lisansını tamamlamıştır. Şu anda Selçuk Üniversitesi Bilgisayar Mühendisliği ABD'de yüksek lisans yapmaktadır. Çalıştığı kurumun sosyal medya sayfaları üzerinden analitik ve doğal dil işleme ile ilgili çeşitli araştırma ve çalışmaları bulunmaktadır. Ana sorumluluk alanları arasında Performans Yönetimi (Şube performans metrikleri), Müşteri Değer Segmentasyonu Projesi (Banka İçi Değer Segment Modelleri), Müşteri Küpleri, Vadesiz İşlem Küpleri, Near-real-time batch veri aktarımı, ETL teknolojileri ve Makine Öğrenmesi teknikleri ile çeşitli projelerde analiz ve tahminleme yer almaktadır.",
       src: imagePaths.member.elifsarigil,
     },
     {
@@ -56,7 +57,7 @@ export const members = [
       linkedin: "https://www.linkedin.com/in/eraybuyukkanat",
       github: "https://www.github.com/eraybuyukkanat",
       description:
-        "ErayThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+        "Eray Büyükkanat, Selçuk Üniversitesi Bilgisayar Mühendisliği bölümünde öğrenim görmektedir. Mobil ve web geliştirme alanında 2 yılı aşkın deneyime sahip olup, takım çalışması ve farklı rollerde görev alma konusunda tecrübelidir. AI, NLP ve GenAI konularında bilgi edinmeye devam etmekte olup, büyük dil modelleri (LLM) ve RAG yaklaşımları kullanarak kurumsal işletmelerin sorularına çözüm bulabilen bir sohbet botu uygulaması geliştirmektedir. Javascript, Python, Java, Dart, C#, React, React Native ve Flutter gibi dillere ve teknolojilerine hakimdir. Şu anda, Nane & Limon ekibinde junior yazılım mühendisi olarak görev almakta ve proje geliştirmelerinde rol almaktadır. Ayrıca, çeşitli hackathonlarda ve yarışmalarda birincilik elde etmiş olup, projelerinde yenilikçi çözümler sunmaktadır.",
       src: imagePaths.member.eraybuyukkanat,
     },
   ];

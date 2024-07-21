@@ -6,9 +6,9 @@ function DetailCardContainer({ children }) {
     <Card
       sx={{
         display: "flex",
-        width: "60%",
+        width: {xs: "90%", md: "60%"},
         flexDirection: { xs: "column", md: "row" },
-        padding: 5,
+        padding: {xs: 3,md: 5},
         margin: 5,
         borderRadius: 10
     }}
