@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Box, CircularProgress } from '@mui/material';
 import { src } from '../../constants/urls';
 import { useLoading } from '../../contexts/LoadingContext';
+import loadingAnimation from '../../assets/loading.json';
+import Lottie from 'lottie-react';
 
 const Loading = () => {
 
@@ -28,6 +30,10 @@ const Loading = () => {
       }}
     >
       <img src={src} alt="Logo" style={{ width: '100px', marginBottom: '20px' }} />
+      <Lottie
+        animationData={loadingAnimation}
+        style={{ width: 100, height: 100 }}
+      />
     </Box>
   );
 };
