@@ -9,11 +9,11 @@ function BreadCrumbs({title}){
       color="inherit"
       to="/"
     >
-      <Typography fontFamily="roboto-bold" color="text.primary">
+      <Typography fontFamily="roboto-bold" fontSize={{xs: 12,md: 16}} color="text.primary">
         Anasayfa
       </Typography>
     </NavLink>
-    <Typography fontFamily="roboto-medium" color="text.primary">
+    <Typography fontFamily="roboto-medium" fontSize={{xs: 12,md: 16}} color="text.primary">
       {title}
     </Typography>
   </Breadcrumbs>

@@ -16,13 +16,15 @@ export const projects = [
     slug: "promo-pilot",
     shortDescription:
       "PromoPilot projesi, ÖDEAL a ait üye iş yerlerinin karşılaştıkları sorunları etkin bir şekilde çözmek ve operasyonel destek sağlamak amacıyla geliştirilmiştir. Bu proje, üye iş yerlerinin sadakatini artırmak, operasyonlarını optimize etmek ve müşteri memnuniyetini sağlamak için çeşitli analiz ve stratejiler sunar.",
-      status: "firstPlace",
+    status: "firstPlace",
 
-      description: `PromoPilot projesi, ÖDEAL a ait üye iş yerlerinin karşılaştıkları sorunları etkin bir şekilde çözmek ve operasyonel destek sağlamak amacıyla geliştirilmiştir. Bu proje, üye iş yerlerinin sadakatini artırmak, operasyonlarını optimize etmek ve müşteri memnuniyetini sağlamak için çeşitli analiz ve stratejiler sunar. 
-
+    description: `PromoPilot projesi, ÖDEAL a ait üye iş yerlerinin karşılaştıkları sorunları etkin bir şekilde çözmek ve operasyonel destek sağlamak amacıyla geliştirilmiştir. Bu proje, üye iş yerlerinin sadakatini artırmak, operasyonlarını optimize etmek ve müşteri memnuniyetini sağlamak için çeşitli analiz ve stratejiler sunar. 
+`,
+    katmaDeger: `
       <b>Sağlanan Katma Değer:</b>
       <ul><li><b>Operasyonel Destek:</b> Üye iş yerlerinin sorunlarını hızlı ve etkin bir şekilde çözecek bir platform sunar.</li>
-        <li><b>Sadakat İnisiyatifi:</b> Stratejik promosyonlar ve kampanyalar ile üye iş yerlerinin sadakatini ve bağlılığını artırır.</li></ul><b>Çözüm Yaklaşımı:</b>
+        <li><b>Sadakat İnisiyatifi:</b> Stratejik promosyonlar ve kampanyalar ile üye iş yerlerinin sadakatini ve bağlılığını artırır.</li></ul>`,
+    cozumYaklasimi: `<b>Çözüm Yaklaşımı:</b>
       <ol><li><b>Keşifçi Veri Analizi:</b> Ham veriden değerli içgörüler elde edilerek veri ön işleme adımları belirlenir ve uygulanır.</li>
         <li><b>Özellik Mühendisliği:</b>
           <ul>
@@ -37,7 +39,8 @@ export const projects = [
             <li>Sosyo-Ekonomik ve Sosyo-Demografik Analiz:</b> Üye iş yerlerinin coğrafik konumlarına göre özel kampanyalar sunar.</li>
           </ul></li><li><b>Prompt Engineering:</b>
           <ul>
-            <li>Çeşitli prompt teknikleri ile modelin en verimli şekilde çalışması sağlanır (Variable-Embedded Prompt Engineering, Chain-of-Thought Prompting, Tree of Thoughts Prompting, Few-Shot Prompting, Generated Knowledge Prompting).</li></ul></li></ol><b>Değer Önerisi:</b><ul><li><b>Güçlü ve Yenilikçi Yaklaşım:</b> Üye iş yerlerinin ihtiyaçlarına yönelik çözümler sunar.</li>
+            <li>Çeşitli prompt teknikleri ile modelin en verimli şekilde çalışması sağlanır (Variable-Embedded Prompt Engineering, Chain-of-Thought Prompting, Tree of Thoughts Prompting, Few-Shot Prompting, Generated Knowledge Prompting).</li></ul></li></ol>`,
+    degerOnerisi: `<b>Değer Önerisi:</b><ul><li><b>Güçlü ve Yenilikçi Yaklaşım:</b> Üye iş yerlerinin ihtiyaçlarına yönelik çözümler sunar.</li>
         <li><b>Hızlı ve Etkin Çözümler:</b> Şikayetlerin analiz edilmesi, sosyo-ekonomik verilerle desteklenen kampanyalar ve churn analizi ile üye iş yerlerinin memnuniyeti artırılır.</li>
         <li><b>Müşteri Odaklı:</b> Hızlı ve güvenli veri erişimi ile operasyonel verimlilik sağlanır.</li></ul>`,
     imageUrl: odeal,
@@ -53,6 +56,12 @@ export const projects = [
     status: "firstPlace",
     description: `AutoMate projesi, BorusanOto'nun satış sonrası hizmetlerini geliştirmek amacıyla çeşitli ileri teknolojiler kullanılarak hayata geçirilmiştir. Bu projede, BorusanOto web sitesi ve sıkça sorulan sorular üzerinden veri toplamak için web scraping teknikleri kullanılmıştır. Doküman embedding ve veri yönetimi için Azure OpenAI'nin text-embedding-ada-002 modeli kullanılarak doküman parçaları optimize edilmiştir. Verilerin hızlı ve ücretsiz bir şekilde yönetilmesi ise Qdrant vektör veritabanı ile sağlanmıştır. \n\nProje kapsamında, iteratif prompt geliştirme ve semantik doğruluk testleri ile sistemin hassasiyeti artırılmıştır. Kullanıcı dostu ve etkileşimli bir arayüz tasarlanarak kullanıcı deneyimi iyileştirilmiş, lokasyon tabanlı interaktif özellikler eklenmiştir. Generative AI tabanlı görsel işleme özellikleri sayesinde kullanıcıların problemlerini görseller üzerinden rahatça aktarabilmeleri sağlanmıştır. \n\nBu çözümler, müşteri hizmetleri konusunda benzersiz bir deneyim sunmayı ve kullanıcı memnuniyetini artırmayı hedeflemektedir. Projenin genel mimarisi ve kullanılan teknolojiler, kullanıcıların ihtiyaçlarına hızlı ve etkili bir şekilde yanıt verebilecek şekilde tasarlanmıştır.
 `,
+    katmaDeger: `AutoMate projesi, BorusanOto'nun satış sonrası hizmetlerini geliştirmek amacıyla çeşitli ileri teknolojiler kullanılarak hayata geçirilmiştir. Bu projede, BorusanOto web sitesi ve sıkça sorulan sorular üzerinden veri toplamak için web scraping teknikleri kullanılmıştır. Doküman embedding ve veri yönetimi için Azure OpenAI'nin text-embedding-ada-002 modeli kullanılarak doküman parçaları optimize edilmiştir. Verilerin hızlı ve ücretsiz bir şekilde yönetilmesi ise Qdrant vektör veritabanı ile sağlanmıştır. \n\nProje kapsamında, iteratif prompt geliştirme ve semantik doğruluk testleri ile sistemin hassasiyeti artırılmıştır. Kullanıcı dostu ve etkileşimli bir arayüz tasarlanarak kullanıcı deneyimi iyileştirilmiş, lokasyon tabanlı interaktif özellikler eklenmiştir. Generative AI tabanlı görsel işleme özellikleri sayesinde kullanıcıların problemlerini görseller üzerinden rahatça aktarabilmeleri sağlanmıştır. \n\nBu çözümler, müşteri hizmetleri konusunda benzersiz bir deneyim sunmayı ve kullanıcı memnuniyetini artırmayı hedeflemektedir. Projenin genel mimarisi ve kullanılan teknolojiler, kullanıcıların ihtiyaçlarına hızlı ve etkili bir şekilde yanıt verebilecek şekilde tasarlanmıştır.
+`,
+    cozumYaklasimi: `AutoMate projesi, BorusanOto'nun satış sonrası hizmetlerini geliştirmek amacıyla çeşitli ileri teknolojiler kullanılarak hayata geçirilmiştir. Bu projede, BorusanOto web sitesi ve sıkça sorulan sorular üzerinden veri toplamak için web scraping teknikleri kullanılmıştır. Doküman embedding ve veri yönetimi için Azure OpenAI'nin text-embedding-ada-002 modeli kullanılarak doküman parçaları optimize edilmiştir. Verilerin hızlı ve ücretsiz bir şekilde yönetilmesi ise Qdrant vektör veritabanı ile sağlanmıştır. \n\nProje kapsamında, iteratif prompt geliştirme ve semantik doğruluk testleri ile sistemin hassasiyeti artırılmıştır. Kullanıcı dostu ve etkileşimli bir arayüz tasarlanarak kullanıcı deneyimi iyileştirilmiş, lokasyon tabanlı interaktif özellikler eklenmiştir. Generative AI tabanlı görsel işleme özellikleri sayesinde kullanıcıların problemlerini görseller üzerinden rahatça aktarabilmeleri sağlanmıştır. \n\nBu çözümler, müşteri hizmetleri konusunda benzersiz bir deneyim sunmayı ve kullanıcı memnuniyetini artırmayı hedeflemektedir. Projenin genel mimarisi ve kullanılan teknolojiler, kullanıcıların ihtiyaçlarına hızlı ve etkili bir şekilde yanıt verebilecek şekilde tasarlanmıştır.
+`,
+    degerOnerisi: `AutoMate projesi, BorusanOto'nun satış sonrası hizmetlerini geliştirmek amacıyla çeşitli ileri teknolojiler kullanılarak hayata geçirilmiştir. Bu projede, BorusanOto web sitesi ve sıkça sorulan sorular üzerinden veri toplamak için web scraping teknikleri kullanılmıştır. Doküman embedding ve veri yönetimi için Azure OpenAI'nin text-embedding-ada-002 modeli kullanılarak doküman parçaları optimize edilmiştir. Verilerin hızlı ve ücretsiz bir şekilde yönetilmesi ise Qdrant vektör veritabanı ile sağlanmıştır. \n\nProje kapsamında, iteratif prompt geliştirme ve semantik doğruluk testleri ile sistemin hassasiyeti artırılmıştır. Kullanıcı dostu ve etkileşimli bir arayüz tasarlanarak kullanıcı deneyimi iyileştirilmiş, lokasyon tabanlı interaktif özellikler eklenmiştir. Generative AI tabanlı görsel işleme özellikleri sayesinde kullanıcıların problemlerini görseller üzerinden rahatça aktarabilmeleri sağlanmıştır. \n\nBu çözümler, müşteri hizmetleri konusunda benzersiz bir deneyim sunmayı ve kullanıcı memnuniyetini artırmayı hedeflemektedir. Projenin genel mimarisi ve kullanılan teknolojiler, kullanıcıların ihtiyaçlarına hızlı ve etkili bir şekilde yanıt verebilecek şekilde tasarlanmıştır.
+`,
     imageUrl: automate,
     buttonLink:
       "https://www.canva.com/design/DAFzYmLsdd0/vKhkhe-Wj9ePUmVq4VsFxg/edit?utm_content=DAFzYmLsdd0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
@@ -64,8 +73,8 @@ export const projects = [
     slug: "qlink",
     shortDescription:
       "QLink, doğal afetler sırasında enerji dağıtım ağının kontrolünü optimize etmek ve enerji kesintilerinden kaynaklanan riskleri minimize etmek amacıyla Bursa Deprem Hackathon’u kapsamında geliştirilmiştir.",
-      status: "thirdPlace",
-      description: `QLink, doğal afetler sırasında enerji dağıtım ağının kontrolünü optimize etmek ve enerji kesintilerinden kaynaklanan riskleri minimize etmek amacıyla Bursa Deprem Hackathon’u kapsamında geliştirilmiştir.
+    status: "thirdPlace",
+    description: `QLink, doğal afetler sırasında enerji dağıtım ağının kontrolünü optimize etmek ve enerji kesintilerinden kaynaklanan riskleri minimize etmek amacıyla Bursa Deprem Hackathon’u kapsamında geliştirilmiştir.
     
       <b>Problemler:</b>
       <ul><li>Enerji dağıtımının kontrol edilememesi ve kesintiler.</li>
@@ -80,7 +89,7 @@ export const projects = [
             <li>Hızlı ve etkin acil durum müdahaleleri gerçekleştirme.</li>
             <li>Yangın ve diğer riskleri minimize etme.</li>
             </ul>Bu yenilikçi proje, afet anında enerji dağıtımını optimize ederek kamu hizmetlerinin ve acil durum yanıtlarının etkinliğini artırmayı hedeflemektedir.`,
-    imageUrl: qlink,
+    SimageUrl: qlink,
     buttonLink:
       "https://www.canva.com/design/DAFmK9us1AM/WKqF6ERgZTNadabTczPPYQ/edit?utm_content=DAF",
   },
@@ -92,7 +101,7 @@ export const projects = [
       "ZelTech tarafından geliştirilen ve Akbank tarafından desteklenen TR-NLPGUIDE projesi, doğal afetler sırasında yardım koordinasyonunu ve lojistik yönetimini optimize etmek için modern teknolojilerden faydalanmaktadır.",
 
     status: "finalist",
-      description: `ZelTech tarafından geliştirilen ve Akbank tarafından desteklenen TR-NLPGUIDE projesi, doğal afetler sırasında yardım koordinasyonunu ve lojistik yönetimini optimize etmek için modern teknolojilerden faydalanmaktadır. Bu sistem, sosyal medyadan alınan anlık ihbarları yapay zeka destekli algoritmalarla sınıflandırarak, sivil toplum kuruluşlarının yardım envanterlerini merkezi bir platformda yönetmelerini sağlar. Projenin temel özellikleri şunlardır:
+    description: `ZelTech tarafından geliştirilen ve Akbank tarafından desteklenen TR-NLPGUIDE projesi, doğal afetler sırasında yardım koordinasyonunu ve lojistik yönetimini optimize etmek için modern teknolojilerden faydalanmaktadır. Bu sistem, sosyal medyadan alınan anlık ihbarları yapay zeka destekli algoritmalarla sınıflandırarak, sivil toplum kuruluşlarının yardım envanterlerini merkezi bir platformda yönetmelerini sağlar. Projenin temel özellikleri şunlardır:
     
     <b>Anlık Sosyal Medya İhbar İzleme:</b>
       <ul><li>Çerçeve: Twitter üzerinden yapılan yardım çağrıları ve ihbarlar gerçek zamanlı olarak taranır.</li>
@@ -118,13 +127,13 @@ export const projects = [
   {
     title: "mintlemon-turkish-nlp Library",
     subtitle: "düzenlenecek",
-    slug:"mintlemon-turkish-nlp",
+    slug: "mintlemon-turkish-nlp",
     shortDescription:
       "Mintlemon Turkish NLP, Türkçe metinlerle çalışmak için geliştirilmiş kapsamlı ve güçlü bir doğal dil işleme (NLP) araç kütüphanesidir. Bu kütüphane, dil işleme görevlerini kolaylaştırmak ve hızlandırmak amacıyla PyPI platformunda Nane&Limon topluluğu tarafından yayınlanmıştır.",
 
-      status: "firstPlace",
+    status: "firstPlace",
 
-      description: `Mintlemon Turkish NLP, Türkçe metinlerle çalışmak için geliştirilmiş kapsamlı ve güçlü bir doğal dil işleme (NLP) araç kütüphanesidir. Bu kütüphane, dil işleme görevlerini kolaylaştırmak ve hızlandırmak amacıyla PyPI platformunda Nane&Limon topluluğu tarafından yayınlanmıştır.
+    description: `Mintlemon Turkish NLP, Türkçe metinlerle çalışmak için geliştirilmiş kapsamlı ve güçlü bir doğal dil işleme (NLP) araç kütüphanesidir. Bu kütüphane, dil işleme görevlerini kolaylaştırmak ve hızlandırmak amacıyla PyPI platformunda Nane&Limon topluluğu tarafından yayınlanmıştır.
     
     <b>Özellikler:</b>
       <ul><b><li>Türkçe Dil Desteği:</b> Türkçe metinler için özel olarak optimize edilmiş dil işleme araçları içerir.</li>
@@ -139,13 +148,13 @@ export const projects = [
   {
     title: "Kolay Veri Etiketleme Aracı",
     subtitle: "düzenlenecek",
-    slug:"kolay-etiketleme",
+    slug: "kolay-etiketleme",
     shortDescription:
       "Easy Data Labeling Engine, veri etiketleme sürecini hızlandırmak ve kolaylaştırmak amacıyla geliştirilmiş bir araçtır. Nane&Limon topluluğu tarafından GitHub'da yayınlanan bu araç, verilerinizi hızlı, verimli ve doğru bir şekilde etiketlemenize yardımcı olur.",
 
-      status: "firstPlace",
+    status: "firstPlace",
 
-      description: `Easy Data Labeling Engine, veri etiketleme sürecini hızlandırmak ve kolaylaştırmak amacıyla geliştirilmiş bir araçtır. Nane&Limon topluluğu tarafından GitHub'da yayınlanan bu araç, verilerinizi hızlı, verimli ve doğru bir şekilde etiketlemenize yardımcı olur.
+    description: `Easy Data Labeling Engine, veri etiketleme sürecini hızlandırmak ve kolaylaştırmak amacıyla geliştirilmiş bir araçtır. Nane&Limon topluluğu tarafından GitHub'da yayınlanan bu araç, verilerinizi hızlı, verimli ve doğru bir şekilde etiketlemenize yardımcı olur.
     
     <b>Özellikler:</b>
       <ul><b><li>Kullanıcı Dostu Arayüz:</b> Basit ve anlaşılır bir arayüz ile veri etiketleme işlemlerini hızlı bir şekilde gerçekleştirebilirsiniz.</li>
@@ -162,13 +171,13 @@ export const projects = [
   {
     title: "Offensive Veri Modeli",
     subtitle: "düzenlenecek",
-    slug:"offensive",
+    slug: "offensive",
     shortDescription:
       "BERT-Base Turkish Offensive modeli, Türkçe metinlerde ofansif dil kullanımı algılamak amacıyla özel olarak eğitilmiş bir dil modelidir. Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanan bu model, çevrimiçi ortamda ofansif içeriklerin tespiti ve yönetilmesi için güçlü bir araç sunar.",
 
-      status: "firstPlace",
+    status: "firstPlace",
 
-      description: `BERT-Base Turkish Offensive modeli, Türkçe metinlerde ofansif dil kullanımı algılamak amacıyla özel olarak eğitilmiş bir dil modelidir. Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanan bu model, çevrimiçi ortamda ofansif içeriklerin tespiti ve yönetilmesi için güçlü bir araç sunar.
+    description: `BERT-Base Turkish Offensive modeli, Türkçe metinlerde ofansif dil kullanımı algılamak amacıyla özel olarak eğitilmiş bir dil modelidir. Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanan bu model, çevrimiçi ortamda ofansif içeriklerin tespiti ve yönetilmesi için güçlü bir araç sunar.
     
     <b>Özellikler:</b>
       <ul><b><li>Türkçe Metinlere Özel:</b> Model, Türkçe dil yapısına ve ofansif dil özelliklerine uygun olacak şekilde eğitilmiştir.</li>
@@ -181,12 +190,12 @@ export const projects = [
   {
     title: "Türkçe İş İlanı Sınıflandırma Modeli",
     subtitle: "düzenlenecek",
-    slug:"turkce-is-ilani-siniflandirma",
+    slug: "turkce-is-ilani-siniflandirma",
     shortDescription:
       "BERT-Base Turkish Job Advertisement modeli, Türkçe iş ilanları verisi kullanılarak özel olarak eğitilmiş bir dil modelidir. Bu model, iş ilanlarının analiz edilmesi, kategorize edilmesi ve çeşitli doğal dil işleme (NLP) görevlerinde kullanılması amacıyla geliştirilmiştir. Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanmıştır.",
 
-      status: "academic",
-      description: `BERT-Base Turkish Job Advertisement modeli, Türkçe iş ilanları verisi kullanılarak özel olarak eğitilmiş bir dil modelidir. Bu model, iş ilanlarının analiz edilmesi, kategorize edilmesi ve çeşitli doğal dil işleme (NLP) görevlerinde kullanılması amacıyla geliştirilmiştir. Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanmıştır.
+    status: "academic",
+    description: `BERT-Base Turkish Job Advertisement modeli, Türkçe iş ilanları verisi kullanılarak özel olarak eğitilmiş bir dil modelidir. Bu model, iş ilanlarının analiz edilmesi, kategorize edilmesi ve çeşitli doğal dil işleme (NLP) görevlerinde kullanılması amacıyla geliştirilmiştir. Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanmıştır.
     
     <b>Özellikler:</b>
       <ul><b><li>Türkçe Metinlere Özel:</b> Model, Türkçe iş ilanları veritabanı kullanılarak eğitilmiştir, bu sayede Türkçe dil yapısına ve iş ilanlarının kendine has terminolojisine uyum sağlar.</li>
@@ -199,12 +208,12 @@ export const projects = [
   {
     title: "Türkçe Acil Durum Yönetim Modeli",
     subtitle: "düzenlenecek",
-    slug:"turkce-acil-yonetim",
+    slug: "turkce-acil-yonetim",
     shortDescription:
       "Akbank tarafından düzenlenen hackathon kapsamında geliştirilmiş ve Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanmıştır. Bu model, doğal dil işleme (NLP) ve makine öğrenimi projelerinde kullanılmak üzere özel olarak eğitilmiştir.",
 
-      status: "finalist",
-      description: `Akbank tarafından düzenlenen hackathon kapsamında geliştirilmiş ve Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanmıştır. Bu model, doğal dil işleme (NLP) ve makine öğrenimi projelerinde kullanılmak üzere özel olarak eğitilmiştir.
+    status: "finalist",
+    description: `Akbank tarafından düzenlenen hackathon kapsamında geliştirilmiş ve Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanmıştır. Bu model, doğal dil işleme (NLP) ve makine öğrenimi projelerinde kullanılmak üzere özel olarak eğitilmiştir.
 
     <b>Özellikler:</b>
       <ul><b><li>Hackathon İçin Geliştirildi:</b> Akbank Hackathon kapsamında ortaya çıkan ihtiyaçlar ve problemler göz önünde bulundurularak tasarlanmış ve optimize edilmiştir.</li>
@@ -217,16 +226,27 @@ export const projects = [
   {
     title: "Veri Temizleme Aracı",
     subtitle: "düzenlenecek",
-    slug:"veri-temizleme-araci",
+    slug: "veri-temizleme-araci",
     shortDescription:
       "Veri ön işleme, modellemeye hazırlık aşamasında modelin başarısı için kritik öneme sahiptir. Özellikle doğal dil işleme (NLP) alanında, metin verilerinin temizlenmesi her modelleme sürecinde önemli bir adımdır. Bu ihtiyacı karşılamak ve Türkçe metinlerde doğal dil işleme literatürüne katkı sağlamak amacıyla text-data-cleaner aracı geliştirilmiştir.",
 
-      status: "firstPlace",
+    status: "firstPlace",
 
-      description: `Veri ön işleme, modellemeye hazırlık aşamasında modelin başarısı için kritik öneme sahiptir. Özellikle doğal dil işleme (NLP) alanında, metin verilerinin temizlenmesi her modelleme sürecinde önemli bir adımdır. Bu ihtiyacı karşılamak ve Türkçe metinlerde doğal dil işleme literatürüne katkı sağlamak amacıyla text-data-cleaner aracı geliştirilmiştir. \n\ntext-data-cleaner, veri temizleme sürecini herkes için erişilebilir ve basit hale getiren bir araçtır. Bu araç, veri bilimcilerin ve NLP uzmanlarının modelleme öncesi verilerini temizlenmesine yardımcı olarak daha yüksek performanslı modeller geliştirmelerine olanak tanır.`,
+    description: `Veri ön işleme, modellemeye hazırlık aşamasında modelin başarısı için kritik öneme sahiptir. Özellikle doğal dil işleme (NLP) alanında, metin verilerinin temizlenmesi her modelleme sürecinde önemli bir adımdır. Bu ihtiyacı karşılamak ve Türkçe metinlerde doğal dil işleme literatürüne katkı sağlamak amacıyla text-data-cleaner aracı geliştirilmiştir. \n\ntext-data-cleaner, veri temizleme sürecini herkes için erişilebilir ve basit hale getiren bir araçtır. Bu araç, veri bilimcilerin ve NLP uzmanlarının modelleme öncesi verilerini temizlenmesine yardımcı olarak daha yüksek performanslı modeller geliştirmelerine olanak tanır.`,
     imageUrl: datacleaning,
     buttonLink: "https://github.com/nanelimon-organization/text-data-cleaner",
   },
 ];
 
-export const validProjects = ["promo-pilot", "automate","qlink","zeltek","mintlemon-turkish-nlp","kolay-etiketleme","offensive","turkce-is-ilani-siniflandirma","turkce-acil-yonetim","veri-temizleme-araci"];
+export const validProjects = [
+  "promo-pilot",
+  "automate",
+  "qlink",
+  "zeltek",
+  "mintlemon-turkish-nlp",
+  "kolay-etiketleme",
+  "offensive",
+  "turkce-is-ilani-siniflandirma",
+  "turkce-acil-yonetim",
+  "veri-temizleme-araci",
+];
