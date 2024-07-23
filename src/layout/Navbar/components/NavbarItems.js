@@ -26,7 +26,7 @@ function NavbarItems({ scrollToSection }) {
       }, 1000);
     }
   };
-  const [language, setLanguage] = useState("EN");
+  const [language, setLanguage] = useState("TR");
 
   const handleChange = (event) => {
     if (language == "EN") {
