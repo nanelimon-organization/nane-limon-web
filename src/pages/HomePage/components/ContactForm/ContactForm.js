@@ -6,7 +6,10 @@ import React, { useRef, useState } from "react";
 
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
+import { useTranslation } from "react-i18next";
 function ContactForm({ handleClick }) {
+  const {t} = useTranslation();
+
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",
@@ -124,7 +127,7 @@ function ContactForm({ handleClick }) {
           sx={{ fontFamily: "roboto-bold" }}
           textAlign="center"
         >
-          BİZE ULAŞIN
+          {t("contact.title")}
         </Typography>
 
         <Grid
@@ -140,7 +143,7 @@ function ContactForm({ handleClick }) {
           <CustomTextField
             formValue="name"
             value={formValues.name}
-            label="İsim Soyisim"
+            label={t("contact.form.name")}
             onChange={inputHandler}
             name="name"
             error={!isFirstRender && formValues.name === ""}
@@ -148,7 +151,7 @@ function ContactForm({ handleClick }) {
           <CustomTextField
             formValue="email"
             value={formValues.email}
-            label="E-mail Adresiniz"
+            label={t("contact.form.email")}
             type="email"
             onChange={inputHandler}
             name="email"
@@ -162,7 +165,7 @@ function ContactForm({ handleClick }) {
             type="tel"
             id="phone"
             name="phone"
-            label="Telefon Numarası"
+            label={t("contact.form.phone")}
             value={formValues.phone}
             onChange={handleChange}
             error={
@@ -174,7 +177,7 @@ function ContactForm({ handleClick }) {
           <CustomTextField
             formValue="title"
             value={formValues.title}
-            label="Konu"
+            label={t("contact.form.subject")}
             name="title"
             onChange={inputHandler}
             error={!isFirstRender && formValues.title === ""}
@@ -182,7 +185,7 @@ function ContactForm({ handleClick }) {
           <CustomTextArea
             formValue="description"
             value={formValues.description}
-            label="Mesaj"
+            label={t("contact.form.message")}
             name="description"
             rows={6}
             maxRows={10}
@@ -196,7 +199,7 @@ function ContactForm({ handleClick }) {
         </Grid>
         <Grid item xs={12}>
           <CustomButton
-            title="Gönder"
+            title={t("contact.buttonText")}
             disabled={!capVal}
             border={1}
             color="#111111"

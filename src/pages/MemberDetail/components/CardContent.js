@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const StyledTabs = styled((props) => (
   <Tabs
@@ -41,6 +42,7 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
 );
 
 function CardDetail({ location }) {
+  const { t } = useTranslation();
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -55,12 +57,18 @@ function CardDetail({ location }) {
         flexDirection="column"
         alignItems="center"
       >
-        <Card sx={{ height: {xs: 100,md: 180}, width: {xs: 100,md: 180}, borderRadius: 5 }}>
+        <Card
+          sx={{
+            height: { xs: 100, md: 180 },
+            width: { xs: 100, md: 180 },
+            borderRadius: 5,
+          }}
+        >
           <Box
             component="img"
-            width={{xs: "100px", md: "180px"}}
-            height={{xs: "100px", md: "180px"}}
-            sx={{objectFit:"cover"}}
+            width={{ xs: "100px", md: "180px" }}
+            height={{ xs: "100px", md: "180px" }}
+            sx={{ objectFit: "cover" }}
             src={location.state.src}
           />
         </Card>
@@ -68,24 +76,41 @@ function CardDetail({ location }) {
           textAlign="center"
           marginTop={2}
           fontFamily="roboto-bold"
-          fontSize={{xs: 16,md:24}}
+          fontSize={{ xs: 16, md: 24 }}
         >
           {location.state.name}
         </Typography>
-        <Typography textAlign="center" fontFamily="roboto-medium" fontSize={{xs:12,md:16}}>
-          {location.state.title}
+        <Typography
+          textAlign="center"
+          fontFamily="roboto-medium"
+          fontSize={{ xs: 12, md: 16 }}
+        >
+          {t(`ourTeam.${location.state.slug}.title`)}
         </Typography>
-        <Typography textAlign="center" fontFamily="roboto-medium" fontSize={{xs:12,md:16}}>
+        <Typography
+          textAlign="center"
+          fontFamily="roboto-medium"
+          fontSize={{ xs: 12, md: 16 }}
+        >
           {location.state.email}
         </Typography>
         <Grid marginTop={1} display="flex">
           <Link target="_blank" to={location.state.github}>
             <Button
-              sx={{ "&:hover": { backgroundColor: "#ffffff" },display: location.state.github ? "block" : "none" }}
+              sx={{
+                "&:hover": { backgroundColor: "#ffffff" },
+                display: location.state.github ? "block" : "none",
+              }}
               disableFocusRipple
               disableRipple
             >
-              <GitHubIcon sx={{ width: {xs: 30,md: 40}, height: {xs: 30,md: 40}, color: "#111111" }} />
+              <GitHubIcon
+                sx={{
+                  width: { xs: 30, md: 40 },
+                  height: { xs: 30, md: 40 },
+                  color: "#111111",
+                }}
+              />
             </Button>
           </Link>
           <Link target="_blank" to={location.state.linkedin}>
@@ -94,7 +119,13 @@ function CardDetail({ location }) {
               disableFocusRipple
               disableRipple
             >
-              <LinkedInIcon sx={{ width: {xs: 30,md: 40}, height: {xs: 30,md: 40}, color: "#111111" }} />
+              <LinkedInIcon
+                sx={{
+                  width: { xs: 30, md: 40 },
+                  height: { xs: 30, md: 40 },
+                  color: "#111111",
+                }}
+              />
             </Button>
           </Link>
           <Link
@@ -105,7 +136,13 @@ function CardDetail({ location }) {
               disableFocusRipple
               disableRipple
             >
-              <EmailIcon sx={{ width: {xs: 30,md: 40}, height:{xs: 30,md: 40}, color: "#111111" }} />
+              <EmailIcon
+                sx={{
+                  width: { xs: 30, md: 40 },
+                  height: { xs: 30, md: 40 },
+                  color: "#111111",
+                }}
+              />
             </Button>
           </Link>
         </Grid>
@@ -118,7 +155,7 @@ function CardDetail({ location }) {
           padding={{ xs: 2, md: 0 }}
           fontSize={{ xs: 12, md: 16 }}
         >
-          {location.state.description}
+          {t(`ourTeam.${location.state.slug}.biography`)}
         </Typography>
 
         {/* <StyledTabs

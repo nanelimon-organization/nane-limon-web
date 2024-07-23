@@ -4,8 +4,9 @@ import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftR
 import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
 import { useState } from "react";
 import {members} from '../../../../constants/members'
+import { useTranslation } from "react-i18next";
 function Team() {
-  
+  const { t } = useTranslation()
   const [index, setIndex] = useState(0);
 
   let member1 = members[0 + index];
@@ -43,7 +44,7 @@ function Team() {
           component="div"
           sx={{ fontFamily: "roboto-bold", fontSize: 24 }}
         >
-          EKİBİMİZ
+          {t("ourTeam.title")}
         </Typography>
       <Grid
         item

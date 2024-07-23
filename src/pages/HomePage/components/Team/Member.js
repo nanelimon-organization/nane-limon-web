@@ -3,7 +3,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import animation from '../../../../animations/animation.gif'
+import { useTranslation } from "react-i18next";
 function Member({ member }) {
+  const { t } = useTranslation()
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -65,7 +67,7 @@ function Member({ member }) {
           fontSize={14}
           fontFamily="roboto-regular"
         >
-          {member.title}
+          {t(`ourTeam.${member.slug}.title`)}
         </Typography>
       </Card>
     </NavLink>

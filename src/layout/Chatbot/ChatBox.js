@@ -16,7 +16,11 @@ import { useEffect, useRef, useState } from "react";
 import { delay, motion } from "framer-motion";
 import { postQuestion } from "../../requests/requests";
 import imagePaths from "../../assets/imagePaths";
+import { useTranslation } from "react-i18next";
 function ChatBox() {
+  
+  const { t } = useTranslation()
+
   const animations = {
     initial: { scale: 0, opacity: 0 },
     animate: { scale: 1, opacity: 1 },
@@ -30,7 +34,16 @@ function ChatBox() {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const [questions, setQuestions] = useState(["Merhaba, ben Nane&Limon Chatbot. Nası yardımcı olabilirim?"]);
+  const [questions, setQuestions] = useState([t("chatbot.firstMessage")]);
+
+  useEffect(() => {
+    let firstMessage = t("chatbot.firstMessage");
+    setQuestions(prev => {
+      const newQuestions = [...prev];
+      newQuestions[0] = firstMessage;
+      return newQuestions;
+    });
+  }, [t]);
 
   const [isChatBoxOpen, setIsChatBoxOpen] = useState(false);
 

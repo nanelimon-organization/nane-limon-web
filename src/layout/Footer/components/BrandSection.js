@@ -1,6 +1,8 @@
 import { Box, Grid, Link, Typography } from "@mui/material";
 import { src } from "../../../constants/urls";
+import { useTranslation } from "react-i18next";
 function BrandSection() {
+  const { t } = useTranslation()
   return (
     <Grid
       display="flex"
@@ -28,7 +30,7 @@ function BrandSection() {
           color="white"
           fontFamily="roboto-mediumitalic"
         >
-          Copyright © 2024 Tüm Hakları Saklıdır.
+          {t("footer.copyright")}
         </Typography>
       </Box>
     </Grid>

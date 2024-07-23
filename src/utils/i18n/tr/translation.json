@@ -1,14 +1,137 @@
 {
-    "banner": {
-      "bannerText": "Türkçe Doğal Dil İşleme Gönüllüleri"
+  "banner": {
+    "bannerText": "Türkçe Doğal Dil İşleme Gönüllüleri"
+  },
+  "navbar": {
+    "home": "Anasayfa",
+    "team": "Ekibimiz",
+    "projects": "Projeler",
+    "events": "Etkinlikler",
+    "contact": "Bize Ulaşın",
+    "support": "Bize Destek Olun"
+  },
+  "medium": {
+    "lastArticles": "Son 3 Makale"
+  },
+  "summary": {
+    "title": "Türkçe Doğal Dil İşleme Gönüllüleri",
+    "description": "Ekip liderimiz Seyma SARIGİL ve Doç. Dr. Murat Köklü'nün akademik rehberliğinde 2021'de kurulan Nane&Limon ekibimiz, Teknofest 2022'de Türkçe Doğal Dil İşleme Serbest Kategoride Teknofest 2023' te Türkçe Doğal Dil İşleme Tüm Kategoriler yarışmalarında üst üste zirveye çıkarak hem 1.lik derecesi hemde teknik sunumda özel ödül kazandı. Hedefimiz açık: Türkçe Doğal Dil İşleme alanında çığır açmak ve Türkiye'yi bu alanda lider yapmak. Açık kaynaklı projelere katkımızla ulusal gelişime öncülük ediyoruz. Nane&Limon ekibi olarak, Türkçe Doğal Dil İşlemede yapacak çok işimiz var ve heyecanla sizlerle paylaşmayı bekliyoruz! Sevgiler..."
+  },
+  "ourTeam": {
+    "title": "Ekibimiz",
+    "murat-koklu": {
+      "title": "Akademik Danışman",
+      "biography": "Ekibimizin kurucu akademik danışmanıdır. Murat Köklü, Selçuk Üniversitesi Teknoloji Fakültesi Bilgisayar Mühendisliği Bölümü'nde Dr. Öğr. Üyesi olarak görev yapmaktadır. \n\n1979 yılında Konya'da doğan Köklü, evli ve çocuklu bir aile babasıdır. Akademik kariyerine Selçuk Üniversitesi'nde Bilgisayar Sistemleri Öğretmenliği lisansını tamamlayarak başlayan Köklü, daha sonra aynı üniversitede Elektrik ve Bilgisayar Sistemleri Eğitimi alanında yüksek lisans ve doktora derecelerini almıştır. Kariyerine teknik öğretmen olarak başlayan Köklü, daha sonra Selçuk Üniversitesi'nde araştırma görevlisi olarak çalışmış ve akademik kariyerinde yükselerek yardımcı doçent ve doçent unvanlarını elde etmiştir. Köklü, aynı zamanda Selçuk Üniversitesi'nin çeşitli idari birimlerinde görev almıştır. Bu görevler arasında Bilimsel Araştırma Projeleri Koordinatörlüğü'nde yardımcı koordinatörlük, Lazer Uyarımlı Proton Terapi Uygulama ve Araştırma Merkezi Müdürlüğü'nde merkez müdür yardımcılığı gibi önemli pozisyonlar bulunmaktadır. Köklü'nün uzmanlık alanları arasında Karar Destek Sistemleri, Yapay Öğrenme ve Derin Öğrenme yer almaktadır. Ayrıca, TÜBİTAK tarafından verilen çeşitli ödüller ve patentler de bulunmaktadır. Köklü, öğrencileriyle birlikte geliştirdiği projelerle TÜBİTAK tarafından düzenlenen yarışmalarda birincilik, ikincilik ve üçüncülük ödüllerine layık görülmüştür. Son olarak, Köklü'nün iletişim bilgileri şu şekildedir: E-posta adresleri mkoklu@selcuk.edu.tr ve muradkoklu@gmail.com, web sitesi www.muratkoklu.com ve telefon numarası +90 332 223 33 48'dir."
     },
-    "navbar": {
-      "home": "Anasayfa",
-      "team": "Ekibimiz",
-      "projects": "Projeler",
-      "events":"Etkinlikler",
-      "contact":"Bize Ulaşın",
-      "support": "Bize Destek Olun"
+    "seyma-sarigil": {
+      "title": "Ekip Lideri & Yapay Zeka Mühendisi",
+      "biography": "Şeyma Sarıgil, Selçuk Üniversitesi'nde Türkçe Doğal Dil İşleme üzerine yüksek lisans eğitimini tamamlamış ve profesyonel olarak Python Backend ve AI&NLP mühendisi olarak uzun yıllar tecrübe kazanmıştır. Softtech A.Ş.'de AI Mühendisi olarak çalışmakta ve uygulamaların Backend servislerini geliştirmektedir. Daha önce Getir Perakende Lojistik A.Ş.'de AI NLP mühendisi olarak chatbot ve NLP projeleri geliştirmiştir. Kariyeri boyunca birçok hackathon ve datathon'da ödüller kazanmıştır. Teknolojiye olan tutkusu ve sürekli öğrenme arzusu ile yenilikçi projelerde yer alarak teknoloji dünyasına değer katmayı hedeflemektedir. Detaylı bilgi için kendisiyle iletişime geçmekten çekinmeyin."
+    },
+    "erdinc-dal": {
+      "title": "Veri Analisti",
+      "biography": "Alaaddin Erdinç DAL, Selçuk Üniversitesi'nde Türkçe Doğal Dil İşleme alanında yüksek lisans yapmış, deneyimli bir AI ve NLP mühendisidir. Hem kamu hem de özel sektörde önemli projelere imza atmış, özellikle T.C. Cumhurbaşkanlığı Dijital Dönüşüm Ofisi'nde Türkçe dil modelini geliştirerek devlet hizmetlerinde yapay zeka yeteneklerini artırmıştır. Python, AWS SageMaker, makine öğrenimi ve veri analizi konularında uzman olan DAL, PromoPilot Chatbot ve MintLemon Türkçe NLP Kütüphanesi gibi projeleri hayata geçirmiştir. Teknofest 2022 ve 2023'te Türkçe NLP yenilikleri için birincilik ödülleri kazanarak başarısını kanıtlamıştır. AI geliştirme ve proje yönetiminde lider olan Erdinç, sürekli öğrenme ve yenilikçilikle bu alandaki çalışmalarını sürdürmektedir."
+    },
+    "tarik-kaan-koc": {
+      "title": "Üretken Yapay Zeka Mühendisi",
+      "biography": "Tarık Kaan Koç, 2024 yılında Yazılım Mühendisliği bölümünden mezun olmuştur. Akademik yolculuğu, yapay zeka alanına derin bir odaklanma ile şekillenmiştir. Profesyonel alanda, bankacılık ve pazarlama sektörlerinde müşteri memnuniyetini artırmada önemli katkılarda bulunmuştur. Önemli başarıları arasında, Türk Havacılık ve Uzay Sanayii'nde (TUSAŞ) LIFT UP programında kritik teknoloji haberlerini ayrıştıran bir yapay zeka algoritması geliştirmek ve ulusal yapay zeka yarışmalarında (Teknofest TDDI vb.) birincilik dereceleri kazanmak bulunmaktadır. Yarışmaların ötesinde, 200'den fazla mühendislik öğrencisine veri bilimi ve makine öğrenimi konularında eğitim vermiştir. Gerçek dünya senaryolarında yenilikçi teknolojilerin, özellikle Üretken Yapay Zeka Büyük Dil Modelleri ve Doğal Dil İşleme (NLP) alanlarında uygulanmasına tutku duymaktadır ve takım çalışması, yaratıcılık ve çeşitliliğe büyük önem vermektedir."
+    },
+    "elif-sarigil": {
+      "title": "ARGE Mühendisi",
+      "biography": "Elif SARIGİL KARA, 2023'ten beri Zorlu Enerji bünyesinde Veri Bilimi ve Analitik Ekip Yöneticisi olarak çalışmaktadır. 2012-2023 yılları arasında Türkiye Halk Bankası A.Ş.'de görev almış, 2012-2017 yılları arasında Mainframe z/OS sistem programcısı ve DB2 on z/OS veri tabanı yöneticisi olarak çalışmıştır. Veri Ambarı ve Analitik Bölümüne olan ilgisi nedeniyle bu alana geçiş yapmıştır. 2017 yılından itibaren, kurumunda çeşitli yazılımsal ve donanımsal teknolojileri harmanlayarak Veri Ambarı, Veri Analitiği ve Veri Bilimi üzerine çalışmaya devam etmektedir. Lisans eğitimini Sakarya Üniversitesi Bilgisayar Mühendisliği bölümünde 2011 yılında tamamlamıştır. 2019 yılında çalıştığı kurumu temsilen İTÜ Büyük Veri ve İş Analitiği Uzmanlığı Sertifika Programı'nı tamamlamıştır. 2022 yılında ise Galatasaray Üniversitesi Fen Bilimleri Enstitüsü Veri Bilimi programında yüksek lisansını tamamlamıştır. Şu anda Selçuk Üniversitesi Bilgisayar Mühendisliği ABD'de yüksek lisans yapmaktadır. Çalıştığı kurumun sosyal medya sayfaları üzerinden analitik ve doğal dil işleme ile ilgili çeşitli araştırma ve çalışmaları bulunmaktadır. Ana sorumluluk alanları arasında Performans Yönetimi (Şube performans metrikleri), Müşteri Değer Segmentasyonu Projesi (Banka İçi Değer Segment Modelleri), Müşteri Küpleri, Vadesiz İşlem Küpleri, Near-real-time batch veri aktarımı, ETL teknolojileri ve Makine Öğrenmesi teknikleri ile çeşitli projelerde analiz ve tahminleme yer almaktadır."
+    },
+    "eray-buyukkanat": {
+      "title": "Önyüz Geliştirici",
+      "biography": "Eray Büyükkanat, Selçuk Üniversitesi Bilgisayar Mühendisliği bölümünde öğrenim görmektedir. Mobil ve web geliştirme alanında 2 yılı aşkın deneyime sahip olup, takım çalışması ve farklı rollerde görev alma konusunda tecrübelidir. AI, NLP ve GenAI konularında bilgi edinmeye devam etmekte olup, büyük dil modelleri (LLM) ve RAG yaklaşımları kullanarak kurumsal işletmelerin sorularına çözüm bulabilen bir sohbet botu uygulaması geliştirmektedir. Javascript, Python, Java, Dart, C#, React, React Native ve Flutter gibi dillere ve teknolojilerine hakimdir. Şu anda, Nane & Limon ekibinde junior yazılım mühendisi olarak görev almakta ve proje geliştirmelerinde rol almaktadır. Ayrıca, çeşitli hackathonlarda ve yarışmalarda birincilik elde etmiş olup, projelerinde yenilikçi çözümler sunmaktadır."
     }
+  },
+  "projects": {
+    "title":"Projelerimiz",
+    "buttonText":"Projeyi İncele",
+    "promo-pilot": {
+      "title":"PromoPilot",
+      "shortDescription":"PromoPilot projesi, ÖDEAL a ait üye iş yerlerinin karşılaştıkları sorunları etkin bir şekilde çözmek ve operasyonel destek sağlamak amacıyla geliştirilmiştir. Bu proje, üye iş yerlerinin sadakatini artırmak, operasyonlarını optimize etmek ve müşteri memnuniyetini sağlamak için çeşitli analiz ve stratejiler sunar."
+    },
+    "automate": {
+      "title":"AutoMate: Borusan Satış Sonrası Destek Çözümü",
+      "shortDescription":"AutoMate projesi, BorusanOto'nun satış sonrası hizmetlerini geliştirmek amacıyla çeşitli ileri teknolojiler kullanılarak hayata geçirilmiştir. Bu projede, BorusanOto web sitesi ve sıkça sorulan sorular üzerinden veri toplamak için web scraping teknikleri kullanılmıştır."
+    },
+    "qlink": {
+      "title":"QLink Hackathon: Enerji Dağıtım ve Kontrolü İçin Yenilikçi Çözümler:",
+      "shortDescription":"QLink, doğal afetler sırasında enerji dağıtım ağının kontrolünü optimize etmek ve enerji kesintilerinden kaynaklanan riskleri minimize etmek amacıyla Bursa Deprem Hackathon’u kapsamında geliştirilmiştir."
+    },
+    "zeltek": {
+      "title":"Zeltek",
+      "shortDescription":"ZelTech tarafından geliştirilen ve Akbank tarafından desteklenen TR-NLPGUIDE projesi, doğal afetler sırasında yardım koordinasyonunu ve lojistik yönetimini optimize etmek için modern teknolojilerden faydalanmaktadır."
+    },
+    "mintlemon-turkish-nlp": {
+      "title":"mintlemon-turkish-nlp Library",
+      "shortDescription":"Mintlemon Turkish NLP, Türkçe metinlerle çalışmak için geliştirilmiş kapsamlı ve güçlü bir doğal dil işleme (NLP) araç kütüphanesidir. Bu kütüphane, dil işleme görevlerini kolaylaştırmak ve hızlandırmak amacıyla PyPI platformunda Nane&Limon topluluğu tarafından yayınlanmıştır."
+    },
+    "kolay-etiketleme": {
+      "title":"Kolay Veri Etiketleme Aracı",
+      "shortDescription":"Easy Data Labeling Engine, veri etiketleme sürecini hızlandırmak ve kolaylaştırmak amacıyla geliştirilmiş bir araçtır. Nane&Limon topluluğu tarafından GitHub'da yayınlanan bu araç, verilerinizi hızlı, verimli ve doğru bir şekilde etiketlemenize yardımcı olur."
+    },
+    "offensive": {
+      "title":"Offensive Veri Modeli",
+      "shortDescription":"BERT-Base Turkish Offensive modeli, Türkçe metinlerde ofansif dil kullanımı algılamak amacıyla özel olarak eğitilmiş bir dil modelidir. Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanan bu model, çevrimiçi ortamda ofansif içeriklerin tespiti ve yönetilmesi için güçlü bir araç sunar."
+    },
+    "turkce-is-ilani-siniflandirma": {
+      "title":"Türkçe İş İlanı Sınıflandırma Modeli",
+      "shortDescription":"BERT-Base Turkish Job Advertisement modeli, Türkçe iş ilanları verisi kullanılarak özel olarak eğitilmiş bir dil modelidir. Bu model, iş ilanlarının analiz edilmesi, kategorize edilmesi ve çeşitli doğal dil işleme (NLP) görevlerinde kullanılması amacıyla geliştirilmiştir. Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanmıştır."
+    },
+    "turkce-acil-yonetim": {
+      "title":"Türkçe Acil Durum Yönetim Modeli",
+      "shortDescription":"Akbank tarafından düzenlenen hackathon kapsamında geliştirilmiş ve Hugging Face platformunda Nane&Limon topluluğu tarafından yayınlanmıştır. Bu model, doğal dil işleme (NLP) ve makine öğrenimi projelerinde kullanılmak üzere özel olarak eğitilmiştir."
+    },
+    "veri-temizleme-araci": {
+      "title":"Veri Temizleme Aracı",
+      "shortDescription":"Veri ön işleme, modellemeye hazırlık aşamasında modelin başarısı için kritik öneme sahiptir. Özellikle doğal dil işleme (NLP) alanında, metin verilerinin temizlenmesi her modelleme sürecinde önemli bir adımdır. Bu ihtiyacı karşılamak ve Türkçe metinlerde doğal dil işleme literatürüne katkı sağlamak amacıyla text-data-cleaner aracı geliştirilmiştir."
+    }
+  },
+  "events": {
+    "event1": {
+      "title":"Gönüllü Konuşmacılık",
+      "description":"Çeşitli yerlerde gönülllü konuşmacılık yapıyor, sunumlar yapıyoruz. Bunları yaparken bilgilerimizi aktarıyor, bu alanda gelişmek isteyenlerle beraber gelişiyoruz."
+    },
+    "event2": {
+      "title":"Hackathonlar",
+      "description":"Hackathonlara katılarak yeni teknolojileri keşfetme ve yaratıcı çözümler geliştirme fırsatı buluyoruz. Bu etkinliklerde takım çalışması yapıyor ve problem çözme yeteneklerimizi geliştiriyoruz. Diğer katılımcılarla bilgi alışverişinde bulunuyor ve beraber öğreniyoruz."
+    },
+    "event3": {
+      "title":"Açık Kaynak Kütüphaneler",
+      "description": "Açık kaynak kütüphaneler üzerinde çalışarak, yazılım dünyasında bilgi paylaşımını ve işbirliğini destekliyoruz. Bu projelere katkıda bulunarak hem kendi becerilerimizi geliştiriyor hem de topluluğa fayda sağlıyoruz."
+    },
+    "event4": {
+      "title": "Gönüllü Eğitimler",
+      "description": "Gönüllü olarak çeşitli eğitim programlarında yer alıyoruz. Bu programlarda, teknolojiyi öğrenmek isteyen bireylere rehberlik ediyor ve onlara bilgi aktararak, kariyerlerinde ilerlemelerine yardımcı oluyoruz."
+    },
+    "event5": {
+      "title": "Açık İçerik ve Dökümantasyon Üretimi",
+      "description": "Açık içerik ve dökümantasyon üretimi yaparak, herkesin erişebileceği kaliteli kaynaklar oluşturuyoruz. Bu sayede, bilgiye erişimi kolaylaştırarak topluluğun gelişimine katkıda bulunuyoruz."
+    },
+    "event6": {
+      "title": "Mentörlük ve Destek",
+      "description":"Mentörlük yaparak ve destek sunarak, yeni başlayanlara ve profesyonellere yol gösteriyoruz. Onların kariyerlerinde ilerlemelerine yardımcı olurken, kendi deneyimlerimizi paylaşarak onların da başarılı olmalarını sağlıyoruz."
+    }
+  },
+  "contact": {
+    "title":"Bize Ulaşın",
+    "buttonText":"Gönder",
+    "form": {
+      "name":"İsim Soyisim",
+      "email":"E-mail Adresiniz",
+      "phone":"Telefon Numarası",
+      "subject":"Konu",
+      "message":"Mesaj"
+    }
+  },
+  "footer": {
+    "title":"Hakkımızda",
+    "description":"Nane&Limon ekibimiz, Şeyma Sarıgil ve Doç. Dr. Murat Köklü rehberliğinde, Teknofest 2022 ve 2023'te Türkçe Doğal Dil İşleme yarışmalarında 1.lik ve özel ödül kazandı. Hedefimiz, Türkiye'yi bu alanda lider yapmak. Açık kaynak projelerle ulusal gelişime öncülük ediyoruz. Heyecanla paylaşmayı bekliyoruz! Sevgiler...",
+    "copyright": "Copyright © 2024 Tüm Hakları Saklıdır."
+  },
+  "chatbot": {
+    "firstMessage": "Merhaba, ben Nane&Limon Chatbot. Nası yardımcı olabilirim?"
   }
   
+}

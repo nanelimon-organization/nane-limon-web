@@ -12,8 +12,10 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 import imagePaths from "../../../../assets/imagePaths";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 function ProjectCard({ project }) {
+ const { t } = useTranslation()
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -80,7 +82,7 @@ function ProjectCard({ project }) {
             component="div"
             sx={{ fontFamily: "roboto-bold", fontSize: { xs: 15, md: 18 } }}
           >
-            {project.title}
+            {t(`projects.${project.slug}.title`)}
           </Typography>
         </CardContent>
         <Typography
@@ -92,8 +94,8 @@ function ProjectCard({ project }) {
             marginX: 2,
           }}
         >
-          {project.shortDescription}
-        </Typography>
+            {t(`projects.${project.slug}.shortDescription`)}
+            </Typography>
         <CardActions sx={{ display: "flex", justifyContent: "start" }}>
           <NavLink
             state={project}
@@ -124,7 +126,7 @@ function ProjectCard({ project }) {
                   textAlign: "start",
                 }}
               >
-                Projeyi İncele
+                {t("projects.buttonText")}
               </Typography>
               <ChevronRightIcon sx={{ color: "#008000" }} />
             </Button>

@@ -1,9 +1,10 @@
 import { Box, Grid, Typography } from "@mui/material";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
-export function InfoLayoutRight({ title, description, src }) {
-
+export function InfoLayoutRight({title, src }) {
+  const { t } = useTranslation()
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -12,14 +13,11 @@ export function InfoLayoutRight({ title, description, src }) {
   const xProgress = useTransform(scrollYProgress, [0, 1], [40, 0]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
- 
-
   return (
     <>
       <Grid
         container
         overflow="hidden"
-  
         component={motion.div}
         ref={ref}
         style={{
@@ -39,7 +37,7 @@ export function InfoLayoutRight({ title, description, src }) {
               borderColor: "#F2F2F2",
               height: { xs: 100, md: 150 },
               width: { xs: 200, md: 300 },
-              display: {xs: "block",md:"none"}
+              display: { xs: "block", md: "none" },
             }}
             component={motion.img}
             initial={{ opacity: 0 }}
@@ -59,7 +57,7 @@ export function InfoLayoutRight({ title, description, src }) {
             marginBottom={2}
             fontFamily="roboto-bold"
           >
-            {title}
+            {t(`events.${title}.title`)}
           </Typography>
           <Typography
             component={motion.p}
@@ -70,8 +68,8 @@ export function InfoLayoutRight({ title, description, src }) {
             fontFamily="roboto-regular"
             maxWidth={550}
           >
-            {description}
-          </Typography>
+            {t(`events.${title}.description`)}
+            </Typography>
         </Grid>
         <Grid>
           <Box
@@ -80,7 +78,7 @@ export function InfoLayoutRight({ title, description, src }) {
               borderColor: "#F2F2F2",
               height: { xs: 100, md: 150 },
               width: { xs: 200, md: 300 },
-              display: {xs: "none",md:"block"}
+              display: { xs: "none", md: "block" },
             }}
             component={motion.img}
             initial={{ opacity: 0 }}
@@ -95,8 +93,8 @@ export function InfoLayoutRight({ title, description, src }) {
   );
 }
 
-export function InfoLayoutLeft({ title, description, src }) {
-
+export function InfoLayoutLeft({ title, src }) {
+  const { t } = useTranslation()
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -104,12 +102,11 @@ export function InfoLayoutLeft({ title, description, src }) {
   });
   const xProgress = useTransform(scrollYProgress, [0, 1], [-40, 0]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
-  
+
   return (
     <>
       <Grid
         container
-        
         component={motion.div}
         ref={ref}
         style={{
@@ -129,7 +126,6 @@ export function InfoLayoutLeft({ title, description, src }) {
               borderColor: "#F2F2F2",
               height: { xs: 100, md: 150 },
               width: { xs: 200, md: 300 },
-              
             }}
             variant="outlined"
             component={motion.img}
@@ -149,8 +145,8 @@ export function InfoLayoutLeft({ title, description, src }) {
             marginBottom={2}
             fontFamily="roboto-bold"
           >
-            {title}
-          </Typography>
+            {t(`events.${title}.title`)}
+            </Typography>
           <Typography
             fontSize={15}
             component={motion.p}
@@ -160,8 +156,8 @@ export function InfoLayoutLeft({ title, description, src }) {
             fontFamily="roboto-regular"
             maxWidth={550}
           >
-            {description}
-          </Typography>
+            {t(`events.${title}.description`)}
+            </Typography>
         </Grid>
       </Grid>
     </>

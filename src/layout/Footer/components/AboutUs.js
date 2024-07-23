@@ -1,11 +1,13 @@
 import { Box, Divider, Grid, Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 function AboutUs() {
+  const {t} = useTranslation()
   return (
     <Grid item xs={12} md={4}>
       <Box display="flex" flexDirection="column">
         <Typography fontSize={12} color="white" fontFamily="roboto-medium">
-          HAKKIMIZDA
+          {t("footer.title")}
         </Typography>
         <Divider sx={{ marginY: 1, bgcolor: "white" }} />
 
@@ -15,7 +17,7 @@ function AboutUs() {
           textAlign="justify"
           fontSize={14}
         >
-          Nane&Limon ekibimiz, Şeyma Sarıgil ve Doç. Dr. Murat Köklü rehberliğinde, Teknofest 2022 ve 2023'te Türkçe Doğal Dil İşleme yarışmalarında 1.lik ve özel ödül kazandı. Hedefimiz, Türkiye'yi bu alanda lider yapmak. Açık kaynak projelerle ulusal gelişime öncülük ediyoruz. Heyecanla paylaşmayı bekliyoruz! Sevgiler...
+          {t("footer.description")}
         </Typography>
       </Box>
     </Grid>

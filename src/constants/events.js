@@ -8,32 +8,32 @@ import mentorlukvedestek from "../images/events/mentorlukvedestek.png";
 
 export const events = [
     {
-        title: "Gönüllü Konuşmacılık",
+        title: "event1",
         src: gonullukonusmacilik,
         description: "Çeşitli yerlerde gönülllü konuşmacılık yapıyor, sunumlar yapıyoruz. Bunları yaparken bilgilerimizi aktarıyor, bu alanda gelişmek isteyenlerle beraber gelişiyoruz."
     },
     {
-        title: "Hackathonlar",
+        title: "event2",
         src: hackathonlar,
         description: "Hackathonlara katılarak yeni teknolojileri keşfetme ve yaratıcı çözümler geliştirme fırsatı buluyoruz. Bu etkinliklerde takım çalışması yapıyor ve problem çözme yeteneklerimizi geliştiriyoruz. Diğer katılımcılarla bilgi alışverişinde bulunuyor ve beraber öğreniyoruz."    
     },
     {
-        title: "Açık Kaynak Kütüphaneler",
+        title: "event3",
         src: acikkaynak,
         description: "Açık kaynak kütüphaneler üzerinde çalışarak, yazılım dünyasında bilgi paylaşımını ve işbirliğini destekliyoruz. Bu projelere katkıda bulunarak hem kendi becerilerimizi geliştiriyor hem de topluluğa fayda sağlıyoruz."
     },
     {
-        title: "Gönüllü Eğitimler",
+        title: "event4",
         src: gonulluegitimler,
         description: "Gönüllü olarak çeşitli eğitim programlarında yer alıyoruz. Bu programlarda, teknolojiyi öğrenmek isteyen bireylere rehberlik ediyor ve onlara bilgi aktararak, kariyerlerinde ilerlemelerine yardımcı oluyoruz."
     },
     {
-        title: "Açık İçerik ve Dökümantasyon Üretimi",
+        title: "event5",
         src: acikicerikdokumantasyon,
         description: "Açık içerik ve dökümantasyon üretimi yaparak, herkesin erişebileceği kaliteli kaynaklar oluşturuyoruz. Bu sayede, bilgiye erişimi kolaylaştırarak topluluğun gelişimine katkıda bulunuyoruz."
     },
     {
-        title: "Mentörlük ve destek",
+        title: "event6",
         src: mentorlukvedestek,
         description: "Mentörlük yaparak ve destek sunarak, yeni başlayanlara ve profesyonellere yol gösteriyoruz. Onların kariyerlerinde ilerlemelerine yardımcı olurken, kendi deneyimlerimizi paylaşarak onların da başarılı olmalarını sağlıyoruz."
     }

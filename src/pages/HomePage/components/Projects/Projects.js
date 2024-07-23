@@ -4,7 +4,9 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { projects } from "../../../../constants/projects";
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
+import { useTranslation } from "react-i18next";
 function Projects({ refs, scrollToSection }) {
+ const { t } = useTranslation()
   const [showAllProjects, setShowAllProjects] = useState(false);
 
   const toggleProjects = () => {
@@ -29,7 +31,7 @@ function Projects({ refs, scrollToSection }) {
         component="div"
         sx={{ fontFamily: "roboto-bold", fontSize: 24 }}
       >
-        PROJELERİMİZ
+        {t("projects.title")}
       </Typography>
 
       <Grid
@@ -50,10 +52,7 @@ function Projects({ refs, scrollToSection }) {
             <ProjectCard
               project={project}
               key={index}
-              title={project.title}
-              shortDescription={project.shortDescription}
               status={project.status}
-              slug={project.slug}
             />
           ))}
       </Grid>

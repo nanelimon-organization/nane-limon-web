@@ -1,14 +1,136 @@
 {
-    "banner": {
-      "bannerText": "Turkish Natural Language Processing Volunteers"
+  "banner": {
+    "bannerText": "Turkish Natural Language Processing Volunteers"
+  },
+  "navbar": {
+    "home": "Home",
+    "team": "Our Team",
+    "projects": "Projects",
+    "events": "Events",
+    "contact": "Contact Us",
+    "support": "Support Us"
+  },
+  "medium": {
+    "lastArticles": "Last 3 Articles"
+  },
+  "summary": {
+    "title": "Turkish Natural Language Processing Volunteers",
+    "description": "Our Nane&Limon team, founded in 2021 under the academic guidance of our team leader Seyma SARIGİL and Assoc. Prof. Dr. Murat Köklü, achieved first place in the Free Category of Turkish Natural Language Processing at Teknofest 2022 and won both first place and a special award for technical presentation in the All Categories of Turkish Natural Language Processing competition at Teknofest 2023. Our goal is clear: to make breakthroughs in the field of Turkish Natural Language Processing and to make Turkey a leader in this field. We lead national development with our contributions to open-source projects. As the Nane&Limon team, we have a lot of work to do in Turkish Natural Language Processing, and we are excited to share it with you! Best regards..."
+  },
+  "ourTeam": {
+    "title": "Our Team",
+    "murat-koklu": {
+      "title": "Academic Advisor",
+      "biography": "He is the founding academic advisor of our team. Murat Köklü serves as an Assistant Professor at the Department of Computer Engineering at Selçuk University Faculty of Technology.\n\nBorn in Konya in 1979, Köklü is a married father with children. Köklü started his academic career by completing his undergraduate degree in Computer Systems Teaching at Selçuk University, followed by a master's and Ph.D. in Electrical and Computer Systems Education at the same university. He began his career as a technical teacher and later worked as a research assistant at Selçuk University, rising through the academic ranks to become an assistant professor and associate professor. Köklü has also held various administrative positions at Selçuk University, including deputy coordinator in the Scientific Research Projects Coordination and deputy director at the Laser-Excited Proton Therapy Application and Research Center. His areas of expertise include Decision Support Systems, Artificial Learning, and Deep Learning. Köklü has received several awards and patents from TÜBİTAK. He has achieved first, second, and third-place awards in competitions organized by TÜBİTAK with projects developed with his students. Finally, Köklü's contact information is as follows: Email addresses mkoklu@selcuk.edu.tr and muradkoklu@gmail.com, website www.muratkoklu.com, and phone number +90 332 223 33 48."
     },
-    "navbar": {
-      "home": "Home",
-      "team": "Our Team",
-      "projects": "Projects",
-      "events": "Events",
-      "contact":"Contact us",
-      "support":"Support us"
+    "seyma-sarigil": {
+      "title": "Team Leader & AI Engineer",
+      "biography": "Şeyma Sarıgil completed her master's degree in Turkish Natural Language Processing at Selçuk University and gained extensive experience as a Python Backend and AI&NLP engineer. She works as an AI Engineer at Softtech A.Ş., developing backend services for applications. Previously, she developed chatbot and NLP projects as an AI NLP engineer at Getir Perakende Lojistik A.Ş. Throughout her career, she has won awards in numerous hackathons and datathons. With her passion for technology and continuous learning desire, she aims to contribute to the tech world through innovative projects. Do not hesitate to contact her for detailed information."
+    },
+    "erdinc-dal": {
+      "title": "Data Analyst",
+      "biography": "Alaaddin Erdinç DAL is an experienced AI and NLP engineer who completed his master's degree in Turkish Natural Language Processing at Selçuk University. He has worked on significant projects in both the public and private sectors, including developing a Turkish language model for the T.C. Presidency Digital Transformation Office to enhance AI capabilities in government services. DAL is an expert in Python, AWS SageMaker, machine learning, and data analysis. He has implemented projects such as the PromoPilot Chatbot and MintLemon Turkish NLP Library. DAL has proven his success by winning first place in Turkish NLP innovations at Teknofest 2022 and 2023. He continues his work in AI development and project management with a focus on continuous learning and innovation."
+    },
+    "tarik-kaan-koc": {
+      "title": "Generative AI Engineer",
+      "biography": "Tarık Kaan Koç graduated from the Software Engineering department in 2024. His academic journey has been shaped by a deep focus on artificial intelligence. Professionally, he has made significant contributions to enhancing customer satisfaction in the banking and marketing sectors. His notable achievements include developing an AI algorithm that segregates critical technology news in the LIFT UP program at Turkish Aerospace Industries (TUSAŞ) and winning first place in national AI competitions (such as Teknofest TDDI). Beyond competitions, he has trained over 200 engineering students in data science and machine learning. He is passionate about applying innovative technologies, especially in Generative AI Large Language Models and Natural Language Processing (NLP), in real-world scenarios and values teamwork, creativity, and diversity."
+    },
+    "elif-sarigil": {
+      "title": "R&D Engineer",
+      "biography": "Elif SARIGİL KARA has been working as a Data Science and Analytics Team Manager at Zorlu Energy since 2023. Between 2012 and 2023, she worked at Türkiye Halk Bankası A.Ş., first as a Mainframe z/OS systems programmer and DB2 on z/OS database administrator from 2012 to 2017, and later transitioning to the Data Warehouse and Analytics Department due to her interest in this field. Since 2017, she has continued to work on Data Warehousing, Data Analytics, and Data Science, blending various software and hardware technologies. She completed her undergraduate education in Computer Engineering at Sakarya University in 2011. In 2019, she completed the Big Data and Business Analytics Specialist Certificate Program at ITU on behalf of her institution. In 2022, she completed her master's degree in Data Science at the Galatasaray University Institute of Science. Currently, she is pursuing a master's degree in Computer Engineering at Selçuk University. She has various research and studies on analytics and natural language processing shared through her institution's social media pages. Her main areas of responsibility include Performance Management (Branch performance metrics), Customer Value Segmentation Project (In-house Value Segment Models), Customer Cubes, Non-Time Transaction Cubes, Near-real-time batch data transfer, ETL technologies, and analysis and prediction in various projects using Machine Learning techniques."
+    },
+    "eray-buyukkanat": {
+      "title": "Frontend Developer",
+      "biography": "Eray Büyükkanat is studying Computer Engineering at Selçuk University. He has over 2 years of experience in mobile and web development and is experienced in teamwork and taking on different roles. He continues to gain knowledge in AI, NLP, and GenAI, developing a chatbot application that can answer business questions using large language models (LLM) and RAG approaches. He is proficient in languages and technologies such as JavaScript, Python, Java, Dart, C#, React, React Native, and Flutter. Currently, he is a junior software engineer in the Nane & Limon team and plays a role in project development. He has won first place in various hackathons and competitions, offering innovative solutions in his projects."
     }
+  },
+  "projects": {
+    "title": "Our Projects",
+    "buttonText": "View Project",
+    "promo-pilot": {
+      "title": "PromoPilot",
+      "shortDescription": "The PromoPilot project was developed to effectively solve the problems faced by ÖDEAL's member businesses and provide operational support. This project offers various analyses and strategies to increase member loyalty, optimize operations, and ensure customer satisfaction."
+    },
+    "automate": {
+      "title": "AutoMate: Borusan After-Sales Support Solution",
+      "shortDescription": "The AutoMate project was implemented using various advanced technologies to improve BorusanOto's after-sales services. In this project, web scraping techniques were used to collect data from the BorusanOto website and frequently asked questions."
+    },
+    "qlink": {
+      "title": "QLink Hackathon: Innovative Solutions for Energy Distribution and Control",
+      "shortDescription": "QLink was developed within the scope of the Bursa Earthquake Hackathon to optimize the control of the energy distribution network during natural disasters and minimize the risks caused by power outages."
+    },
+    "zeltek": {
+      "title": "Zeltek",
+      "shortDescription": "The TR-NLPGUIDE project, developed by ZelTech and supported by Akbank, utilizes modern technologies to optimize aid coordination and logistics management during natural disasters."
+    },
+    "mintlemon-turkish-nlp": {
+      "title": "mintlemon-turkish-nlp Library",
+      "shortDescription": "Mintlemon Turkish NLP is a comprehensive and powerful natural language processing (NLP) toolkit developed for working with Turkish texts. This library, published by the Nane&Limon community on the PyPI platform, aims to facilitate and accelerate language processing tasks."
+    },
+    "kolay-etiketleme": {
+      "title": "Easy Data Labeling Tool",
+      "shortDescription": "The Easy Data Labeling Engine is a tool developed to speed up and facilitate the data labeling process. Published by the Nane&Limon community on GitHub, this tool helps you label your data quickly, efficiently, and accurately."
+    },
+    "offensive": {
+      "title": "Offensive Data Model",
+      "shortDescription": "The BERT-Base Turkish Offensive model is a language model specifically trained to detect offensive language usage in Turkish texts. Published by the Nane&Limon community on the Hugging Face platform, this model provides a powerful tool for detecting and managing offensive content online."
+    },
+    "turkce-is-ilani-siniflandirma": {
+      "title": "Turkish Job Advertisement Classification Model",
+      "shortDescription": "The BERT-Base Turkish Job Advertisement model is a language model specifically trained using Turkish job advertisement data. This model was developed to analyze, categorize, and be used in various natural language processing (NLP) tasks. It was published by the Nane&Limon community on the Hugging Face platform."
+    },
+    "turkce-acil-yonetim": {
+      "title": "Turkish Emergency Management Model",
+      "shortDescription": "This model was developed within the scope of a hackathon organized by Akbank and published by the Nane&Limon community on the Hugging Face platform. It is specifically trained to be used in natural language processing (NLP) and machine learning projects."
+    },
+    "veri-temizleme-araci": {
+      "title": "Data Cleaning Tool",
+      "shortDescription": "Data preprocessing is crucial for the success of modeling. In the field of natural language processing (NLP), cleaning text data is an important step in every modeling process. To meet this need and contribute to the NLP literature in Turkish texts, the text-data-cleaner tool was developed."
+    }
+  },
+  "events": {
+    "event1": {
+      "title": "Volunteer Speaking",
+      "description": "We engage in volunteer speaking at various places, giving presentations. While doing this, we share our knowledge and develop together with those who want to improve in this field."
+    },
+    "event2": {
+      "title": "Hackathons",
+      "description": "By participating in hackathons, we have the opportunity to explore new technologies and develop creative solutions. In these events, we work as a team and improve our problem-solving skills. We exchange knowledge with other participants and learn together."
+    },
+    "event3": {
+      "title": "Open Source Libraries",
+      "description": "By working on open source libraries, we support knowledge sharing and collaboration in the software world. By contributing to these projects, we both develop our own skills and benefit the community."
+    },
+    "event4": {
+      "title": "Volunteer Training",
+      "description": "We participate in various training programs as volunteers. In these programs, we guide individuals who want to learn technology and help them progress in their careers by sharing knowledge."
+    },
+    "event5": {
+      "title": "Open Content and Documentation Production",
+      "description": "By producing open content and documentation, we create high-quality resources accessible to everyone. In this way, we contribute to the development of the community by facilitating access to information."
+    },
+    "event6": {
+      "title": "Mentorship and Support",
+      "description": "By providing mentorship and support, we guide newcomers and professionals. While helping them advance in their careers, we share our experiences to ensure their success."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "buttonText": "Submit",
+    "form": {
+      "name": "Full Name",
+      "email": "Your Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Message"
+    }
+  },
+  "footer": {
+    "title": "About Us",
+    "description": "Our Nane&Limon team, under the guidance of Şeyma Sarıgil and Assoc. Prof. Dr. Murat Köklü, won first place and special awards in the Turkish Natural Language Processing competitions at Teknofest 2022 and 2023. Our goal is to make Turkey a leader in this field. We pioneer national development with open source projects. We are excited to share! Best regards...",
+    "copyright": "Copyright © 2024 All Rights Reserved."
+  },
+  "chatbot": {
+    "firstMessage": "Hello, this is Mint & Lemon Chatbot. How can I help you?"
   }
-  
+}
