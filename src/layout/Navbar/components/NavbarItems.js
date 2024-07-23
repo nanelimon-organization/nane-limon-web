@@ -162,6 +162,18 @@ function NavbarItems({ scrollToSection }) {
 export default NavbarItems;
 
 function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
+
+  const [language, setLanguage] = useState("TR");
+
+  const handleChange = (event) => {
+    if (language == "EN") {
+      setLanguage("TR");
+      changeLanguage("tr");
+    } else {
+      setLanguage("EN");
+      changeLanguage("en");
+    }
+  };
   const location = useLocation();
 
   const handleClick = (value) => {
@@ -276,7 +288,7 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
           }}
         />
       </Grid>
-      <Grid marginTop={1}>
+      <Grid marginTop={1} justifyContent="center" display="flex" flexDirection="column" alignItems="center">
         {/* <Grid
           component={motion.div}
           initial={{ opacity: 0 }}
@@ -315,6 +327,7 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
             </Button>
           </NavLink>
         </Grid>
+        
       </Grid>
     </Grid>
   );
