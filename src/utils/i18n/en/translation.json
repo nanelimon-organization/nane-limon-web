@@ -7,11 +7,12 @@
     "team": "Our Team",
     "projects": "Projects",
     "events": "Events",
-    "contact": "Contact Us",
-    "support": "Support Us"
+    "contact": "Contact us",
+    "support": "Support us"
   },
   "medium": {
-    "lastArticles": "Last 3 Articles"
+    "lastArticles": "Last 3 Articles",
+    "readMore": "Read more"
   },
   "summary": {
     "title": "Turkish Natural Language Processing Volunteers",
@@ -131,6 +132,7 @@
     "copyright": "Copyright © 2024 All Rights Reserved."
   },
   "chatbot": {
-    "firstMessage": "Hello, this is Mint & Lemon Chatbot. How can I help you?"
+    "firstMessage": "Hello, this is Mint & Lemon Chatbot. How can I help you?",
+    "emptyList": "You haven't asked any questions yet..."
   }
 }

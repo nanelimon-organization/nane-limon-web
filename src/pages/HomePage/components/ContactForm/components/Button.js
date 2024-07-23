@@ -33,7 +33,7 @@ function CustomButton({
       }}
     >
       <Typography
-        textTransform="capitalize"
+        textTransform="initial"
         fontSize={fontSize}
         fontFamily="roboto-medium"
       >

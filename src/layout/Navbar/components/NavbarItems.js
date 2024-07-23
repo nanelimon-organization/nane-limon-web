@@ -143,7 +143,7 @@ function NavbarItems({ scrollToSection }) {
         >
           <NavLink to="https://buymeacoffee.com/nanelimon" target="_blank">
             <Button disableRipple sx={styles.donateButton}>
-              <Typography textTransform="capitalize" fontFamily="roboto-medium">
+              <Typography textTransform="initial" fontFamily="roboto-medium">
                 {t("navbar.support")}
               </Typography>
             </Button>

@@ -229,7 +229,7 @@ function ChatBox() {
                           height="100%"
                         >
                           <Typography fontFamily="roboto-medium" fontSize={16}>
-                            Henüz soru sormamışsın...
+                            {t("chatbot.emptyList")}
                           </Typography>
                         </Grid>
                       )}

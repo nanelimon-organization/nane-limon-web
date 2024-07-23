@@ -11,7 +11,8 @@
     "support": "Bize Destek Olun"
   },
   "medium": {
-    "lastArticles": "Son 3 Makale"
+    "lastArticles": "Son 3 Makale",
+    "readMore": "Diğer Paylaşımları Oku"
   },
   "summary": {
     "title": "Türkçe Doğal Dil İşleme Gönüllüleri",
@@ -131,7 +132,8 @@
     "copyright": "Copyright © 2024 Tüm Hakları Saklıdır."
   },
   "chatbot": {
-    "firstMessage": "Merhaba, ben Nane&Limon Chatbot. Nası yardımcı olabilirim?"
+    "firstMessage": "Merhaba, ben Nane&Limon Chatbot. Nası yardımcı olabilirim?",
+    "emptyList": "Henüz soru sormamışsın..."
   }
   
 }

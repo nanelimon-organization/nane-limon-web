@@ -11,9 +11,10 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 function Medium({ posts }) {
-
+const { t }= useTranslation()
    function decodeHtmlEntities(text) {
     const textArea = document.createElement('textarea');
     textArea.innerHTML = text;
@@ -33,7 +34,7 @@ function Medium({ posts }) {
           />
         </Box>
         <List>
-          <Typography variant="h5" textAlign="center" fontFamily="roboto-mediumitalic" sx={{fontSize:{xs: 15,md:22}}}>Son 3 Makale</Typography>
+          <Typography variant="h5" textAlign="center" fontFamily="roboto-mediumitalic" sx={{fontSize:{xs: 15,md:22}}}>{t("medium.lastArticles")}</Typography>
           <Divider sx={{marginY: 1, borderWidth:1,borderColor: "green"}}/>
           {posts.map((post) => {
             return (
@@ -60,7 +61,7 @@ function Medium({ posts }) {
               <ListItemIcon>
                 <KeyboardArrowRightRoundedIcon />
               </ListItemIcon>
-              <ListItemText primary="Diğer Paylaşımları Oku" />
+              <ListItemText primary={t("medium.readMore")} />
             </ListItemButton>
           </ListItem>
         </List>
