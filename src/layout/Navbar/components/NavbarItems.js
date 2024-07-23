@@ -211,7 +211,7 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
         transition={{ delay: 0.3, type: "tween", stiffness: 100 }}
       >
         <NavbarButton
-          title="Anasayfa"
+            title={t("navbar.home")}
           sx={{ margin: 0 }}
           onClick={() => {
             handleClick("home");
@@ -228,8 +228,8 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
         transition={{ delay: 0.5, type: "tween", stiffness: 100 }}
       >
         <NavbarButton
-          title="Ekibimiz"
-          to="/"
+            title={t("navbar.team")}
+            to="/"
           sx={{ margin: 0 }}
           onClick={() => {
             handleClick("team");
@@ -245,8 +245,8 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
         transition={{ delay: 0.5, type: "tween", stiffness: 100 }}
       >
         <NavbarButton
-          title="Projeler"
-          to="/"
+            title={t("navbar.projects")}
+            to="/"
           sx={{ margin: 0 }}
           onClick={() => {
             handleClick("projects");
@@ -262,8 +262,8 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
         transition={{ delay: 0.7, type: "tween", stiffness: 100 }}
       >
         <NavbarButton
-          title="Etkinlikler"
-          to="/"
+            title={t("navbar.events")}
+            to="/"
           sx={{ margin: 0 }}
           onClick={() => {
             handleClick("events");
@@ -279,8 +279,8 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
         transition={{ delay: 0.7, type: "tween", stiffness: 100 }}
       >
         <NavbarButton
-          title="Bize Ulaşın"
-          to="/"
+            title={t("navbar.contact")}
+            to="/"
           sx={{ margin: 0 }}
           onClick={() => {
             handleClick("contact");
@@ -322,8 +322,8 @@ function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
                 textAlign="center"
                 fontFamily="roboto-medium"
               >
-                Bize Destek Olun
-              </Typography>
+                {t("navbar.support")}
+                </Typography>
             </Button>
           </NavLink>
         </Grid>
