@@ -12,9 +12,12 @@ import { motion } from "framer-motion";
 import NavbarButton from "./NavbarButton";
 import { NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { changeLanguage, t } from "i18next";
+import { changeLanguage } from "i18next";
+import { useTranslation } from "react-i18next";
 
 function NavbarItems({ scrollToSection }) {
+  const { t } = useTranslation()
+
   const location = useLocation();
 
   const handleClick = (value) => {
@@ -162,6 +165,8 @@ function NavbarItems({ scrollToSection }) {
 export default NavbarItems;
 
 function NavbarItemsMobile({ toggleMenu, scrollToSection }) {
+  const { t } = useTranslation()
+
 
   const [language, setLanguage] = useState("TR");
 

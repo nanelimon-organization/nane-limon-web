@@ -1,9 +1,11 @@
 import {  Grid,Button,Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
-import { changeLanguage, t } from "i18next";
+import { changeLanguage } from "i18next";
+import { useTranslation } from "react-i18next";
 
 function MobileMenuToggle({toggleMenu}) {
+  const { t } = useTranslation()
   const [language, setLanguage] = useState("TR");
   const handleChange = (event) => {
     if (language == "EN") {
