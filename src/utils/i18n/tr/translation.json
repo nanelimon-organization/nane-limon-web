@@ -1,0 +1,14 @@
+{
+    "banner": {
+      "bannerText": "Türkçe Doğal Dil İşleme Gönüllüleri"
+    },
+    "navbar": {
+      "home": "Anasayfa",
+      "team": "Ekibimiz",
+      "projects": "Projeler",
+      "events":"Etkinlikler",
+      "contact":"Bize Ulaşın",
+      "support": "Bize Destek Olun"
+    }
+  }
+  

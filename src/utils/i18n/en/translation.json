@@ -1,0 +1,14 @@
+{
+    "banner": {
+      "bannerText": "Turkish Natural Language Processing Volunteers"
+    },
+    "navbar": {
+      "home": "Home",
+      "team": "Our Team",
+      "projects": "Projects",
+      "events": "Events",
+      "contact":"Contact us",
+      "support":"Support us"
+    }
+  }
+  

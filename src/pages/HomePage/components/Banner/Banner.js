@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Box, Button, Divider, Grid } from "@mui/material";
+import { Box, Button, Divider, Grid, Typography } from "@mui/material";
 import { motion, useScroll, useTransform } from "framer-motion";
-
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import AnimatedTitle from "../../../../animations/AnimatedTitle";
 import imagePaths from "../../../../assets/imagePaths";
 
 function Banner({ preloadedImages, visible }) {
-  
+  const {t} = useTranslation();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -70,7 +70,7 @@ function Banner({ preloadedImages, visible }) {
         }}
       >
         <AnimatedTitle text="Nane & Limon" fontSize={{xs: 28,md:48}} fontFamily="roboto-bold" color="#ffffff" />
-        <AnimatedTitle text="Türkçe Doğal Dil İşleme Gönüllüleri" fontSize={{xs: 20,md:26}} fontFamily="roboto-regular" color="#ffffff" />
+        <Typography fontSize={{xs: 20,md:26}} fontFamily="roboto-regular" color="#ffffff" >{t("banner.bannerText")}</Typography>
 
       </Box>
 

@@ -1,7 +1,18 @@
-import { Button, Divider, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Divider,
+  FormControl,
+  Grid,
+  MenuItem,
+  Select,
+  Typography,
+} from "@mui/material";
 import { motion } from "framer-motion";
 import NavbarButton from "./NavbarButton";
 import { NavLink, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { changeLanguage, t } from "i18next";
 
 function NavbarItems({ scrollToSection }) {
   const location = useLocation();
@@ -15,7 +26,17 @@ function NavbarItems({ scrollToSection }) {
       }, 1000);
     }
   };
+  const [language, setLanguage] = useState("EN");
 
+  const handleChange = (event) => {
+    if (language == "EN") {
+      setLanguage("TR");
+      changeLanguage("tr");
+    } else {
+      setLanguage("EN");
+      changeLanguage("en");
+    }
+  };
   return (
     <>
       <Grid
@@ -23,6 +44,7 @@ function NavbarItems({ scrollToSection }) {
         flexDirection="row"
         alignItems="center"
         justifyContent="center"
+        md={6}
       >
         <Grid
           component={motion.div}
@@ -32,7 +54,7 @@ function NavbarItems({ scrollToSection }) {
           transition={{ delay: 0.3, type: "tween", stiffness: 100 }}
         >
           <NavbarButton
-            title="Anasayfa"
+            title={t("navbar.home")}
             to="/"
             onClick={() => handleClick("home")}
           />
@@ -45,7 +67,7 @@ function NavbarItems({ scrollToSection }) {
           transition={{ delay: 0.5, type: "tween", stiffness: 100 }}
         >
           <NavbarButton
-            title="Ekibimiz"
+            title={t("navbar.team")}
             to="/"
             onClick={() => handleClick("team")}
           />
@@ -58,7 +80,7 @@ function NavbarItems({ scrollToSection }) {
           transition={{ delay: 0.5, type: "tween", stiffness: 100 }}
         >
           <NavbarButton
-            title="Projeler"
+            title={t("navbar.projects")}
             to="/"
             onClick={() => handleClick("projects")}
           />
@@ -71,7 +93,7 @@ function NavbarItems({ scrollToSection }) {
           transition={{ delay: 0.7, type: "tween", stiffness: 100 }}
         >
           <NavbarButton
-            title="Etkinlikler"
+            title={t("navbar.events")}
             to="/"
             onClick={() => handleClick("events")}
           />
@@ -84,7 +106,7 @@ function NavbarItems({ scrollToSection }) {
           transition={{ delay: 0.7, type: "tween", stiffness: 100 }}
         >
           <NavbarButton
-            title="Bize Ulaşın"
+            title={t("navbar.contact")}
             to="/"
             onClick={() => handleClick("contact")}
           />
@@ -106,19 +128,32 @@ function NavbarItems({ scrollToSection }) {
         </Grid> */}
       </Grid>
       <Grid
-        component={motion.div}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ delay: 1, type: "tween", stiffness: 100 }}
+        display="flex"
+        md={6}
+        justifyContent="end"
+        alignItems="center"
+        gap={5}
       >
-        <NavLink to="https://buymeacoffee.com/nanelimon" target="_blank">
-          <Button disableRipple sx={styles.donateButton}>
-            <Typography textTransform="capitalize" fontFamily="roboto-medium">
-              Bize Destek Olun
-            </Typography>
-          </Button>
-        </NavLink>
+        <Grid
+          component={motion.div}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ delay: 1, type: "tween", stiffness: 100 }}
+        >
+          <NavLink to="https://buymeacoffee.com/nanelimon" target="_blank">
+            <Button disableRipple sx={styles.donateButton}>
+              <Typography textTransform="capitalize" fontFamily="roboto-medium">
+                {t("navbar.support")}
+              </Typography>
+            </Button>
+          </NavLink>
+        </Grid>
+        <Button disableRipple sx={styles.languageButton} onClick={handleChange}>
+          <Typography fontFamily="roboto-regular" color="#ffffff">
+            {language}
+          </Typography>
+        </Button>
       </Grid>
     </>
   );
@@ -307,6 +342,16 @@ const styles = {
     "&:hover": {
       backgroundColor: "black",
       boxShadow: "0 0 20px rgba(0, 255, 0, 0.5)",
+    },
+  },
+  languageButton: {
+    backgroundColor: "transparent",
+    borderRadius: 2,
+    color: "#ffffff",
+    marginY: { xs: 2, md: 0 },
+    transition: "box-shadow 0.1s ease-in-out",
+    "&:hover": {
+      backgroundColor: "transparent",
     },
   },
 };
