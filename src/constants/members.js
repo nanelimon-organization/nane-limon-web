@@ -13,7 +13,7 @@ export let members = [
       slug: "seyma-sarigil",
       email: "seyma.sarigil@nanelimon.ai",
       github: "http://github.com/seymasa",
-      linkedin: "https://www.linkedin.com/in/eraybuyukkanat/",
+      linkedin: "https://www.linkedin.com/in/seymasa/",
       src: imagePaths.member.seymasarigil,
     },
     {
