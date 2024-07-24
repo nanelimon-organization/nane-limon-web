@@ -9,10 +9,10 @@ function MobileMenuToggle({toggleMenu}) {
   const [language, setLanguage] = useState("EN");
   const handleChange = (event) => {
     if (language == "EN") {
-      setLanguage("EN");
+      setLanguage("TR");
       changeLanguage("en");
     } else {
-      setLanguage("TR");
+      setLanguage("EN");
       changeLanguage("tr");
     }
   };
