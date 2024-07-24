@@ -42,6 +42,7 @@ export default MobileMenuToggle;
 
 const styles = {
   languageButton: {
+    display: { xs: "flex", md: "none" },
     backgroundColor: "transparent",
     borderRadius: 2,
     color: "#ffffff",
