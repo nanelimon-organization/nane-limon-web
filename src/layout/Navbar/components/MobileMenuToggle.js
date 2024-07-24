@@ -6,14 +6,14 @@ import { useTranslation } from "react-i18next";
 
 function MobileMenuToggle({toggleMenu}) {
   const { t } = useTranslation()
-  const [language, setLanguage] = useState("TR");
+  const [language, setLanguage] = useState("EN");
   const handleChange = (event) => {
     if (language == "EN") {
-      setLanguage("TR");
-      changeLanguage("tr");
-    } else {
       setLanguage("EN");
       changeLanguage("en");
+    } else {
+      setLanguage("TR");
+      changeLanguage("tr");
     }
   };
   return (
