@@ -29,15 +29,15 @@ function NavbarItems({ scrollToSection }) {
       }, 1000);
     }
   };
-  const [language, setLanguage] = useState("TR");
+  const [language, setLanguage] = useState("EN");
 
   const handleChange = (event) => {
     if (language == "EN") {
       setLanguage("TR");
-      changeLanguage("tr");
+      changeLanguage("en");
     } else {
       setLanguage("EN");
-      changeLanguage("en");
+      changeLanguage("tr");
     }
   };
   return (
