@@ -14,7 +14,7 @@ export const LoadingProvider = ({ children }) => {
     preloadImages(imagePaths).then(() => {
       hideLoading();
     });
-  }, []);
+  }, [hideLoading]);
 
   return (
     <LoadingContext.Provider value={{ loading, showLoading, hideLoading }}>

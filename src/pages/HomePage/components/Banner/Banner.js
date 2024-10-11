@@ -7,7 +7,7 @@ import AnimatedTitle from "../../../../animations/AnimatedTitle";
 import imagePaths from "../../../../assets/imagePaths";
 
 function Banner({ preloadedImages, visible }) {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -23,15 +23,15 @@ function Banner({ preloadedImages, visible }) {
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [preloadedImages.length]);
+  }, [preloadedImages]);
 
   return (
     <Box
-    component={motion.div}
-    ref={ref}
-    style={{
-      scale: scaleProgress,
-    }}
+      component={motion.div}
+      ref={ref}
+      style={{
+        scale: scaleProgress,
+      }}
       sx={{
         position: "fixed",
         top: 0,
@@ -46,7 +46,7 @@ function Banner({ preloadedImages, visible }) {
     >
       {preloadedImages.length > 0 && (
         <Box
-          key={index}
+          key={preloadedImages[index].src}
           component={motion.img}
           sx={{
             width: "100%",
@@ -69,11 +69,20 @@ function Banner({ preloadedImages, visible }) {
           textAlign: "center",
         }}
       >
-        <AnimatedTitle text="Nane & Limon" fontSize={{xs: 28,md:48}} fontFamily="roboto-bold" color="#ffffff" />
-        <Typography fontSize={{xs: 20,md:26}} fontFamily="roboto-regular" color="#ffffff" >{t("banner.bannerText")}</Typography>
-
+        <AnimatedTitle
+          text="Nane & Limon"
+          fontSize={{ xs: 28, md: 48 }}
+          fontFamily="roboto-bold"
+          color="#ffffff"
+        />
+        <Typography
+          fontSize={{ xs: 20, md: 26 }}
+          fontFamily="roboto-regular"
+          color="#ffffff"
+        >
+          {t("banner.bannerText")}
+        </Typography>
       </Box>
-
     </Box>
   );
 }
