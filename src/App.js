@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import {
   Navigate,
   RouterProvider,
@@ -9,8 +9,6 @@ import CommunityEvents from "./pages/CommunityEvents/CommunityEvents";
 import HomePage, { homeLoader } from "./pages/HomePage/HomePage";
 import Main from "./pages/MainPage";
 import MemberDetail from "./pages/MemberDetail/MemberDetail";
-import Loading from "./layout/Loading/Loading";
-import { LoadingProvider, useLoading } from "./contexts/LoadingContext";
 import ProjectDetail from "./pages/ProjectDetail/ProjectDetail";
 const MainApp = () => {
 
@@ -92,7 +90,6 @@ const MainApp = () => {
 
   return (
     <>
-      <Loading />
       <RouterProvider router={router} />
     </>
   );
@@ -100,9 +97,7 @@ const MainApp = () => {
 
 function App() {
   return (
-    <LoadingProvider>
       <MainApp />
-    </LoadingProvider>
   );
 }
 

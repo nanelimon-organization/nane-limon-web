@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Box, Button, Divider, Grid, Typography } from "@mui/material";
+import React, { useRef } from "react";
+import { Box, Typography } from "@mui/material";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import AnimatedTitle from "../../../../animations/AnimatedTitle";
 import imagePaths from "../../../../assets/imagePaths";
+import BackgroundSlider from "react-background-slider";
 
-function Banner({ preloadedImages, visible }) {
+function Banner() {
   const { t } = useTranslation();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -15,15 +15,6 @@ function Banner({ preloadedImages, visible }) {
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [1.1, 1]);
 
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % preloadedImages.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [preloadedImages]);
 
   return (
     <Box
@@ -39,25 +30,24 @@ function Banner({ preloadedImages, visible }) {
         width: "100%",
         height: "100vh",
         zIndex: -1,
-        visibility: visible ? "visible" : "hidden",
-        opacity: visible ? 1 : 0,
         transition: "opacity 0.3s ease-in-out",
       }}
     >
-      {preloadedImages.length > 0 && preloadedImages[index] && (
-        <Box
-          key={index}
-          component={motion.img}
-          sx={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            filter: "brightness(0.2)",
-          }}
-          src={preloadedImages[index].src || ""}
-          alt={`Banner image ${index + 1}`}
+      <Box
+        sx={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          filter: "brightness(0.2)",
+          bgcolor: "#000",
+        }}
+      >
+        <BackgroundSlider
+          images={Object.values(imagePaths.banner)}
+          duration={5}
+          transition={0.5}
         />
-      )}
+      </Box>
 
       <Box
         sx={{

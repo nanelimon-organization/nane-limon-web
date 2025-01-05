@@ -4,31 +4,17 @@ import Summary from "./components/Summary/Summary";
 import { useLoaderData } from "react-router-dom";
 import Team from "./components/Team/Team";
 import ContactForm from "./components/ContactForm/ContactForm";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { events } from "../../constants/events";
 import {
   InfoLayoutLeft,
   InfoLayoutRight,
 } from "../CommunityEvents/components/InfoLayout/InfoLayout";
-import preloadImages from "../../utils/preloadImages";
-import imagePaths from "../../assets/imagePaths";
-
 import Projects from "./components/Projects/Projects";
 import Medium from "./components/Medium/Medium";
-import { useLoading } from "../../contexts/LoadingContext";
 import axios from "axios";
 
 function HomePage({ refs, scrollToSection }) {
-  const { showLoading, hideLoading } = useLoading();
-  const [preloadedImages, setPreloadedImages] = useState([]);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    preloadImages(imagePaths).then((images) => {
-      setPreloadedImages(images);
-      setVisible(true);
-    });
-  }, [showLoading, hideLoading]);
 
   const posts = useLoaderData();
   const [open, setOpen] = useState(false);
@@ -57,7 +43,7 @@ function HomePage({ refs, scrollToSection }) {
         </Alert>
       </Snackbar>
       <div ref={refs.homeRef}>
-        <Banner visible={visible} preloadedImages={preloadedImages} />
+        <Banner />
       </div>
 
       <Box sx={{ paddingTop: "100vh" }}>
