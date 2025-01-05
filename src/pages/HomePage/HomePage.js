@@ -57,7 +57,9 @@ function HomePage({ refs, scrollToSection }) {
         </Alert>
       </Snackbar>
       <div ref={refs.homeRef}>
-        <Banner visible={visible} preloadedImages={preloadedImages} />
+        {preloadedImages.length > 0 ? (
+          <Banner visible={visible} preloadedImages={preloadedImages} />
+        ) : null}
       </div>
 
       <Box sx={{ paddingTop: "100vh" }}>
