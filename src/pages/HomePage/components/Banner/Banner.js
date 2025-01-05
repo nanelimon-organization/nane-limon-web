@@ -44,9 +44,9 @@ function Banner({ preloadedImages, visible }) {
         transition: "opacity 0.3s ease-in-out",
       }}
     >
-      {preloadedImages.length > 0 && (
+      {preloadedImages.length > 0 && preloadedImages[index] && (
         <Box
-          key={preloadedImages[index].src}
+          key={index}
           component={motion.img}
           sx={{
             width: "100%",
@@ -54,10 +54,11 @@ function Banner({ preloadedImages, visible }) {
             objectFit: "cover",
             filter: "brightness(0.2)",
           }}
-          src={preloadedImages[index].src}
+          src={preloadedImages[index].src || ""}
           alt={`Banner image ${index + 1}`}
         />
       )}
+
       <Box
         sx={{
           position: "absolute",
