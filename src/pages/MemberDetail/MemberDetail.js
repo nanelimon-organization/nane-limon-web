@@ -1,12 +1,11 @@
 import { Navigate, useLocation, useParams } from "react-router-dom";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { members, validMembers } from "../../constants/members";
 import MemberDetailContainer from "./components/MemberDetailContainer";
 import BreadCrumbs from "./components/BreadCrumbs";
 import DetailCardContainer from "./components/DetailCardContainer";
 import CardDetail from "./components/CardContent";
-import { useLoading } from "../../contexts/LoadingContext";
 
 function MemberDetail() {
 
@@ -15,11 +14,6 @@ function MemberDetail() {
   },[])
 
   const { memberDetail } = useParams();
-  const { showLoading, hideLoading } = useLoading();
-
-  useEffect(() => {
-    hideLoading();
-  }, []);
 
   let location = useLocation();
 
