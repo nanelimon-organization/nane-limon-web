@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Navigate, useLocation, useParams } from "react-router-dom";
-import { useLoading } from "../../contexts/LoadingContext";
 
 import { projects, validProjects } from "../../constants/projects";
 import {
@@ -18,11 +17,7 @@ function ProjectDetail() {
   }, []);
 
   const { projectDetail } = useParams();
-  const { showLoading, hideLoading } = useLoading();
 
-  useEffect(() => {
-    hideLoading();
-  }, []);
 
   let location = useLocation();
 
